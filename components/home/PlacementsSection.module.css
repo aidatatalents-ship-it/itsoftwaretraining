@@ -1,0 +1,68 @@
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  padding: 28px 12px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s;
+}
+.highlight:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.hIcon { font-size: 1.8rem; }
+.hVal {
+  font-size: 1.75rem;
+  font-weight: 900;
+  background: var(--brand-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hLbl { font-size: 0.78rem; color: var(--text-muted); font-weight: 500; }
+
+.companies {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.company {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s;
+}
+.company:hover { border-color: var(--border-card); transform: translateX(4px); box-shadow: var(--shadow-md); }
+.cLogo {
+  width: 44px; height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.cName { font-size: 0.9rem; font-weight: 700; color: var(--text-dark); }
+.cCount { font-size: 0.75rem; font-weight: 600; margin-top: 2px; }
+
+@media (max-width: 1024px) {
+  .highlights { grid-template-columns: repeat(2, 1fr); }
+  .companies { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .companies { grid-template-columns: 1fr; }
+}

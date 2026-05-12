@@ -1,0 +1,228 @@
+/* ── ServiceHero — Dark Edition ── */
+.hero {
+  background: var(--grad-hero-dark);
+  padding: 56px 0 72px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative glowing orbs */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -80px;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(29,78,216,0.28) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -60px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(99,102,241,0.22) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Breadcrumb */
+.bc {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .76rem;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+.bc a { color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
+.bc a:hover { color: #93C5FD; }
+.bc span { color: rgba(255,255,255,0.3); }
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 52px;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+.left { display: flex; flex-direction: column; gap: 18px; }
+
+/* Demand badge */
+.demandBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: var(--r99);
+  background: rgba(99,102,241,0.2);
+  border: 1px solid rgba(99,102,241,0.45);
+  backdrop-filter: blur(8px);
+  font-size: .76rem;
+  font-weight: 700;
+  color: #A5B4FC;
+  width: fit-content;
+  letter-spacing: 0.02em;
+}
+
+/* Heading */
+.h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 900;
+  color: #FFFFFF;
+  line-height: 1.15;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.4);
+}
+
+.tagline {
+  font-size: 1rem;
+  color: #7DD3FC;
+  font-weight: 600;
+}
+
+.desc {
+  font-size: .95rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.8;
+  max-width: 520px;
+}
+
+/* Quick meta cards */
+.quickMeta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.qm {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  backdrop-filter: blur(12px);
+  transition: background 0.25s, border-color 0.25s;
+}
+.qm:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(99,102,241,0.45);
+}
+
+.qiWrap {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  background: rgba(99,102,241,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.qi { font-size: 1rem; flex-shrink: 0; }
+.qm > div { display: flex; flex-direction: column; }
+.qv { font-size: .82rem; font-weight: 700; color: #FFFFFF; line-height: 1.2; }
+.ql { font-size: .62rem; color: rgba(255,255,255,0.5); }
+
+/* Tags */
+.tags { display: flex; flex-wrap: wrap; gap: 7px; }
+.tag {
+  padding: 4px 12px;
+  border-radius: var(--r99);
+  background: rgba(99,102,241,0.15);
+  border: 1px solid rgba(99,102,241,0.35);
+  font-size: .75rem;
+  font-weight: 600;
+  color: #A5B4FC;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* CTA row */
+.ctaRow { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* ── RIGHT COLUMN ── */
+.right { display: flex; flex-direction: column; gap: 16px; }
+
+.imgWrap {
+  position: relative;
+  height: 240px;
+  border-radius: var(--r16);
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.08);
+}
+
+.img { object-fit: cover; width: 100%; height: 100%; }
+
+.urgency {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: rgba(220,53,69,0.92);
+  color: #fff;
+  font-size: .82rem;
+  padding: 10px 16px;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Enrol card — glassmorph on dark */
+.enrolCard {
+  background: rgba(255,255,255,0.06);
+  border-radius: var(--r16);
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(20px);
+}
+
+.enrolHead {
+  padding: 14px 18px;
+  background: linear-gradient(135deg, rgba(29,78,216,0.8) 0%, rgba(99,102,241,0.7) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.enrolBody { padding: 16px 18px; }
+
+.eRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.ek { font-size: .8rem; color: rgba(255,255,255,0.6); display: flex; align-items: center; gap: 6px; }
+.ev { font-size: .85rem; font-weight: 700; color: #FFFFFF; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: 1fr; }
+  .right { max-width: 520px; }
+  .quickMeta { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .h1 { font-size: 2rem; }
+  .ctaRow { flex-direction: column; }
+}

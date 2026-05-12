@@ -1,0 +1,209 @@
+/* ═══════════════════════════════════════════
+   NAVBAR — Exact match to reference design
+   Dark navy bg, white links, cyan Sign In pill
+═══════════════════════════════════════════ */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #0D1B3E;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  gap: 16px;
+}
+
+/* ── LOGO ── */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoName {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.logoSub {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.56rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: rgba(255,255,255,0.45);
+}
+
+/* ── NAV LINKS ── */
+.links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: color .2s;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.link:hover { color: #FFFFFF; }
+.active { color: #FFFFFF !important; font-weight: 700; }
+
+/* ── DROPDOWN ── */
+.dropWrap { position: relative; }
+.dropBtn {}
+
+.drop {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  width: 260px;
+  background: #0F2557;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  z-index: 100;
+}
+
+.dropOpen {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropItem {
+  display: block;
+  padding: 9px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: rgba(255,255,255,0.75);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+
+.dropItem:hover {
+  background: rgba(255,255,255,0.1);
+  color: #FFFFFF;
+}
+
+/* ── CTAs ── */
+.ctas {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.signIn {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 24px;
+  background: #FFFFFF;
+  color: #0D1B3E;
+  border-radius: 30px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity .2s;
+  white-space: nowrap;
+}
+
+.signIn:hover { opacity: 0.85; }
+
+/* ── BURGER ── */
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+/* ── MOBILE MENU ── */
+.mob {
+  background: #0D1B3E;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  animation: slideDown 0.25s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.mobLink {
+  display: block;
+  padding: 12px 20px;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: color .2s;
+}
+
+.mobLink:hover { color: #FFFFFF; }
+
+.mobSec {
+  padding: 10px 20px 4px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+}
+
+@media (max-width: 1024px) {
+  .links { display: none; }
+  .burger { display: flex; }
+}
+
+@media (max-width: 600px) {
+  .logoSub { display: none; }
+  .logoName { font-size: 0.9rem; }
+}

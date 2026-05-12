@@ -1,0 +1,97 @@
+.hero {
+  background: linear-gradient(135deg, #F3F0FF, #EEF2FF);
+  border-bottom: 1px solid var(--border);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.formCard {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: 36px;
+  box-shadow: var(--shadow-lg);
+}
+
+.formTop { margin-bottom: 24px; }
+.formBadge {
+  display: inline-block;
+  padding: 5px 14px;
+  background: var(--brand-grad);
+  color: #fff;
+  border-radius: var(--r-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.formH { font-size: 1.4rem; font-weight: 800; color: var(--text-dark); margin-bottom: 4px; }
+.formSub { font-size: 0.82rem; color: #059669; font-weight: 600; }
+
+.form { display: flex; flex-direction: column; gap: 14px; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.field { display: flex; flex-direction: column; gap: 5px; }
+.label { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); }
+.privacy { text-align: center; font-size: 0.72rem; color: var(--text-muted); margin-top: 4px; }
+
+/* Info */
+.info { display: flex; flex-direction: column; gap: 16px; }
+.infoCard {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+}
+.infoH { font-size: 0.95rem; font-weight: 700; color: var(--text-dark); margin-bottom: 14px; }
+.infoList { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.infoList li { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; color: var(--text-body); }
+.checkBox {
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: #DCFCE7;
+  color: #059669;
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.contactLinks { display: flex; flex-direction: column; gap: 10px; }
+.contactBtn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  text-decoration: none;
+  color: var(--text-dark);
+  transition: all 0.2s;
+}
+.contactBtn:hover { border-color: var(--border-card); box-shadow: var(--shadow-md); transform: translateX(4px); }
+.waBtn:hover { border-color: #25D366; }
+.cIcon { font-size: 1.4rem; flex-shrink: 0; }
+.cLabel { font-size: 0.72rem; color: var(--text-muted); }
+.cVal { font-size: 0.9rem; font-weight: 700; }
+
+.officeCard {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 16px;
+  transition: all 0.2s;
+}
+.officeCard:hover { border-color: var(--border-card); }
+.officeHead { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+.officeArea { font-size: 0.9rem; font-weight: 700; }
+.officeAddr { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 6px; }
+.officePhone { font-size: 0.82rem; color: var(--brand-purple); text-decoration: none; font-weight: 600; }
+
+@media (max-width: 1024px) { .layout { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .row { grid-template-columns: 1fr; } .formCard { padding: 24px; } }

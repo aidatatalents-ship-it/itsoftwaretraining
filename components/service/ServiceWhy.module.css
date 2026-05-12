@@ -1,0 +1,48 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.benefits { display: flex; flex-direction: column; gap: 14px; }
+.benefitCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px 20px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s;
+}
+.benefitCard:hover { border-color: var(--border-card); transform: translateX(4px); box-shadow: var(--shadow-md); }
+.benefitIcon { font-size: 1.4rem; flex-shrink: 0; }
+.benefitTitle { font-size: 0.9rem; font-weight: 700; margin-bottom: 4px; }
+.benefitDesc { color: var(--text-muted); font-size: 0.8rem; line-height: 1.6; }
+
+.rolesPanel {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+.rolesTitle { font-size: 1rem; font-weight: 700; margin-bottom: 16px; }
+.rolesList { display: flex; flex-direction: column; margin-bottom: 20px; }
+.roleItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  transition: all 0.2s;
+  cursor: default;
+}
+.roleItem:last-child { border-bottom: none; }
+.roleItem:hover { padding-left: 6px; }
+.roleNum { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; font-weight: 700; min-width: 24px; }
+.roleName { flex: 1; font-size: 0.88rem; font-weight: 500; }
+.ctaBox { padding: 20px; border: 1px solid var(--border-card); border-radius: var(--r-md); background: var(--bg-section); }
+
+@media (max-width: 1024px) { .layout { grid-template-columns: 1fr; } }

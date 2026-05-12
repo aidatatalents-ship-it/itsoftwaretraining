@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" fill="none">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#1E3A8A"/>
+      <stop offset="55%"  stop-color="#1D4ED8"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="10" x2="0" y2="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="white" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="68" y1="0" x2="220" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ── ICON BADGE ── -->
+  <!-- Offset badge vertically to sit at y=10, 40×40 -->
+  <g transform="translate(0,10)">
+    <rect width="40" height="40" rx="10" fill="url(#g1)"/>
+    <!-- Gloss shine — top half -->
+    <rect width="40" height="20" rx="10" fill="url(#g2)"/>
+    <rect x="0" y="18" width="40" height="2" fill="url(#g2)"/>
+    <!-- < bracket -->
+    <polyline points="14,12 7,20 14,28"
+      stroke="white" stroke-width="2.8"
+      stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <!-- / slash (slightly softer) -->
+    <line x1="24" y1="29" x2="19" y2="11"
+      stroke="white" stroke-width="2.8"
+      stroke-linecap="round" stroke-opacity="0.82"/>
+    <!-- > bracket -->
+    <polyline points="26,12 33,20 26,28"
+      stroke="white" stroke-width="2.8"
+      stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- ── WORDMARK ── -->
+  <!-- "IT Software Training" — bold, dark navy -->
+  <text x="54" y="30"
+    font-family="'Poppins','Inter',system-ui,-apple-system,sans-serif"
+    font-size="20" font-weight="800"
+    letter-spacing="-0.4"
+    fill="#01142F">IT Software Training</text>
+
+  <!-- Gradient accent underline -->
+  <rect x="54" y="33" width="172" height="2.5" rx="1.25" fill="url(#g3)" opacity="0.75"/>
+
+  <!-- "BANGALORE" — tracked, brand blue -->
+  <text x="54" y="48"
+    font-family="'Poppins','Inter',system-ui,-apple-system,sans-serif"
+    font-size="9" font-weight="700"
+    letter-spacing="4"
+    fill="#1D4ED8">BANGALORE</text>
+
+  <!-- "#1 IT Institute" — muted -->
+  <text x="124" y="48"
+    font-family="'Poppins','Inter',system-ui,-apple-system,sans-serif"
+    font-size="9" font-weight="500"
+    letter-spacing="0.5"
+    fill="#6C757D"> · #1 IT Institute</text>
+</svg>
