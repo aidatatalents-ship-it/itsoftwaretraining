@@ -62,11 +62,7 @@ export {
   Zap,
   Flame,
 
-  // Social
-  Facebook,
-  Instagram,
-  Linkedin,
-  Twitter,
+  // Social (Brand icons removed from lucide-react)
 
   // Misc
   Lock,
