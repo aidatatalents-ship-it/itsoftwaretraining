@@ -1,0 +1,231 @@
+/* ═══════════════════════════════════════════════
+   FAQ SECTION — AEO / GEO / PAA Optimised
+   Navy & White brand palette, premium accordion UI
+═══════════════════════════════════════════════ */
+
+.section {
+  padding: 80px 0 96px;
+  background: #f8f9fc;
+}
+
+/* ── Header ── */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(13, 27, 62, 0.07);
+  border: 1px solid rgba(13, 27, 62, 0.12);
+  color: #0D1B3E;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 99px;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-family: 'Hind', sans-serif;
+  font-size: clamp(1.75rem, 3.5vw, 2.6rem);
+  font-weight: 800;
+  color: #0D1B3E;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  margin-bottom: 14px;
+}
+
+.title span {
+  color: #1D4ED8;
+}
+
+.sub {
+  color: #52637A;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+/* ── Category Filters ── */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+
+.filterBtn {
+  padding: 7px 16px;
+  border-radius: 99px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border: 1.5px solid #DDE3EE;
+  background: #fff;
+  color: #52637A;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Hind', sans-serif;
+}
+
+.filterBtn:hover {
+  border-color: #0D1B3E;
+  color: #0D1B3E;
+}
+
+.filterActive {
+  background: #0D1B3E;
+  color: #fff;
+  border-color: #0D1B3E;
+}
+
+/* ── Accordion List ── */
+.list {
+  max-width: 840px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ── Accordion Item ── */
+.item {
+  background: #fff;
+  border: 1.5px solid #DDE3EE;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.itemOpen {
+  border-color: #1D4ED8;
+  box-shadow: 0 4px 24px rgba(29, 78, 216, 0.1);
+}
+
+/* ── Question Button ── */
+.question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s ease;
+}
+
+.question:hover {
+  background: #f8f9fc;
+}
+
+.qText {
+  font-family: 'Hind', sans-serif;
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: #0D1B3E;
+  line-height: 1.45;
+  flex: 1;
+}
+
+.itemOpen .qText {
+  color: #1D4ED8;
+}
+
+/* ── Chevron Icon ── */
+.icon {
+  color: #52637A;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, color 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.iconOpen {
+  transform: rotate(180deg);
+  color: #1D4ED8;
+}
+
+/* ── Answer Panel — CSS height animation ── */
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.itemOpen .answer {
+  max-height: 600px;
+}
+
+.answerInner {
+  padding: 0 24px 22px;
+  font-size: 0.93rem;
+  color: #374151;
+  line-height: 1.8;
+  border-top: 1px solid #EEF0F5;
+  padding-top: 16px;
+}
+
+/* ── Bottom CTA ── */
+.cta {
+  text-align: center;
+  margin-top: 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.cta p {
+  font-size: 1rem;
+  color: #52637A;
+  line-height: 1.6;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #0D1B3E;
+  color: #fff;
+  font-family: 'Hind', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.ctaBtn:hover {
+  background: #1D4ED8;
+  transform: translateY(-2px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .section {
+    padding: 56px 0 72px;
+  }
+
+  .question {
+    padding: 16px 18px;
+  }
+
+  .answerInner {
+    padding: 0 18px 18px;
+    padding-top: 14px;
+  }
+
+  .qText {
+    font-size: 0.9rem;
+  }
+}

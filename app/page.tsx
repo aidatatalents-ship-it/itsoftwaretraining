@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { ChevronLeft, ChevronRight, Calendar, MonitorSmartphone, ArrowRight } from 'lucide-react';
 import HeroSection from '@/components/home/HeroSection';
 import ServicesGrid from '@/components/home/ServicesGrid';
+import FaqSection from '@/components/home/FaqSection';
 
 /* ── DATA ─────────────────────────────────────── */
 
@@ -245,7 +246,10 @@ export default function HomePage() {
       </section>
 
 
-      {/* 6. TESTIMONIALS — dark navy, single-card slider, circular photo + gold star ring */}
+      {/* 6. FAQ — AEO / GEO / PAA optimised, before testimonials (answer intent → social proof) */}
+      <FaqSection />
+
+      {/* 7. TESTIMONIALS — dark navy, single-card slider, circular photo + gold star ring */}
       <section style={{ background: '#0D1B3E', padding: '80px 0' }}>
         <div className="container">
           <h2 style={{
