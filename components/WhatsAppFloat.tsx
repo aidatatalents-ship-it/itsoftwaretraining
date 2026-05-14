@@ -1,10 +1,10 @@
-import Link from 'next/link';
-import { MessageCircle } from 'lucide-react';
+import { WHATSAPP_BASE } from '@/data/contact';
 
 export default function WhatsAppFloat() {
+  const href = `${WHATSAPP_BASE}?text=Hi%2C+I+want+to+know+more+about+IT+Software+Training+in+Bangalore`;
   return (
     <a
-      href="https://wa.me/918888888888?text=Hi%2C+I+want+to+know+more+about+IT+training+in+Bangalore"
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       className="wa-float"

@@ -1,26 +1,26 @@
 'use client';
 import Link from 'next/link';
-import { useState } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { PHONE_DISPLAY, PHONE_E164, WHATSAPP_BASE, EMAIL, ADDRESS, HOURS } from '@/data/contact';
 
-const builtFor = [
-  { label: 'Inspiration', href: '/' },
-  { label: 'Get Hired', href: '/placements' },
-  { label: 'Courses', href: '/services/salesforce' },
-  { label: 'Certifications', href: '/contact' },
+const quickLinks = [
+  { label: 'All Courses',        href: '/#courses' },
+  { label: 'Salesforce Training', href: '/services/salesforce' },
+  { label: 'Cloud (AWS & Azure)', href: '/services/cloud' },
+  { label: 'SAP Training',        href: '/services/sap' },
+  { label: 'Python & AI',         href: '/services/python-data-science' },
+  { label: 'Placements',          href: '/placements' },
 ];
 
 const findUs = [
   { label: 'Instagram', href: '#' },
-  { label: 'Twitter', href: '#' },
-  { label: 'Pinterest', href: '#' },
+  { label: 'Twitter / X', href: '#' },
   { label: 'Facebook', href: '#' },
   { label: 'LinkedIn', href: '#' },
+  { label: 'YouTube', href: '#' },
 ];
 
 export default function Footer() {
-  const [email, setEmail] = useState('');
-
   return (
     <footer style={{ background: '#0A1530', padding: '60px 0 0' }}>
       <div className="container footer-grid" style={{
@@ -45,16 +45,16 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Col 2 — Built For */}
+        {/* Col 2 — Quick Links */}
         <div>
           <h4 style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 700, fontSize: '1rem', color: '#FFFFFF', marginBottom: 20 }}>
-            Built For
+            Quick Links
           </h4>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
-            {builtFor.map(item => (
+            {quickLinks.map(item => (
               <li key={item.label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                 <ArrowRight size={13} style={{ color: 'rgba(255,255,255,0.4)', flexShrink: 0 }} />
-                <Link href={item.href} style={{ fontSize: '0.87rem', color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color .2s' }}>
+                <Link href={item.href} style={{ fontSize: '0.87rem', color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>
                   {item.label}
                 </Link>
               </li>
@@ -65,7 +65,7 @@ export default function Footer() {
         {/* Col 3 — Find Us */}
         <div>
           <h4 style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 700, fontSize: '1rem', color: '#FFFFFF', marginBottom: 20 }}>
-            Find Us
+            Follow Us
           </h4>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
             {findUs.map(item => (
@@ -79,43 +79,32 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Col 4 — Stay in Touch */}
+        {/* Col 4 — Contact */}
         <div>
           <h4 style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 700, fontSize: '1rem', color: '#FFFFFF', marginBottom: 20 }}>
-            Stay in Touch
+            Contact Us
           </h4>
-          <div style={{ display: 'flex', gap: 0 }}>
-            <input
-              type="email"
-              placeholder="Enter your mail"
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-              style={{
-                flex: 1,
-                padding: '10px 14px',
-                background: 'rgba(255,255,255,0.1)',
-                border: '1px solid rgba(255,255,255,0.2)',
-                borderRight: 'none',
-                borderRadius: '8px 0 0 8px',
-                color: '#FFFFFF',
-                fontSize: '0.83rem',
-                outline: 'none',
-              }}
-            />
-            <button style={{
-              padding: '10px 18px',
-              background: 'rgba(255,255,255,0.12)',
-              border: '1px solid rgba(255,255,255,0.2)',
-              borderRadius: '0 8px 8px 0',
-              color: '#FFFFFF',
-              fontFamily: "'Poppins', sans-serif",
-              fontWeight: 600,
-              fontSize: '0.83rem',
-              cursor: 'pointer',
-              whiteSpace: 'nowrap',
-            }}>
-              Subscribe
-            </button>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+            <a href={`tel:${PHONE_E164}`} style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
+              <Phone size={14} style={{ color: '#A5B4FC', flexShrink: 0 }} />
+              <span style={{ fontSize: '0.87rem', color: 'rgba(255,255,255,0.75)', fontWeight: 600 }}>{PHONE_DISPLAY}</span>
+            </a>
+            <a href={`${WHATSAPP_BASE}?text=Hi+I+want+to+know+more+about+IT+training`} target="_blank" rel="noopener" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
+              <svg width="14" height="14" viewBox="0 0 48 48" fill="none"><path d="M24 4C12.95 4 4 12.95 4 24c0 3.7 1.02 7.16 2.77 10.13L4.09 43.91l10.02-2.63C17 43.22 20.39 44 24 44c11.05 0 20-8.95 20-20S35.05 4 24 4z" fill="#A5B4FC"/></svg>
+              <span style={{ fontSize: '0.87rem', color: 'rgba(255,255,255,0.6)' }}>WhatsApp Us</span>
+            </a>
+            <a href={`mailto:${EMAIL}`} style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
+              <Mail size={14} style={{ color: '#A5B4FC', flexShrink: 0 }} />
+              <span style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.6)' }}>{EMAIL}</span>
+            </a>
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
+              <MapPin size={14} style={{ color: '#A5B4FC', flexShrink: 0, marginTop: 2 }} />
+              <span style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.5 }}>{ADDRESS}</span>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+              <Clock size={14} style={{ color: '#A5B4FC', flexShrink: 0 }} />
+              <span style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.5)' }}>{HOURS}</span>
+            </div>
           </div>
         </div>
       </div>
