@@ -1,380 +1,349 @@
 'use client';
 import Link from 'next/link';
 import { useState } from 'react';
-import { ChevronLeft, ChevronRight, Calendar, MonitorSmartphone, ArrowRight } from 'lucide-react';
-import HeroSection from '@/components/home/HeroSection';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import ServicesGrid from '@/components/home/ServicesGrid';
 import FaqSection from '@/components/home/FaqSection';
+import styles from './HomePage.module.css';
 
-/* ── DATA ─────────────────────────────────────── */
-
-const whyPoints = [
-  'Individual-focused learning support',
-  'Small, well-structured class sizes',
-  'Real-time, project-based learning',
-  'Industry-aligned, modern syllabus',
-  'Career and interview readiness guidance',
+/* ── PLACEMENT DATA ── */
+const placements = [
+  { init: 'RS', bg: 'linear-gradient(135deg,#1565C0,#5B9BD5)', name: 'Rahul S.', role: '→ Salesforce Admin',     from: 'Manual Tester',   salary: '₹3.2L → ₹6.5L LPA', days: '58 days' },
+  { init: 'PK', bg: 'linear-gradient(135deg,#1565C0,#5B9BD5)', name: 'Priya K.',  role: '→ SAP FICO Consultant', from: 'Accounts Exec',   salary: '₹4.1L → ₹8.2L LPA', days: '72 days' },
+  { init: 'AM', bg: 'linear-gradient(135deg,#0A7A45,#2DB876)', name: 'Arjun M.',  role: '→ DevOps Engineer',     from: 'Java Dev',        salary: '₹5.5L → ₹9.2L LPA', days: '44 days' },
+  { init: 'NR', bg: 'linear-gradient(135deg,#7A2DB8,#B060FF)', name: 'Neha R.',   role: '→ Python Data Analyst', from: 'Fresher',         salary: 'First Job: ₹5.8L LPA', days: '81 days' },
+  { init: 'SK', bg: 'linear-gradient(135deg,#C47A00,#F0A830)', name: 'Suresh K.', role: '→ AWS Cloud Engineer',  from: 'Support Eng',     salary: '₹3.8L → ₹8.6L LPA', days: '63 days' },
 ];
 
-const partners = ['TCS', 'Coforge', 'Cognizant', 'Infosys', 'Wipro', 'Accenture', 'IBM', 'Capgemini'];
+const journeyTabs = ['Fresher', 'Upskilling', 'Switching'];
 
-const batches = [
-  { course: 'Salesforce Training',   date: '15 Jun 2025', mode: 'Online & Offline', slug: 'salesforce' },
-  { course: 'Python & Data Science', date: '10 Jun 2025', mode: 'Online & Offline', slug: 'python-data-science' },
-  { course: 'Cloud — AWS & Azure',   date: '8 Jun 2025',  mode: 'Online & Offline', slug: 'cloud' },
+const journeyData: Record<string, { steps: {done:boolean;active:boolean;title:string;sub:string}[]; outcome:string }> = {
+  Fresher: {
+    steps: [
+      { done: true,  active: false, title: 'Free Counselling Call',       sub: 'We find the right platform for your background and goals' },
+      { done: true,  active: false, title: 'Hands-On Training',            sub: 'Live platform from Day 1. Real projects, not theory slides' },
+      { done: false, active: true,  title: 'Build Portfolio + Get Certified', sub: 'A real project and certification you can show any interviewer' },
+      { done: false, active: false, title: 'Full Placement Support',       sub: 'Resume, LinkedIn, paid Naukri, AI interviews, recruiters' },
+    ],
+    outcome: '₹6.2 LPA first job · Offer in 60–90 days',
+  },
+  Upskilling: {
+    steps: [
+      { done: true,  active: false, title: 'Skills Mapping Session',       sub: 'Fastest path from your current role to target platform' },
+      { done: true,  active: false, title: 'Accelerated Weekend Track',    sub: 'Learn without leaving your current job. Evenings + weekends' },
+      { done: false, active: true,  title: 'Platform + AI Specialisation', sub: 'The combo that pushes salaries past ₹10 LPA' },
+      { done: false, active: false, title: 'Certification + Placement',    sub: 'Certified candidates get 3x more interview calls' },
+    ],
+    outcome: '₹3.5 LPA salary jump · Interview call in 30 days',
+  },
+  Switching: {
+    steps: [
+      { done: true,  active: false, title: 'Career Repositioning Call',   sub: 'We map your domain expertise to the right platform niche' },
+      { done: true,  active: false, title: 'Domain-Contextualised Training', sub: 'Learn the platform through your own industry\'s lens' },
+      { done: false, active: true,  title: 'Build Your Differentiation Story', sub: '"Domain expertise + platform skills" — a rare combination' },
+      { done: false, active: false, title: 'Targeted Placement',           sub: 'Companies in your industry that need both sides of you' },
+    ],
+    outcome: '₹9.4 LPA avg package · Least competitive segment',
+  },
+};
+
+/* ── HOW WE TRAIN ── */
+const methods = [
+  { n: '01', title: 'You Work Inside the Real Platform From Day 1', body: 'No slides for weeks before you touch anything. You log into the actual platform in your very first session. By Week 6 you have more hands-on hours than most "experienced" candidates from other institutes.' },
+  { n: '02', title: 'Every Week You Solve a Real Business Problem',  body: 'Each week brings a scenario drawn from an actual company implementation — not a textbook exercise. You\'re training your mind to think like a consultant, not memorise answers.' },
+  { n: '03', title: 'AI Tools Are Woven Into Every Course',          body: 'Einstein for Salesforce. AI security tools for Cybersecurity. ML pipelines for Python. AI-assisted DevOps. By graduation, using AI as a productivity multiplier is natural — not a novelty.' },
+  { n: '04', title: 'Your Career Profile Grows Throughout the Course', body: 'Most institutes build your resume in the last two weeks. We start Week 1. By the time you finish, your professional profile has been active and growing for 3 months.' },
 ];
 
+/* ── PLACEMENT SUPPORT ── */
+const placementSteps = [
+  { n: '01', title: 'AI-Built Resume',            body: 'Written around the exact keywords your platform\'s recruiters search for — custom built around your background, projects, and certification.' },
+  { n: '02', title: 'LinkedIn Profile Overhaul',  body: 'Your headline, summary, and skills section completely rewritten for recruiter discovery. 70% of IT hiring in Bangalore happens via LinkedIn searches.' },
+  { n: '03', title: 'Paid Naukri Activation',     body: 'We set up a paid Naukri subscription for you. Paid profiles get 3–5x more recruiter visibility and receive direct recruiter calls.', highlight: true },
+  { n: '04', title: 'AI Interview Simulation',    body: 'Many companies now use HireVue and Talview for AI-powered first-round screening. We run you through a full mock session before you face the real thing.' },
+  { n: '05', title: 'Direct Recruiter Submissions', body: 'We personally send your profile to our active network of hiring managers and platform-specific recruiters in Bangalore — with a direct recommendation.' },
+  { n: '06', title: '90-Day Active Follow-Up',    body: 'Day 30, 60, and 90 check-ins after your course. If something isn\'t working, we diagnose and fix it. We keep pushing until your offer letter is signed.' },
+];
+
+/* ── PRICING ── */
+const packages = [
+  {
+    tier: 'Basic', price: '₹25,000', hot: false,
+    for: 'For students who want solid platform training and will handle their own job search.',
+    yes: ['Full platform course (your choice)', 'AI tools module included', 'Weekend + evening batches', 'Recorded session access', 'Basic resume guidance'],
+    no:  ['AI-built resume + LinkedIn', 'Paid Naukri activation', 'Direct recruiter submissions', '90-day placement support', 'AI interview simulation'],
+    cta: 'Get Started →',
+  },
+  {
+    tier: 'Pro', price: '₹32,000', hot: true,
+    for: 'For students who want us to build their entire career profile and placement support.',
+    yes: ['Everything in Basic', 'AI-built, ATS-optimized resume', 'LinkedIn profile complete overhaul', 'Paid Naukri activation (3–5x visibility)', 'Hirist profile setup', 'Direct recruiter submissions', '90-day active placement support'],
+    no:  ['AI interview simulation', 'Certification exam prep', 'Guaranteed interview calls'],
+    cta: 'Reserve Your Seat →',
+  },
+  {
+    tier: 'Premium', price: '₹42,000', hot: false,
+    for: 'For students who want the complete package — training, AI, certification, and guaranteed interviews.',
+    yes: ['Everything in Pro', 'Advanced AI module + specialisation', 'Full AI interview simulation (×2)', 'Certification exam preparation', 'GitHub portfolio projects', 'Guaranteed 3 interview calls', 'Priority placement track', 'Salary negotiation coaching', '1-on-1 monthly counselling', 'Lifetime alumni network access'],
+    no:  [],
+    cta: 'Go Premium →',
+  },
+];
+
+/* ── TESTIMONIALS ── */
 const testimonials = [
-  {
-    name: 'Priya Sharma',
-    role: 'Salesforce Developer',
-    img: '/avatar-priya.jpg',
-    text: 'The classes were highly practical, well-structured, and very easy to follow, even for beginners. Each topic was explained clearly with real-world examples and hands-on practice. The trainers were supportive and knowledgeable, and the placement guidance helped me build confidence, improve my interview skills, and prepare effectively for real-world IT jobs.',
-  },
-  {
-    name: 'Rahul Nair',
-    role: 'AWS Solutions Architect',
-    img: '/avatar-rahul.jpg',
-    text: 'Cracked AWS SAA in first attempt after 10 weeks of training. Hands-on labs on actual AWS accounts — not simulators. The placement team arranged 6 interview calls within 45 days of course completion.',
-  },
-  {
-    name: 'Divya Menon',
-    role: 'Senior Data Scientist',
-    img: '/avatar-divya.jpg',
-    text: 'From Python basics to building production ML models in 5 months. The GenAI module was absolutely cutting-edge. The structured curriculum and mentor support made every concept click instantly.',
-  },
+  { init: 'PS', bg: 'linear-gradient(135deg,#1565C0,#5B9BD5)', name: 'Priya Sharma',  role: 'Salesforce Developer',     text: 'The classes were highly practical and easy to follow even for beginners. The trainers were supportive, the placement guidance helped me build confidence and land my first IT role within 3 months.' },
+  { init: 'RN', bg: 'linear-gradient(135deg,#0A7A45,#2DB876)', name: 'Rahul Nair',    role: 'AWS Solutions Architect',   text: 'Cracked AWS SAA in first attempt after 10 weeks of training. Hands-on labs on actual AWS accounts — not simulators. The placement team arranged 6 interview calls within 45 days of course completion.' },
+  { init: 'DM', bg: 'linear-gradient(135deg,#7A2DB8,#B060FF)', name: 'Divya Menon',   role: 'Senior Data Scientist',     text: 'From Python basics to building production ML models in 5 months. The GenAI module was absolutely cutting-edge. Structured curriculum and mentor support made every concept click instantly.' },
 ];
-
-/* ── PAGE ─────────────────────────────────────── */
 
 export default function HomePage() {
+  const [activeJourney, setActiveJourney] = useState('Fresher');
   const [activeT, setActiveT] = useState(0);
-
-  const prev = () => setActiveT(i => (i === 0 ? testimonials.length - 1 : i - 1));
-  const next = () => setActiveT(i => (i === testimonials.length - 1 ? 0 : i + 1));
-
   const t = testimonials[activeT];
 
   return (
-    <>
-      {/* 1. HERO */}
-      <HeroSection />
+    <main style={{ paddingTop: 62 }}>
 
-      {/* 2. OUR POPULAR COURSES */}
+      {/* ══ 1. HERO ══ */}
+      <div className={styles.hero}>
+        <div className={styles.heroInner}>
+
+          {/* LEFT */}
+          <div className={styles.heroLeft}>
+            <div className={styles.heroPill}>
+              <span className={styles.pulse} />
+              Bangalore&apos;s Future-Proof IT Career Platform
+            </div>
+            <h1 className={styles.heroH1}>
+              The IT Skills<br />That Pay More.<br />Stay in Demand.<br />And Actually<br />
+              <em>Get You Hired.</em>
+            </h1>
+            <p className={styles.heroDesc}>We train you on the platforms companies are desperate to hire for — right now and for the next 10 years.</p>
+            <div className={styles.heroPlatforms}>
+              {['Salesforce','SAP','Cybersecurity','Python + AI','AWS + Azure','Power BI','DevOps'].map(p => (
+                <span key={p} className={styles.hp}>{p}</span>
+              ))}
+            </div>
+            <p className={styles.heroNote}>Not sure which platform is right for you? Book a free counselling call — we&apos;ll figure it out together based on your background and goals.</p>
+            <div className={styles.heroBtns}>
+              <Link href="/contact" className={styles.btnInk}>Book Free Counselling Call →</Link>
+              <a href="#paths" className={styles.btnGhost}>See Our Approach</a>
+            </div>
+            <div className={styles.heroTrust}>
+              <div className={styles.avs}>
+                {[['RS','linear-gradient(135deg,#1565C0,#5B9BD5)'],['PK','linear-gradient(135deg,#1565C0,#5B9BD5)'],['AM','linear-gradient(135deg,#0A7A45,#2DB876)'],['NR','linear-gradient(135deg,#7A2DB8,#B060FF)']].map(([i,bg]) => (
+                  <div key={i} className={styles.av} style={{ background: bg }}>{i}</div>
+                ))}
+              </div>
+              <p className={styles.trustTxt}><strong>200+ students placed</strong> across Bangalore&apos;s top IT companies</p>
+            </div>
+          </div>
+
+          {/* RIGHT — placements + journey */}
+          <div className={styles.heroRight}>
+            <div className={styles.placementsCard}>
+              <div className={styles.plHeader}><span className={styles.plDot} />Recent Placements</div>
+              {placements.map(p => (
+                <div key={p.name} className={styles.plItem}>
+                  <div className={styles.plAv} style={{ background: p.bg }}>{p.init}</div>
+                  <div className={styles.plInfo}>
+                    <div className={styles.plName}>{p.name} <span className={styles.plRole}>{p.role}</span></div>
+                    <div className={styles.plDetail}>{p.from} · <strong>{p.salary}</strong></div>
+                  </div>
+                  <div className={styles.plDays}>{p.days}</div>
+                </div>
+              ))}
+            </div>
+
+            <div className={styles.journeyLabel}>Your Learning Journey</div>
+            <div className={styles.journeyTabs}>
+              {journeyTabs.map(tab => (
+                <button key={tab} className={`${styles.jTab} ${activeJourney === tab ? styles.jTabActive : ''}`} onClick={() => setActiveJourney(tab)}>{tab}</button>
+              ))}
+            </div>
+            <div className={styles.journeySteps}>
+              {journeyData[activeJourney].steps.map((s, i) => (
+                <div key={i} className={styles.jStep}>
+                  <div className={`${styles.jDot} ${s.done ? styles.jDone : s.active ? styles.jActive : styles.jNext}`}>
+                    {s.done ? '✓' : s.active ? '→' : i + 1}
+                  </div>
+                  <div>
+                    <div className={styles.jTitle}>{s.title}</div>
+                    <div className={styles.jSub}>{s.sub}</div>
+                  </div>
+                </div>
+              ))}
+              <div className={styles.jOutcome}>
+                <span>Typical Outcome</span>
+                <p>{journeyData[activeJourney].outcome}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ══ 2. STATS BAR ══ */}
+      <div className={styles.statsBar}>
+        {[['85%+','Placement Rate'],['₹9.8L','Average Package'],['7','High-Demand Platforms'],['90 Days','Post-Course Support']].map(([n, l]) => (
+          <div key={l} className={styles.stat}>
+            <div className={styles.statN}>{n}</div>
+            <div className={styles.statL}>{l}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* ══ 3. OUR POPULAR COURSES — ServicesGrid kept intact ══ */}
       <ServicesGrid />
 
-      {/* 3. WHY CHOOSE US — dark navy split layout */}
-      <section style={{
-        background: '#0D1B3E',
-        padding: '80px 0',
-      }}>
-        <div className="container grid-split">
-          {/* Left — circular collage image */}
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <div style={{
-              width: 380,
-              height: 380,
-              borderRadius: '50%',
-              overflow: 'hidden',
-              border: '4px solid rgba(255,255,255,0.25)',
-              flexShrink: 0,
-            }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/why-us.jpg"
-                alt="Why choose IT Software Training Bangalore"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              />
-            </div>
-          </div>
-
-          {/* Right — text */}
-          <div>
-            <h2 style={{
-              fontFamily: "'Poppins', sans-serif",
-              fontSize: 'clamp(1.8rem, 3vw, 2.6rem)',
-              fontWeight: 800,
-              color: '#FFFFFF',
-              lineHeight: 1.25,
-              marginBottom: 20,
-            }}>
-              Why Students Choose<br />to Learn With Us
-            </h2>
-            <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.95rem', lineHeight: 1.75, marginBottom: 24 }}>
-              We provide career-oriented IT training that combines expert mentorship with practical
-              experience. Our programs are designed to equip learners with job-ready skills for
-              today&apos;s competitive tech industry.
-            </p>
-            <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 32px', display: 'flex', flexDirection: 'column', gap: 10 }}>
-              {whyPoints.map(p => (
-                <li key={p} style={{ display: 'flex', alignItems: 'flex-start', gap: 10, color: 'rgba(255,255,255,0.85)', fontSize: '0.9rem' }}>
-                  <span style={{ color: '#FFFFFF', fontWeight: 800, fontSize: '1rem', lineHeight: 1.5, flexShrink: 0 }}>&raquo;</span>
-                  {p}
-                </li>
-              ))}
-            </ul>
-            <Link href="/contact" style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              background: '#FFFFFF',
-              color: '#0D1B3E',
-              padding: '11px 28px',
-              borderRadius: 30,
-              fontFamily: "'Poppins', sans-serif",
-              fontWeight: 700,
-              fontSize: '0.9rem',
-              textDecoration: 'none',
-              transition: 'opacity .2s',
-            }}>
-              Learn More
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. OUR HIRING PARTNERS — dark navy, white panel */}
-      <section style={{ background: '#0D1B3E', paddingBottom: 60 }}>
-        <div className="container">
-          <h2 style={{
-            fontFamily: "'Poppins', sans-serif",
-            fontSize: 'clamp(1.5rem, 2.5vw, 2rem)',
-            fontWeight: 800,
-            color: '#FFFFFF',
-            marginBottom: 28,
-          }}>
-            Our Hiring Partners
-          </h2>
-          <div style={{
-            background: '#FFFFFF',
-            borderRadius: 16,
-            padding: '28px 36px',
-            display: 'flex',
-            flexWrap: 'wrap',
-            gap: 20,
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-            {partners.map(p => (
-              <div key={p} style={{
-                fontFamily: "'Poppins', sans-serif",
-                fontWeight: 700,
-                fontSize: '1.05rem',
-                color: '#0D1B3E',
-                padding: '8px 20px',
-                borderRight: '1px solid #E2E8F0',
-              }}>
-                {p}
+      {/* ══ 4. THREE PATHS ══ */}
+      <section className={styles.pathsSec} id="paths">
+        <div className={styles.wrap}>
+          <div className={styles.sTag}>Our Approach</div>
+          <h2>Three Paths. One Goal — Your Offer Letter.</h2>
+          <p className={styles.sSub}>We don&apos;t treat everyone the same. Where you are right now determines how we train you.</p>
+          <div className={styles.pathsGrid}>
+            {[
+              { tag: '🎓 Just Starting Out', tagCls: styles.pTagBlue, h3: 'Zero Experience? We Help You Find the Right Platform and Build a Career From Scratch.', story: 'Most freshers pick a technology randomly, spend months learning it, and realise the market is flooded or shrinking. We fix that before it happens — we talk to you first, understand your interests, then point you at the one platform that gives you the best shot at a strong first job.', numCls: styles.numB, outcome: 'Starting salary ₹6.2 LPA · First offer in 60–90 days after course', outCls: styles.outBlue, steps: ['Free Counselling Call — We recommend the right platform for you, not the most popular one.','Hands-On Training — You work inside the real platform from Day 1.','AI Tools Included — Every course includes the AI tools changing that platform.','Build Your Portfolio — You finish with a real project built by you.','Full Placement Support — Resume, LinkedIn, paid Naukri, AI interviews, 90-day support.'] },
+              { tag: '💼 Already in IT. Ready for More.', tagCls: styles.pTagOrange, h3: 'Beyond the Next Increment — Build Skills That Keep You Relevant for the Next 10 Years.', story: "You've been in IT a few years. You're good at your job. But the increment is small, the role hasn't changed, and you're wondering — is my skill set future-proof? Generic IT roles face automation first. Specialists on enterprise platforms are the last ones touched.", numCls: styles.numO, outcome: 'Average salary jump ₹3.5 LPA · First interview call within 30 days', outCls: styles.outOrange, steps: ['Skills Mapping Session — Fastest path from your current role to your target platform.','Accelerated Learning Track — Skip what you already know. Weekend + evening batches.','Platform + AI Specialisation — Deep skills + AI tools. This combo pushes salaries past ₹10 LPA.','Certification Sprint — We prep you for the industry certification.','Salary-Smart Placement — Present your existing experience + new skills for maximum salary leverage.'] },
+              { tag: '🔄 Switching Fields or Tech Tracks', tagCls: styles.pTagGreen, h3: "Your Past Experience Isn't Baggage. In the Right Platform, It's Your Biggest Advantage.", story: "A banking professional who learns Salesforce already understands the business it's built around. A supply chain manager who learns SAP already knows the processes the software automates. Your background isn't baggage — in the right platform, it's your edge.", numCls: styles.numG, outcome: '₹9.4 LPA avg package · Least competitive segment — highest quality job matches', outCls: styles.outGreen, steps: ['Career Repositioning Call — We find the platform that makes the most of your existing background.','Domain-Contextualised Training — Examples connect to your domain. You learn faster.','Your Niche + AI Skills — Platform module most relevant to your industry, plus AI skills.','Build Your Story — "I have X years in [domain] and now bring that to [platform]."','Targeted Placement — Companies in your industry that use your platform and need both sides.'] },
+            ].map(card => (
+              <div key={card.tag} className={styles.pathCard}>
+                <div className={`${styles.ptag} ${card.tagCls}`}>{card.tag}</div>
+                <h3>{card.h3}</h3>
+                <p className={styles.pathStory}>{card.story}</p>
+                <div className={styles.stepsList}>
+                  {card.steps.map((s, i) => (
+                    <div key={i} className={styles.slItem}>
+                      <div className={`${styles.slNum} ${card.numCls}`}>{i + 1}</div>
+                      <div>
+                        <div className={styles.slTitle}>{s.split(' — ')[0]}</div>
+                        <div className={styles.slDesc}>{s.split(' — ')[1]}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className={`${styles.outcomeBox} ${card.outCls}`}>
+                  <div className={styles.outLabel}>Typical Outcome</div>
+                  <p>{card.outcome}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 5. UPCOMING BATCHES */}
-      <section style={{ background: '#FFFFFF', padding: '72px 0 80px' }}>
-        <div className="container">
-          <h2 style={{
-            fontFamily: "'Poppins', sans-serif",
-            fontSize: 'clamp(1.8rem, 3vw, 2.6rem)',
-            fontWeight: 800,
-            color: '#0D1B3E',
-            textAlign: 'center',
-            marginBottom: 60,
-          }}>
-            Upcoming Batches
-          </h2>
-          <div className="grid-3" style={{
-            maxWidth: 900,
-            margin: '0 auto',
-          }}>
-            {batches.map(b => (
-              /*
-               * The ENTIRE card is the arch shape.
-               * border-radius: 999px 999px 0 0 on a wide box gets clamped to
-               * half-the-width, producing a perfect tombstone arch.
-               * padding-top pushes content below the curved arch portion.
-               */
-              <div key={b.course} style={{
-                background: '#FFFFFF',
-                border: '3px solid #1E3A8A',
-                borderRadius: '999px 999px 0 0',   /* entire top is the arch */
-                paddingTop: 180,                    /* pushes content below the arch */
-                paddingLeft: 28,
-                paddingRight: 28,
-                paddingBottom: 28,
-                display: 'flex',
-                flexDirection: 'column',
-                gap: 10,
-              }}>
-                <div style={{
-                  fontFamily: "'Poppins', sans-serif",
-                  fontWeight: 600,
-                  fontSize: '1rem',
-                  color: '#0D1B3E',
-                  marginBottom: 2,
-                }}>
-                  {b.course}
-                </div>
-                <div style={{ fontSize: '0.87rem', color: '#374151' }}>
-                  Starts: {b.date}
-                </div>
-                <div style={{ fontSize: '0.87rem', color: '#374151', marginBottom: 10 }}>
-                  Mode: {b.mode}
-                </div>
-                <Link
-                  href={`/services/${b.slug}`}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    background: '#1E3A8A',
-                    color: '#FFFFFF',
-                    padding: '12px 0',
-                    borderRadius: 8,
-                    fontFamily: "'Poppins', sans-serif",
-                    fontWeight: 700,
-                    fontSize: '0.88rem',
-                    textDecoration: 'none',
-                  }}
-                >
-                  Enroll Now
-                </Link>
+      {/* ══ 5. HOW WE TRAIN ══ */}
+      <section className={styles.howSec} id="how">
+        <div className={styles.wrap}>
+          <div className={styles.sTagLight}>The Method</div>
+          <h2 style={{ color: '#fff' }}>This Is How We Actually Teach.</h2>
+          <p className={styles.sSubLight}>Four things we do differently — and why they produce better results.</p>
+          <div className={styles.howGrid}>
+            {methods.map(m => (
+              <div key={m.n} className={styles.howCard}>
+                <div className={styles.howNum}>{m.n}</div>
+                <h4>{m.title}</h4>
+                <p>{m.body}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* ══ 6. PLACEMENT SUPPORT ══ */}
+      <section className={styles.placeSec} id="placement">
+        <div className={styles.wrap}>
+          <div className={styles.sTag}>Placement Support</div>
+          <h2>We Don&apos;t Stop When the Course Ends.</h2>
+          <p className={styles.sSub}>Getting placed takes more than a certificate. Here&apos;s exactly what we do for every student — step by step.</p>
+          <div className={styles.placeGrid}>
+            {placementSteps.map(s => (
+              <div key={s.n} className={`${styles.psCard} ${s.highlight ? styles.psHighlight : ''}`}>
+                <div className={styles.psN}>{s.n}</div>
+                <h4>{s.title}</h4>
+                <p>{s.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      {/* 6. FAQ — AEO / GEO / PAA optimised, before testimonials (answer intent → social proof) */}
+      {/* ══ 7. PRICING ══ */}
+      <section className={styles.pkgSec} id="packages">
+        <div className={styles.wrap}>
+          <div className={styles.sTag}>Pricing</div>
+          <h2>Three Packages. One Goal.</h2>
+          <p className={styles.pkgIntro}>Same pricing across all platforms. The difference is how much of the placement support you want us to handle. All packages include the core training and weekend + evening batches.</p>
+          <div className={styles.pkgGrid}>
+            {packages.map(pkg => (
+              <div key={pkg.tier} className={`${styles.pkg} ${pkg.hot ? styles.pkgHot : ''}`}>
+                {pkg.hot && <div className={styles.pkgBadge}>Most Popular</div>}
+                <div className={styles.pkgTier}>{pkg.tier}</div>
+                <div className={styles.pkgPrice}>{pkg.price}</div>
+                <div className={styles.pkgFor}>{pkg.for}</div>
+                <ul className={styles.pkgFeats}>
+                  {pkg.yes.map(f => <li key={f} className={styles.featY}>{f}</li>)}
+                  {pkg.no.map(f  => <li key={f} className={styles.featN}>{f}</li>)}
+                </ul>
+                <Link href="/contact" className={`${styles.pkgBtn} ${pkg.hot ? styles.pkgBtnHot : ''}`}>{pkg.cta}</Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ 8. FAQ ══ */}
       <FaqSection />
 
-      {/* 7. TESTIMONIALS — dark navy, single-card slider, circular photo + gold star ring */}
-      <section style={{ background: '#0D1B3E', padding: '80px 0' }}>
-        <div className="container">
-          <h2 style={{
-            fontFamily: "'Poppins', sans-serif",
-            fontSize: 'clamp(1.6rem, 2.5vw, 2.2rem)',
-            fontWeight: 800,
-            color: '#FFFFFF',
-            textAlign: 'center',
-            marginBottom: 8,
-          }}>
-            What Our Students Say
-          </h2>
-          <p style={{ textAlign: 'center', color: 'rgba(255,255,255,0.5)', fontSize: '0.88rem', marginBottom: 48 }}>
-            Discover how our students transformed their careers through practical learning and expert guidance.
-          </p>
+      {/* ══ 9. COUNSELLING CTA ══ */}
+      <section className={styles.counselSec} id="counsel">
+        <div className={styles.wrap} style={{ textAlign: 'center' }}>
+          <div className={styles.sTagLight}>Free Counselling</div>
+          <h2 style={{ color: '#fff', marginBottom: 14 }}>Not Sure Where to Start?<br />Let&apos;s Figure It Out Together.</h2>
+          <p className={styles.counselSub}>A lot of students come to us not knowing which platform to choose. That&apos;s completely normal. Book a free call — we&apos;ll spend 20–30 minutes understanding your background and career goals, then tell you honestly which platform gives you the best shot. No pitch. No pressure.</p>
+          <div className={styles.counselPoints}>
+            {['We understand your background and goals','We walk you through which platforms fit your profile','We tell you honestly what salary and timeline to expect','You leave with a clear next step — whether you join us or not'].map(p => (
+              <span key={p} className={styles.cp}>{p}</span>
+            ))}
+          </div>
+          <Link href="/contact" className={styles.btnAccent}>Book Your Free Counselling Call →</Link>
+          <p className={styles.counselNote}>No pitch. No pressure. Just 30 minutes of honest career guidance.</p>
+        </div>
+      </section>
 
-          {/* Single testimonial card with prev/next */}
-          <div className="grid-testimonial">
-            {/* LEFT — quote + text */}
-            <div>
-              {/* Opening large quote */}
-              <div style={{
-                fontFamily: 'Georgia, serif',
-                fontSize: '5rem',
-                color: 'rgba(255,255,255,0.15)',
-                lineHeight: 0.8,
-                marginBottom: 16,
-                userSelect: 'none',
-              }}>&ldquo;&ldquo;</div>
-
-              <div style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 700, fontSize: '1.1rem', color: '#FFFFFF', marginBottom: 4 }}>
-                {t.name}
-              </div>
-              <div className="flex-center-mobile" style={{ display: 'flex', alignItems: 'center', gap: 20, marginBottom: 20 }}>
-                <span style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.6)', background: 'rgba(255,255,255,0.08)', padding: '3px 12px', borderRadius: 4 }}>{t.role}</span>
-                <span style={{ color: '#FFC107', fontSize: '1rem', letterSpacing: 2 }}>★★★★★</span>
-              </div>
-
-              <p style={{
-                fontSize: '0.92rem',
-                color: 'rgba(255,255,255,0.78)',
-                lineHeight: 1.85,
-                maxWidth: 560,
-              }}>
-                {t.text}
-              </p>
-
-              {/* Prev / Next arrows */}
-              <div className="flex-center-mobile" style={{ display: 'flex', gap: 10, marginTop: 28, alignItems: 'center' }}>
-                <button onClick={prev} style={{
-                  width: 36, height: 36, borderRadius: '50%',
-                  background: '#FFC107', border: 'none', cursor: 'pointer',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                }}>
-                  <ChevronLeft size={18} color="#0D1B3E" />
-                </button>
-                <button onClick={next} style={{
-                  width: 36, height: 36, borderRadius: '50%',
-                  background: '#FFC107', border: 'none', cursor: 'pointer',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                }}>
-                  <ChevronRight size={18} color="#0D1B3E" />
-                </button>
-              </div>
-
-              {/* Closing large quote (bottom-right) */}
-              <div style={{
-                fontFamily: 'Georgia, serif',
-                fontSize: '4rem',
-                color: 'rgba(255,255,255,0.15)',
-                lineHeight: 1,
-                marginTop: 16,
-                userSelect: 'none',
-                display: 'flex',
-                justifyContent: 'flex-end',
-                maxWidth: 560,
-              }}>&rdquo;&rdquo;</div>
-            </div>
-
-            {/* RIGHT — circular photo with gold star ring */}
-            <div className="flex-center-mobile" style={{ display: 'flex', justifyContent: 'center' }}>
-              <div style={{ position: 'relative', width: 280, height: 280, flexShrink: 0 }}>
-              {/* Gold star ring using CSS + positioned stars */}
-              {/* Outer gold circle */}
-              <div style={{
-                position: 'absolute',
-                top: '-20px', left: '-20px',
-                width: 320, height: 320,
-                borderRadius: '50%',
-                border: '2.5px solid #FFC107',
-              }} />
-              {/* Stars at N, E, S, W positions */}
-              {[
-                { top: -28, left: '50%', transform: 'translateX(-50%)' },
-                { right: -28, top: '50%', transform: 'translateY(-50%)' },
-                { bottom: -28, left: '50%', transform: 'translateX(-50%)' },
-                { left: -28, top: '50%', transform: 'translateY(-50%)' },
-              ].map((pos, i) => (
-                <div key={i} style={{
-                  position: 'absolute',
-                  ...pos,
-                  fontSize: '1.5rem',
-                  lineHeight: 1,
-                  zIndex: 2,
-                }}>⭐</div>
-              ))}
-              {/* Photo */}
-              <div style={{
-                width: 280, height: 280,
-                borderRadius: '50%',
-                overflow: 'hidden',
-                border: '4px solid #FFC107',
-              }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={t.img}
-                  alt={t.name}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' }}
-                />
-              </div>
-              </div>
+      {/* ══ 10. TESTIMONIALS ══ */}
+      <section className={styles.testSec}>
+        <div className={styles.wrap} style={{ textAlign: 'center' }}>
+          <div className={styles.sTag}>Student Success</div>
+          <h2>What Our Students Say</h2>
+          <p className={styles.sSub} style={{ margin: '0 auto 48px' }}>Discover how our students transformed their careers through practical learning.</p>
+          <div className={styles.testCard}>
+            <div className={styles.testAv} style={{ background: t.bg }}>{t.init}</div>
+            <p className={styles.testQuote}>&ldquo;{t.text}&rdquo;</p>
+            <div className={styles.testName}>{t.name}</div>
+            <div className={styles.testRole}>{t.role}</div>
+            <div className={styles.testNav}>
+              <button onClick={() => setActiveT(i => (i === 0 ? testimonials.length - 1 : i - 1))} className={styles.testBtn}><ChevronLeft size={18} /></button>
+              <button onClick={() => setActiveT(i => (i === testimonials.length - 1 ? 0 : i + 1))} className={styles.testBtn}><ChevronRight size={18} /></button>
             </div>
           </div>
         </div>
       </section>
-    </>
+
+      {/* ══ 11. FINAL CTA ══ */}
+      <section className={styles.finalSec}>
+        <div className={styles.wrap} style={{ textAlign: 'center' }}>
+          <div className={styles.sTag}>Start Today</div>
+          <h2>One Call. Clear Direction.<br />No Pressure.</h2>
+          <p className={styles.finalSub}>Whether you&apos;re a fresher, a professional ready to upskill, or someone switching careers — we&apos;ll give you an honest answer on your best path forward.</p>
+          <div className={styles.finalBtns}>
+            <Link href="/contact" className={styles.btnInk}>Book Free Counselling Call →</Link>
+            <a href="https://wa.me/918888888888" className={styles.btnGhost}>Chat on WhatsApp</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
   );
 }

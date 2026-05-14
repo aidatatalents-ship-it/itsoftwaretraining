@@ -43,7 +43,7 @@ export default function Navbar() {
             style={{ borderRadius: '8px', objectFit: 'contain' }}
           />
           <div className={styles.logoText}>
-            <span className={styles.logoName}>IT Software Training</span>
+            <span className={styles.logoName}>IT Software <span>Training</span></span>
             <span className={styles.logoSub}>BANGALORE&apos;S #1 IT INSTITUTE</span>
           </div>
         </Link>
