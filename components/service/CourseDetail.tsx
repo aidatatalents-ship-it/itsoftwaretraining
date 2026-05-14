@@ -11,6 +11,7 @@ import {
 import Image from 'next/image';
 import type { ServiceItem } from '@/data/services';
 import type { ServiceDetail } from '@/data/serviceDetails';
+import { PHONE_DISPLAY, PHONE_E164, WHATSAPP_BASE } from '@/data/contact';
 import styles from './CourseDetail.module.css';
 
 interface Props { service: ServiceItem; detail: ServiceDetail; }
@@ -24,7 +25,7 @@ const features = [
   { Icon: BookOpen,    title: 'Lifetime Access',       body: 'Attend any future batch free. Access recordings for life after completion.', color: '#0D1B3E' },
   { Icon: Clock,       title: 'Flexible Batches',      body: 'Weekday mornings, evenings, weekends and fast-track intensive options.', color: '#0D1B3E' },
   { Icon: BadgeCheck,  title: 'Certifications',        body: 'Dedicated exam prep for globally recognised certifications.', color: '#0D1B3E' },
-  { Icon: TrendingUp,  title: '98% Placement Rate',    body: 'Consistent placement record backed by real students and Google reviews.', color: '#0D1B3E' },
+  { Icon: TrendingUp,  title: '85%+ Placement Rate',    body: 'Consistent placement record backed by real students and Google reviews. 90-day active support until your offer letter is signed.', color: '#0D1B3E' },
   { Icon: Building2,   title: '6 Bangalore Centres',   body: 'Koramangala, Whitefield, HSR Layout, Marathahalli, Indiranagar, Electronic City.', color: '#0D1B3E' },
 ];
 
@@ -74,7 +75,7 @@ export default function CourseDetail({ service, detail }: Props) {
 
           {/* Heading */}
           <h1 className={styles.heroH1}>
-            Best <span>{service.name}</span> in Bangalore
+            {service.h1 || `${service.name} in Bangalore`}
           </h1>
           <p className={styles.heroDesc}>{service.description}</p>
 
@@ -85,7 +86,7 @@ export default function CourseDetail({ service, detail }: Props) {
               { Icon: Users,       val: service.students,   lbl: 'Students Enrolled',  color: '#28A745' },
               { Icon: IndianRupee, val: service.salary,     lbl: 'Average Salary',     color: '#FF6B35' },
               { Icon: Calendar,    val: service.nextBatch,  lbl: 'Next Batch',         color: '#DC3545' },
-              { Icon: Award,       val: '98%',              lbl: 'Placement Rate',     color: '#0284C7' },
+              { Icon: Award,       val: '85%+',             lbl: 'Placement Rate',     color: '#0284C7' },
             ].map(({ Icon, val, lbl, color }) => (
               <div key={lbl} className={styles.heroStat}>
                 <div className={styles.heroStatIcon}><Icon size={16} style={{ color: '#FFFFFF' }} /></div>
@@ -118,7 +119,7 @@ export default function CourseDetail({ service, detail }: Props) {
                   <GraduationCap size={16} /> Apply Now
                 </Link>
                 <a
-                  href={`https://wa.me/918888888888?text=Hi+I+am+interested+in+${encodeURIComponent(service.name)}`}
+                  href={`${WHATSAPP_BASE}?text=Hi+I+am+interested+in+${encodeURIComponent(service.name)}`}
                   target="_blank" rel="noopener"
                   className={styles.sideWaBtn}
                 >
@@ -131,7 +132,7 @@ export default function CourseDetail({ service, detail }: Props) {
                   { Icon: Clock,        key: 'Duration',     val: service.duration },
                   { Icon: Monitor,      key: 'Mode',         val: 'Classroom + Online' },
                   { Icon: Users,        key: 'Enrolled',     val: service.students },
-                  { Icon: Calendar,     key: 'Next Batch',   val: `${service.nextBatch} 2025` },
+                  { Icon: Calendar,     key: 'Next Batch',   val: service.nextBatch },
                   { Icon: IndianRupee,  key: 'Avg Salary',   val: service.salary },
                   { Icon: CreditCard,   key: 'EMI',          val: '0% Interest' },
                   { Icon: Award,        key: 'Certificate',  val: 'Industry Recognised' },
@@ -145,11 +146,11 @@ export default function CourseDetail({ service, detail }: Props) {
             </div>
 
             {/* Call card */}
-            <a href="tel:+918888888888" className={styles.sideCallCard}>
+            <a href={`tel:${PHONE_E164}`} className={styles.sideCallCard}>
               <div className={styles.sideCallIcon}><Phone size={16} style={{ color: 'var(--purple)' }} /></div>
               <div>
                 <div className={styles.sideCallLabel}>Talk to our counsellor</div>
-                <div className={styles.sideCallVal}>+91 88888 88888</div>
+                <div className={styles.sideCallVal}>{PHONE_DISPLAY}</div>
               </div>
             </a>
 

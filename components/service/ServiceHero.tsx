@@ -5,6 +5,7 @@ import {
   ArrowRight, Phone, MessageCircle, AlertTriangle,
 } from 'lucide-react';
 import type { ServiceItem } from '@/data/services';
+import { PHONE_DISPLAY, PHONE_E164, WHATSAPP_BASE, HOURS } from '@/data/contact';
 import styles from './ServiceHero.module.css';
 
 interface Props { service: ServiceItem; }
@@ -30,6 +31,9 @@ const highlights = (s: ServiceItem) => [
 ];
 
 export default function ServiceHero({ service }: Props) {
+  const h1Parts = (service.h1 || `${service.name} in Bangalore`).split('—');
+  const h1Main  = h1Parts[0].trim();
+  const h1Sub   = h1Parts[1]?.trim();
   return (
     <section className={styles.hero}>
       <div className="container">
@@ -51,8 +55,8 @@ export default function ServiceHero({ service }: Props) {
             </div>
 
             <h1 className={styles.h1}>
-              Best <span style={{ color: 'var(--purple)' }}>{service.name}</span><br />
-              in Bangalore
+              <span style={{ color: 'var(--purple)' }}>{h1Main}</span>
+              {h1Sub && <><br /><span style={{ fontSize: '0.6em', opacity: 0.75, fontWeight: 500 }}>{h1Sub}</span></>}
             </h1>
 
             <p className={styles.tagline}>{service.tagline}</p>
@@ -90,7 +94,7 @@ export default function ServiceHero({ service }: Props) {
                 Book Free Demo <ArrowRight size={16} />
               </Link>
               <a
-                href={`https://wa.me/918888888888?text=Hi+I+am+interested+in+${encodeURIComponent(service.name)}+in+Bangalore`}
+                href={`${WHATSAPP_BASE}?text=Hi+I+am+interested+in+${encodeURIComponent(service.name)}+training+in+Bangalore`}
                 target="_blank" rel="noopener"
                 className="btn-wa"
               >
@@ -100,8 +104,8 @@ export default function ServiceHero({ service }: Props) {
 
             <p style={{ fontSize: '.8rem', color: 'rgba(255,255,255,0.55)', display: 'flex', alignItems: 'center', gap: 6 }}>
               <Phone size={13} style={{ color: '#7DD3FC' }} />
-              <a href="tel:+918888888888" style={{ color: '#7DD3FC', fontWeight: 700, textDecoration: 'none' }}>+91 88888 88888</a>
-              <span>· Mon–Sat, 9am–8pm</span>
+              <a href={`tel:${PHONE_E164}`} style={{ color: '#7DD3FC', fontWeight: 700, textDecoration: 'none' }}>{PHONE_DISPLAY}</a>
+              <span>· {HOURS}</span>
             </p>
           </div>
 

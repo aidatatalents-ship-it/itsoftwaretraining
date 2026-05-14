@@ -15,16 +15,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const service = services.find((s) => s.slug === slug);
   if (!service) return {};
   return {
-    title: `Best ${service.name} in Bangalore | Nexus Training Institute`,
-    description: `Join Bangalore's #1 ${service.name} program. ${service.description} 100% placement support, expert trainers, live projects, real certifications. Book free demo.`,
+    title: `${service.h1 || `${service.name} Training in Bangalore`} | IT Software Training`,
+    description: `${service.description} Expert-led ${service.short} training in Bangalore with live projects, industry certifications, and 100% placement support. Book a free demo today.`,
     keywords: [
       `${service.short} training Bangalore`,
       `${service.short} course Bangalore`,
-      `best ${service.short} institute Bangalore`,
-      `${service.short} training institute Bangalore`,
+      `best ${service.short} training institute Bangalore`,
+      `${service.short} certification Bangalore`,
+      `${service.short} training fees Bangalore`,
     ],
     openGraph: {
-      title: `Best ${service.name} in Bangalore — Nexus Training`,
+      title: service.h1 || `Best ${service.name} in Bangalore`,
       description: service.description,
       images: [service.img],
     },

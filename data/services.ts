@@ -22,6 +22,8 @@ export interface ServiceItem {
   nextBatch: string;
   category: string;
   modules: number;
+  /** Entity-rich H1 for the service page — overrides default heading */
+  h1?: string;
 }
 
 export const services: ServiceItem[] = [
@@ -44,9 +46,10 @@ export const services: ServiceItem[] = [
     demand: 'Very High',
     rating: '4.9',
     students: '1,200+',
-    nextBatch: '15 Jun',
+    nextBatch: 'Enquire now',
     category: 'recommended',
     modules: 6,
+    h1: 'Salesforce Training in Bangalore — Admin, Developer, LWC, CPQ, Marketing Cloud & Architect Certifications',
   },
   {
     slug: 'sap',
@@ -67,9 +70,10 @@ export const services: ServiceItem[] = [
     demand: 'High',
     rating: '4.8',
     students: '800+',
-    nextBatch: '12 Jun',
+    nextBatch: 'Enquire now',
     category: 'popular',
     modules: 7,
+    h1: 'SAP Training in Bangalore — FICO, MM, SD, ABAP, S/4HANA & SAP Activate Certification',
   },
   {
     slug: 'cybersecurity',
@@ -90,9 +94,10 @@ export const services: ServiceItem[] = [
     demand: 'Critical',
     rating: '4.9',
     students: '650+',
-    nextBatch: '18 Jun',
+    nextBatch: 'Enquire now',
     category: 'recommended',
     modules: 6,
+    h1: 'Cybersecurity Training in Bangalore — CEH v12, CompTIA Security+, Ethical Hacking, VAPT & SOC Analyst',
   },
   {
     slug: 'python-data-science',
@@ -113,9 +118,10 @@ export const services: ServiceItem[] = [
     demand: 'Very High',
     rating: '4.9',
     students: '1,500+',
-    nextBatch: '10 Jun',
+    nextBatch: 'Enquire now',
     category: 'hot',
     modules: 8,
+    h1: 'Python & Data Science Training in Bangalore — AI, Machine Learning, Deep Learning, GenAI & Data Engineering',
   },
   {
     slug: 'cloud',
@@ -136,9 +142,10 @@ export const services: ServiceItem[] = [
     demand: 'Very High',
     rating: '4.9',
     students: '2,000+',
-    nextBatch: '8 Jun',
+    nextBatch: 'Enquire now',
     category: 'hot',
     modules: 7,
+    h1: 'AWS & Azure Cloud Training in Bangalore — Solutions Architect, Cloud Engineer, AZ-104 & DevOps Certification',
   },
   {
     slug: 'power-bi',
@@ -159,9 +166,10 @@ export const services: ServiceItem[] = [
     demand: 'High',
     rating: '4.8',
     students: '900+',
-    nextBatch: '20 Jun',
+    nextBatch: 'Enquire now',
     category: 'popular',
     modules: 5,
+    h1: 'Power BI Training in Bangalore — DAX, Power Query, Tableau, SQL & Microsoft PL-300 Certification',
   },
   {
     slug: 'devops',
@@ -182,9 +190,10 @@ export const services: ServiceItem[] = [
     demand: 'Very High',
     rating: '4.9',
     students: '1,100+',
-    nextBatch: '14 Jun',
+    nextBatch: 'Enquire now',
     category: 'recommended',
     modules: 7,
+    h1: 'DevOps Training in Bangalore — Docker, Kubernetes, Jenkins, Terraform, Ansible & AWS DevOps Certification',
   },
   {
     slug: 'salesforce-admin',
@@ -205,9 +214,10 @@ export const services: ServiceItem[] = [
     demand: 'Very High',
     rating: '4.9',
     students: '800+',
-    nextBatch: '16 Jun',
+    nextBatch: 'Enquire now',
     category: 'recommended',
     modules: 5,
+    h1: 'Salesforce Administrator Training in Bangalore — ADM-201 Exam Prep, Live CRM Projects & Placement Support',
   },
   {
     slug: 'salesforce-developer',
@@ -228,9 +238,10 @@ export const services: ServiceItem[] = [
     demand: 'Very High',
     rating: '4.8',
     students: '600+',
-    nextBatch: '18 Jun',
+    nextBatch: 'Enquire now',
     category: 'recommended',
     modules: 5,
+    h1: 'Salesforce Developer Training in Bangalore — Apex, Triggers, REST API & Platform Developer I (PD1) Certification',
   },
   {
     slug: 'salesforce-lightning',
@@ -251,9 +262,10 @@ export const services: ServiceItem[] = [
     demand: 'High',
     rating: '4.8',
     students: '400+',
-    nextBatch: '20 Jun',
+    nextBatch: 'Enquire now',
     category: 'recommended',
     modules: 5,
+    h1: 'Salesforce Lightning (Aura) Training in Bangalore — SLDS, Component Architecture & App Builder Certification',
   },
   {
     slug: 'salesforce-lwc',
@@ -274,9 +286,10 @@ export const services: ServiceItem[] = [
     demand: 'Very High',
     rating: '4.9',
     students: '500+',
-    nextBatch: '22 Jun',
+    nextBatch: 'Enquire now',
     category: 'recommended',
     modules: 5,
+    h1: 'Salesforce LWC Training in Bangalore — Lightning Web Components, Modern JavaScript & JavaScript Developer I Certification',
   },
   {
     slug: 'salesforce-marketing-cloud',
@@ -297,9 +310,10 @@ export const services: ServiceItem[] = [
     demand: 'High',
     rating: '4.8',
     students: '350+',
-    nextBatch: '24 Jun',
+    nextBatch: 'Enquire now',
     category: 'popular',
     modules: 5,
+    h1: 'Salesforce Marketing Cloud Training in Bangalore — Journey Builder, AMPscript, Automation Studio & Email Specialist Certification',
   },
   {
     slug: 'salesforce-vlocity',
@@ -320,9 +334,10 @@ export const services: ServiceItem[] = [
     demand: 'High',
     rating: '4.9',
     students: '200+',
-    nextBatch: '26 Jun',
+    nextBatch: 'Enquire now',
     category: 'popular',
     modules: 5,
+    h1: 'Salesforce Vlocity / OmniStudio Training in Bangalore — DataRaptors, OmniScripts & OmniStudio Developer Certification',
   },
   {
     slug: 'salesforce-cpq',
@@ -343,9 +358,10 @@ export const services: ServiceItem[] = [
     demand: 'High',
     rating: '4.8',
     students: '300+',
-    nextBatch: '28 Jun',
+    nextBatch: 'Enquire now',
     category: 'popular',
     modules: 5,
+    h1: 'Salesforce CPQ Training in Bangalore — Product Configuration, Pricing Rules, Discount Schedules & CPQ Specialist Certification',
   },
   {
     slug: 'salesforce-crm-analytics',
@@ -366,9 +382,9 @@ export const services: ServiceItem[] = [
     demand: 'Growing',
     rating: '4.7',
     students: '250+',
-    nextBatch: '30 Jun',
+    h1: 'Salesforce CRM Analytics Training in Bangalore — Tableau CRM, SAQL, Einstein Discovery & Analytics Consultant Certification',
+    nextBatch: 'Enquire now',
     category: 'popular',
     modules: 5,
   },
 ];
-

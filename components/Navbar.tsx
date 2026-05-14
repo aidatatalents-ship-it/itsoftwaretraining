@@ -17,11 +17,11 @@ const services = [
 ];
 
 const navLinks = [
-  { label: 'Home',     href: '/' },
-  { label: 'Programs', href: '/services/salesforce' },
-  { label: 'Trainers', href: '/placements' },
-  { label: 'About',    href: '/about' },
-  { label: 'Contact',  href: '/contact' },
+  { label: 'Home',        href: '/' },
+  { label: 'All Courses', href: '/services/salesforce' },
+  { label: 'Placements',  href: '/placements' },
+  { label: 'About',       href: '/about' },
+  { label: 'Contact',     href: '/contact' },
 ];
 
 export default function Navbar() {
@@ -78,10 +78,10 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* ── Sign In CTA ── */}
+        {/* ── Enrol CTA ── */}
         <div className={styles.ctas}>
           <Link href="/contact" className={styles.signIn}>
-            Sign In
+            Book Free Demo
           </Link>
           {/* Burger */}
           <button className={styles.burger} onClick={() => setMenuOpen(m => !m)} aria-label="Menu">
@@ -103,7 +103,7 @@ export default function Navbar() {
           ))}
           <div style={{ padding: '12px 16px' }}>
             <Link href="/contact" className={styles.signIn} style={{ display: 'block', textAlign: 'center', borderRadius: 30 }} onClick={() => setMenuOpen(false)}>
-              Sign In
+              Book Free Demo
             </Link>
           </div>
         </div>

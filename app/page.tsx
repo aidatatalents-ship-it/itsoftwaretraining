@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import ServicesGrid from '@/components/home/ServicesGrid';
 import FaqSection from '@/components/home/FaqSection';
 import styles from './HomePage.module.css';
+import { WHATSAPP_BASE } from '@/data/contact';
 
 /* ── PLACEMENT DATA ── */
 const placements = [
@@ -116,10 +117,10 @@ export default function HomePage() {
               Bangalore&apos;s Future-Proof IT Career Platform
             </div>
             <h1 className={styles.heroH1}>
-              The IT Skills<br />That Pay More.<br />Stay in Demand.<br />And Actually<br />
-              <em>Get You Hired.</em>
+              Salesforce, SAP, Python,<br />Cloud &amp; DevOps Training<br />in Bangalore —<br />
+              <em>Built for the Hiring Market.</em>
             </h1>
-            <p className={styles.heroDesc}>We train you on the platforms companies are desperate to hire for — right now and for the next 10 years.</p>
+            <p className={styles.heroDesc}>Learn from working professionals. Build real-world projects. Get placed in 60 days or keep learning free.</p>
             <div className={styles.heroPlatforms}>
               {['Salesforce','SAP','Cybersecurity','Python + AI','AWS + Azure','Power BI','DevOps'].map(p => (
                 <span key={p} className={styles.hp}>{p}</span>
@@ -185,7 +186,7 @@ export default function HomePage() {
 
       {/* ══ 2. STATS BAR ══ */}
       <div className={styles.statsBar}>
-        {[['85%+','Placement Rate'],['₹9.8L','Average Package'],['7','High-Demand Platforms'],['90 Days','Post-Course Support']].map(([n, l]) => (
+        {[['1,200+','Students Trained'],['4.9★','Google Rating'],['₹4L → ₹18L','Avg Salary Jump'],['60 Days','Avg Time to Placement']].map(([n, l]) => (
           <div key={l} className={styles.stat}>
             <div className={styles.statN}>{n}</div>
             <div className={styles.statL}>{l}</div>
@@ -256,7 +257,7 @@ export default function HomePage() {
         <div className={styles.wrap}>
           <div className={styles.sTag}>Placement Support</div>
           <h2>We Don&apos;t Stop When the Course Ends.</h2>
-          <p className={styles.sSub}>Getting placed takes more than a certificate. Here&apos;s exactly what we do for every student — step by step.</p>
+          <p className={styles.sSub}>Your WhatsApp group stays active for 2 years after course completion. Our alumni have re-used our mock interview sessions up to 3 times when switching jobs. This isn&apos;t a transaction — it&apos;s a long-term career partnership. Here&apos;s exactly what we do for every student — step by step.</p>
           <div className={styles.placeGrid}>
             {placementSteps.map(s => (
               <div key={s.n} className={`${styles.psCard} ${s.highlight ? styles.psHighlight : ''}`}>
@@ -339,7 +340,7 @@ export default function HomePage() {
           <p className={styles.finalSub}>Whether you&apos;re a fresher, a professional ready to upskill, or someone switching careers — we&apos;ll give you an honest answer on your best path forward.</p>
           <div className={styles.finalBtns}>
             <Link href="/contact" className={styles.btnInk}>Book Free Counselling Call →</Link>
-            <a href="https://wa.me/918888888888" className={styles.btnGhost}>Chat on WhatsApp</a>
+            <a href={WHATSAPP_BASE} className={styles.btnGhost}>Chat on WhatsApp</a>
           </div>
         </div>
       </section>
