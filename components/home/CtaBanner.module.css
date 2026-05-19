@@ -1,15 +1,17 @@
 .section {
   position: relative;
-  background: linear-gradient(135deg, #1E0A4C 0%, #0F0A2A 40%, #0A1628 100%);
+  background: linear-gradient(135deg, #070F28 0%, #0D1B3E 40%, #1B3369 100%);
   padding: 80px 0;
   overflow: hidden;
 }
+
 .overlay {
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle at 20% 50%, rgba(107,33,232,0.3) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(37,99,235,0.2) 0%, transparent 50%);
+    radial-gradient(circle at 20% 50%, rgba(21,101,192,0.25) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(37,99,235,0.18) 0%, transparent 50%),
+    radial-gradient(circle at 60% 80%, rgba(242,101,34,0.08) 0%, transparent 40%);
   pointer-events: none;
 }
 
@@ -26,23 +28,33 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  font-family: 'Inter', sans-serif;
   font-size: 0.82rem;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.65);
 }
 
 .h2 {
+  font-family: 'Fraunces', serif;
   font-size: clamp(1.8rem, 3.5vw, 2.75rem);
   font-weight: 900;
   color: #fff;
-  line-height: 1.15;
+  line-height: 1.1;
+  letter-spacing: -1px;
 }
 
-.sub { color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.7; max-width: 480px; }
+.sub {
+  font-family: 'Inter', sans-serif;
+  color: rgba(255,255,255,0.60);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  max-width: 480px;
+}
 
 .ctas { display: flex; gap: 12px; flex-wrap: wrap; }
 
 .phoneLink {
-  color: rgba(255,255,255,0.6);
+  font-family: 'Inter', sans-serif;
+  color: rgba(255,255,255,0.5);
   text-decoration: none;
   font-size: 0.85rem;
   transition: color 0.2s;
@@ -52,25 +64,51 @@
 /* Offer Card */
 .offerCard {
   background: #fff;
-  border-radius: var(--r-2xl);
+  border-radius: 20px;
   padding: 32px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.45);
 }
 
 .offerTag {
   display: inline-block;
   padding: 5px 14px;
-  background: linear-gradient(135deg, #F97316, #EF4444);
+  background: linear-gradient(135deg, #F26522 0%, #FF8A50 100%);
   color: #fff;
-  border-radius: var(--r-full);
-  font-size: 0.75rem;
+  border-radius: 999px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
   font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   margin-bottom: 14px;
 }
-.offerTitle { font-size: 1.15rem; font-weight: 800; color: var(--text-dark); margin-bottom: 16px; }
 
-.offerList { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
-.offerList li { display: flex; align-items: center; gap: 10px; font-size: 0.88rem; color: var(--text-body); }
+.offerTitle {
+  font-family: 'Fraunces', serif;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--ink);
+  margin-bottom: 16px;
+  letter-spacing: -0.3px;
+}
+
+.offerList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.offerList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  color: var(--t-body);
+}
+
 .checkIcon {
   width: 20px; height: 20px;
   background: #DCFCE7;
@@ -88,11 +126,13 @@
   padding: 10px 14px;
   background: #FEF2F2;
   border: 1px solid #FECACA;
-  border-radius: var(--r-md);
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
   font-size: 0.82rem;
   color: #DC2626;
 }
 .seatsLeft strong { font-weight: 800; }
 
-@media (max-width: 1024px) { .inner { grid-template-columns: 1fr; gap: 40px; } .right { max-width: 480px; } }
-@media (max-width: 640px) { .ctas { flex-direction: column; } .ctas a { width: 100%; } }
+@media (max-width: 1024px) { .inner { grid-template-columns: 1fr; gap: 40px; } }
+@media (max-width: 640px) { .ctas { flex-direction: column; } .ctas a { width: 100%; justify-content: center; } }
+

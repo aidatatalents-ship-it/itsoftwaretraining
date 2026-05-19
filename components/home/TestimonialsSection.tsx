@@ -15,7 +15,7 @@ export default function TestimonialsSection() {
       <div className="container">
         <div className="section-header">
           <div className="badge">Success Stories</div>
-          <h2>Our Students, <span className="grad-text">Their Success</span></h2>
+          <h2>Our Students, <span style={{ color: '#F26522', fontStyle: 'italic' }}>Their Success</span></h2>
           <p>Real stories from Bangalore alumni now working at the city&apos;s top IT companies.</p>
           <div className="divider" />
         </div>

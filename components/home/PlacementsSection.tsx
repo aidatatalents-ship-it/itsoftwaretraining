@@ -13,11 +13,11 @@ const placements = [
 
 export default function PlacementsSection() {
   return (
-    <section style={{ padding: '80px 0', background: 'var(--bg-light)' }}>
+    <section style={{ padding: '80px 0', background: '#F8F9FC' }}>
       <div className="container">
         <div className="section-header">
           <div className="badge">Placement Record</div>
-          <h2>10,000+ Careers at <span className="grad-text">Top Companies</span></h2>
+          <h2>10,000+ Careers at <span style={{ color: '#F26522', fontStyle: 'italic' }}>Top Companies</span></h2>
           <p>Our graduates power Bangalore&apos;s biggest IT firms. Your future employer is very likely on this list.</p>
           <div className="divider" />
         </div>

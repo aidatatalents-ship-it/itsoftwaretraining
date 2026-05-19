@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -17,29 +17,35 @@ const services = [
 ];
 
 const navLinks = [
-  { label: 'Home',        href: '/' },
-  { label: 'All Courses', href: '/services/salesforce' },
-  { label: 'Placements',  href: '/placements' },
-  { label: 'About',       href: '/about' },
-  { label: 'Contact',     href: '/contact' },
+  { label: 'Home',       href: '/' },
+  { label: 'Placements', href: '/placements' },
+  { label: 'About',      href: '/about' },
+  { label: 'Contact',    href: '/contact' },
 ];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropOpen, setDropOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const path = usePathname();
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
-    <nav className={styles.nav}>
-      <div className={`container ${styles.row}`}>
+    <nav className={`${styles.nav} ${scrolled ? styles.navScrolled : ''}`}>
+      <div className={styles.row}>
 
         {/* ── Logo ── */}
         <Link href="/" className={styles.logo}>
           <Image
             src="/it-software-logo.png"
             alt="IT Software Training Logo"
-            width={40}
-            height={40}
+            width={38}
+            height={38}
             style={{ borderRadius: '8px', objectFit: 'contain' }}
           />
           <div className={styles.logoText}>
@@ -56,7 +62,8 @@ export default function Navbar() {
             </Link>
           </li>
           {/* Courses dropdown */}
-          <li className={styles.dropWrap}
+          <li
+            className={styles.dropWrap}
             onMouseEnter={() => setDropOpen(true)}
             onMouseLeave={() => setDropOpen(false)}
           >
@@ -81,11 +88,11 @@ export default function Navbar() {
         {/* ── Enrol CTA ── */}
         <div className={styles.ctas}>
           <Link href="/contact" className={styles.signIn}>
-            Book Free Demo
+            Free Demo →
           </Link>
           {/* Burger */}
           <button className={styles.burger} onClick={() => setMenuOpen(m => !m)} aria-label="Menu">
-            {menuOpen ? <X size={22} color="white" /> : <Menu size={22} color="white" />}
+            {menuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </div>
@@ -98,12 +105,13 @@ export default function Navbar() {
           {services.map(s => (
             <Link key={s.href} href={s.href} className={styles.mobLink} onClick={() => setMenuOpen(false)}>{s.label}</Link>
           ))}
+          <div className={styles.mobSec}>More</div>
           {navLinks.slice(1).map(l => (
             <Link key={l.href} href={l.href} className={styles.mobLink} onClick={() => setMenuOpen(false)}>{l.label}</Link>
           ))}
           <div style={{ padding: '12px 16px' }}>
-            <Link href="/contact" className={styles.signIn} style={{ display: 'block', textAlign: 'center', borderRadius: 30 }} onClick={() => setMenuOpen(false)}>
-              Book Free Demo
+            <Link href="/contact" className={styles.signIn} style={{ display: 'block', textAlign: 'center' }} onClick={() => setMenuOpen(false)}>
+              Book Free Demo →
             </Link>
           </div>
         </div>

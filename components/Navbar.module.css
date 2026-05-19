@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════
-   NAVBAR — SkillForge style
-   Frosted light bg, ink links, orange CTA
+   NAVBAR — Premium v2
+   Glassmorphic · scroll-aware · ink links
 ═══════════════════════════════════════════ */
 
 .nav {
@@ -9,18 +9,27 @@
   left: 0;
   right: 0;
   z-index: 200;
-  background: rgba(250, 248, 244, 0.96);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
-  padding: 0 5%;
+  background: rgba(11, 26, 61, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navScrolled {
+  background: rgba(11, 26, 61, 0.97);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
 .row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 62px;
+  height: 68px;
   gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 /* ── LOGO ── */
@@ -41,22 +50,22 @@
   font-family: 'Fraunces', serif;
   font-size: 1.1rem;
   font-weight: 900;
-  color: var(--ink);
+  color: #FFFFFF;
   line-height: 1.15;
   letter-spacing: -0.3px;
 }
 
 .logoName span {
-  color: var(--accent);
+  color: #F26522;
 }
 
 .logoSub {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.55rem;
-  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.52rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--muted);
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 /* ── NAV LINKS ── */
@@ -75,27 +84,29 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  padding: 6px 12px;
-  color: var(--muted);
+  padding: 7px 13px;
+  color: rgba(255, 255, 255, 0.65);
   text-decoration: none;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
-  border-radius: 6px;
+  border-radius: 7px;
   transition: color 0.2s, background 0.2s;
   background: none;
   border: none;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .link:hover {
-  color: var(--ink);
-  background: var(--border);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .active {
-  color: var(--ink) !important;
+  color: #fff !important;
   font-weight: 600;
+  background: rgba(255, 255, 255, 0.10) !important;
 }
 
 /* ── DROPDOWN ── */
@@ -103,22 +114,22 @@
 
 .drop {
   position: absolute;
-  top: calc(100% + 10px);
+  top: calc(100% + 12px);
   left: 50%;
   transform: translateX(-50%) translateY(-8px);
-  width: 260px;
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 12px;
+  width: 240px;
+  background: #0D1B3E;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 14px;
   padding: 8px;
-  box-shadow: 0 12px 40px rgba(27,51,105,0.14);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.18s ease, transform 0.18s ease;
   z-index: 100;
 }
 
-.dropWrap:hover .drop {
+.dropOpen {
   opacity: 1;
   pointer-events: auto;
   transform: translateX(-50%) translateY(0);
@@ -126,35 +137,21 @@
 
 .dropItem {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
-  padding: 10px 12px;
+  padding: 10px 14px;
   border-radius: 8px;
   text-decoration: none;
-  transition: background 0.15s;
+  color: rgba(255, 255, 255, 0.70);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: background 0.15s, color 0.15s;
 }
 
-.dropItem:hover { background: var(--cream); }
-
-.dropIcon {
-  font-size: 1.2rem;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
-
-.dropTitle {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.83rem;
-  font-weight: 600;
-  color: var(--ink);
-  margin-bottom: 2px;
-}
-
-.dropSub {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.72rem;
-  color: var(--muted);
-  line-height: 1.4;
+.dropItem:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
 }
 
 /* ── CTAs ── */
@@ -168,71 +165,89 @@
 .signIn {
   display: inline-flex;
   align-items: center;
-  padding: 8px 20px;
-  background: var(--ink);
+  padding: 9px 20px;
+  background: #F26522;
   color: #fff;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
-  font-weight: 600;
-  border-radius: 6px;
+  font-weight: 700;
+  border-radius: 8px;
   text-decoration: none;
   white-space: nowrap;
-  transition: background 0.2s, transform 0.15s;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(242, 101, 34, 0.4);
+  letter-spacing: 0.01em;
 }
 
 .signIn:hover {
-  background: var(--accent);
+  background: #D4531A;
   transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(242, 101, 34, 0.5);
 }
 
 /* ── BURGER ── */
 .burger {
   display: none;
-  background: none;
-  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
   cursor: pointer;
-  padding: 4px;
-  color: var(--ink);
+  padding: 7px;
+  color: #fff;
+  transition: background 0.2s;
+}
+.burger:hover {
+  background: rgba(255, 255, 255, 0.14);
 }
 
 /* ── MOBILE MENU ── */
 .mob {
   position: fixed;
-  top: 62px;
+  top: 68px;
   left: 0;
   right: 0;
-  background: rgba(250, 248, 244, 0.98);
+  background: rgba(11, 26, 61, 0.98);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   padding: 8px 0 16px;
   display: flex;
   flex-direction: column;
   z-index: 199;
-  box-shadow: 0 12px 40px rgba(27,51,105,0.12);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.4);
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .mobLink {
   display: block;
-  padding: 10px 24px;
-  color: var(--ink);
+  padding: 11px 24px;
+  color: rgba(255, 255, 255, 0.75);
   text-decoration: none;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
-  transition: background 0.15s;
+  transition: background 0.15s, color 0.15s;
 }
 
-.mobLink:hover { background: var(--cream); }
+.mobLink:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
 
 .mobSec {
-  padding: 8px 24px 4px;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.7rem;
+  padding: 10px 24px 4px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: var(--muted);
-  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.30);
+  margin-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 /* ── Responsive ── */
@@ -244,4 +259,6 @@
 @media (max-width: 600px) {
   .logoSub { display: none; }
   .logoName { font-size: 0.95rem; }
+  .row { height: 60px; }
+  .mob { top: 60px; }
 }

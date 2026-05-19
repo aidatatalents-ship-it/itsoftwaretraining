@@ -4,6 +4,7 @@
   gap: 16px;
   margin-bottom: 40px;
 }
+
 .highlight {
   display: flex;
   flex-direction: column;
@@ -13,27 +14,45 @@
   padding: 28px 12px;
   background: #fff;
   border: 1px solid var(--border);
-  border-radius: var(--r-lg);
-  box-shadow: var(--shadow-card);
-  transition: all 0.3s;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(27, 51, 105, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.highlight:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
-.hIcon { font-size: 1.8rem; }
+
+.highlight:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(27, 51, 105, 0.14);
+}
+
+.hIcon {
+  font-size: 1.8rem;
+}
+
 .hVal {
+  font-family: 'Fraunces', serif;
   font-size: 1.75rem;
   font-weight: 900;
-  background: var(--brand-grad);
+  letter-spacing: -1px;
+  color: var(--ink);
+  background: linear-gradient(135deg, #1B3369 0%, #1565C0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.hLbl { font-size: 0.78rem; color: var(--text-muted); font-weight: 500; }
+
+.hLbl {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  color: var(--t-muted);
+  font-weight: 500;
+}
 
 .companies {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;
 }
+
 .company {
   display: flex;
   align-items: center;
@@ -41,28 +60,49 @@
   padding: 16px 20px;
   background: #fff;
   border: 1px solid var(--border);
-  border-radius: var(--r-md);
-  box-shadow: var(--shadow-sm);
-  transition: all 0.3s;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(27, 51, 105, 0.05);
+  transition: all 0.25s ease;
 }
-.company:hover { border-color: var(--border-card); transform: translateX(4px); box-shadow: var(--shadow-md); }
+
+.company:hover {
+  border-color: rgba(27, 51, 105, 0.25);
+  transform: translateX(4px);
+  box-shadow: 0 6px 20px rgba(27, 51, 105, 0.12);
+}
+
 .cLogo {
-  width: 44px; height: 44px;
+  width: 46px;
+  height: 46px;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Inter', sans-serif;
   font-size: 0.7rem;
   font-weight: 800;
   flex-shrink: 0;
 }
-.cName { font-size: 0.9rem; font-weight: 700; color: var(--text-dark); }
-.cCount { font-size: 0.75rem; font-weight: 600; margin-top: 2px; }
+
+.cName {
+  font-family: 'Fraunces', serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.cCount {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: 2px;
+}
 
 @media (max-width: 1024px) {
   .highlights { grid-template-columns: repeat(2, 1fr); }
-  .companies { grid-template-columns: repeat(2, 1fr); }
+  .companies  { grid-template-columns: repeat(2, 1fr); }
 }
+
 @media (max-width: 640px) {
   .companies { grid-template-columns: 1fr; }
 }

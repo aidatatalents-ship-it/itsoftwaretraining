@@ -4,44 +4,144 @@
   gap: 20px;
   margin-bottom: 40px;
 }
+
 .card {
-  background: var(--bg-light);
-  border: 1px solid var(--border);
-  border-radius: var(--r-lg);
-  padding: 24px;
+  background: #fff;
+  border: 1px solid #EAEDF4;
+  border-radius: 16px;
+  padding: 26px;
   display: flex;
   flex-direction: column;
   gap: 14px;
-  transition: all 0.3s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(27, 51, 105, 0.05);
 }
-.card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); border-color: var(--border-card); background: #fff; }
 
-.topRow { display: flex; align-items: center; gap: 12px; }
-.avatar { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem; flex-shrink: 0; }
-.name { font-size: 0.9rem; font-weight: 700; color: var(--text-dark); }
-.role { font-size: 0.72rem; color: var(--text-muted); margin-bottom: 2px; }
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(27, 51, 105, 0.14);
+  border-color: rgba(27, 51, 105, 0.18);
+  background: #fff;
+}
 
-.text { color: var(--text-body); font-size: 0.875rem; line-height: 1.7; font-style: italic; flex: 1; }
+.topRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
-.footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-.coursePill { font-size: 0.7rem; font-weight: 700; padding: 3px 10px; border-radius: var(--r-full); }
-.package { font-size: 0.75rem; font-weight: 700; color: #059669; }
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
 
+.name {
+  font-family: 'Fraunces', serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.role {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  color: var(--t-muted);
+  margin-bottom: 3px;
+}
+
+.text {
+  color: #374151;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  font-style: italic;
+  flex: 1;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid #F0F2F8;
+}
+
+.coursePill {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.package {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #059669;
+  background: #EAF5EE;
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+
+/* Google rating box */
 .googleBox {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 28px 36px;
-  background: linear-gradient(135deg, #FFFBEB, #FEF3C7);
-  border: 1px solid #FCD34D;
-  border-radius: var(--r-xl);
+  padding: 32px 44px;
+  background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+  border: 1.5px solid #FCD34D;
+  border-radius: 20px;
   flex-wrap: wrap;
   gap: 16px;
+  box-shadow: 0 4px 20px rgba(252, 211, 77, 0.2);
 }
-.googleStars { display: flex; align-items: center; gap: 16px; }
-.googleRating { font-size: 2rem; font-weight: 900; color: var(--text-dark); }
-.googleCount { font-size: 0.85rem; color: var(--text-muted); }
-.googleVerified { font-size: 0.85rem; font-weight: 600; color: #059669; }
 
-@media (max-width: 1024px) { .grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 640px) { .grid { grid-template-columns: 1fr; } .googleBox { flex-direction: column; text-align: center; padding: 20px; } }
+.googleStars {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.googleRating {
+  font-family: 'Fraunces', serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--ink);
+  letter-spacing: -1px;
+}
+
+.googleCount {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: var(--t-muted);
+  margin-top: 2px;
+}
+
+.googleVerified {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #059669;
+}
+
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr; }
+  .googleBox { flex-direction: column; text-align: center; padding: 24px 20px; }
+  .googleStars { flex-direction: column; gap: 8px; }
+}

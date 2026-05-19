@@ -104,7 +104,7 @@ export default function HomePage() {
   const t = testimonials[activeT];
 
   return (
-    <main style={{ paddingTop: 62 }}>
+    <main style={{ paddingTop: 68 }}>
 
       {/* ══ 1. HERO ══ */}
       <div className={styles.hero}>

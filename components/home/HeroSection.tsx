@@ -1,8 +1,6 @@
 'use client';
-import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { CheckCircle2, Users, Award } from 'lucide-react';
 import styles from './HeroSection.module.css';
 
 export default function HeroSection() {
@@ -12,16 +10,52 @@ export default function HeroSection() {
 
         {/* ── LEFT ── */}
         <div className={styles.left}>
+
+          {/* Top badge */}
+          <div className={styles.heroBadge}>
+            <span className={styles.badgeDot} />
+            <span className={styles.badgeText}>Bangalore&apos;s #1 IT Training Institute</span>
+          </div>
+
           <h1 className={styles.h1}>
             Build Skills<br />
-            That Get You Hired
+            That Get You{' '}
+            <em className={styles.h1Accent}>Hired</em>
           </h1>
+
           <p className={styles.sub}>
-            Industry-aligned IT courses with practical projects and certification.
+            Industry-aligned IT courses with live projects, global certifications,
+            and 100% placement support. Join 10,000+ professionals who transformed
+            their careers with us.
           </p>
-          <Link href="/contact" className={styles.ctaBtn}>
-            Get Started
-          </Link>
+
+          {/* Trust signals */}
+          <div className={styles.trustRow}>
+            <div className={styles.trustItem}>
+              <CheckCircle2 size={14} color="#22C55E" />
+              100% Placement Support
+            </div>
+            <div className={styles.trustDivider} />
+            <div className={styles.trustItem}>
+              <Users size={14} color="#60A5FA" />
+              10,000+ Trained
+            </div>
+            <div className={styles.trustDivider} />
+            <div className={styles.trustItem}>
+              <Award size={14} color="#FBBF24" />
+              4.9★ Google Rating
+            </div>
+          </div>
+
+          {/* CTAs */}
+          <div className={styles.ctaRow}>
+            <Link href="/contact" className={styles.ctaBtn}>
+              Book Free Demo →
+            </Link>
+            <a href="tel:+918147111010" className={styles.ctaBtnGhost}>
+              📞 Call Now
+            </a>
+          </div>
         </div>
 
         {/* ── RIGHT — Lead Form ── */}
@@ -29,7 +63,7 @@ export default function HeroSection() {
           <div className={styles.leadFormCard}>
             <div className={styles.formHeader}>
               <h3>Book Your Free Demo</h3>
-              <p>Enter your details to get course curriculum and batch timings.</p>
+              <p>Get course curriculum, batch timings &amp; fee details instantly.</p>
             </div>
             <form suppressHydrationWarning className={styles.leadForm}>
               <input type="text" placeholder="Full Name *" required className={styles.inputField} />
@@ -38,21 +72,26 @@ export default function HeroSection() {
               <div className={styles.selectWrapper}>
                 <select className={styles.inputField} required defaultValue="">
                   <option value="" disabled>Select Course *</option>
-                  <option value="python">Python Full Stack</option>
-                  <option value="data-science">Data Science & AI</option>
-                  <option value="aws">AWS Cloud</option>
+                  <option value="salesforce">Salesforce Training</option>
+                  <option value="sap">SAP Training</option>
+                  <option value="python">Python &amp; Data Science</option>
+                  <option value="aws">AWS Cloud / Azure</option>
+                  <option value="devops">DevOps &amp; Kubernetes</option>
+                  <option value="cybersecurity">Cybersecurity / CEH</option>
+                  <option value="powerbi">Power BI &amp; Analytics</option>
                   <option value="digital-marketing">Digital Marketing</option>
                 </select>
               </div>
               <button type="submit" className={styles.submitBtn}>
-                Request Free Demo
+                Request Free Demo →
               </button>
               <div className={styles.formFooter}>
-                🔒 100% Secure. We never share your data.
+                🔒 100% Secure · No spam · No sales calls
               </div>
             </form>
           </div>
         </div>
+
       </div>
     </section>
   );
