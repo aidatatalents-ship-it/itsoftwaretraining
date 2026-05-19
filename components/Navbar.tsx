@@ -41,31 +41,56 @@ export default function Navbar() {
 
         {/* ── Logo ── */}
         <Link href="/" className={styles.logo} style={{ gap: 0, textDecoration: 'none' }}>
-          <svg width="200" height="44" viewBox="0 0 400 88" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="IT Software Training Bangalore">
-            {/* Hexagon */}
-            <polygon points="36,4 70,4 87,32 70,60 36,60 19,32" fill="#0B1A3D" stroke="rgba(255,255,255,0.12)" strokeWidth="1.5"/>
-            {/* Upward arrow */}
-            <polyline points="33,52 43,34 52,44 62,16" stroke="#F26522" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-            <polygon points="62,16 55,24 69,24" fill="#F26522"/>
-            {/* Graduation cap board */}
-            <rect x="50" y="13" width="18" height="3.5" rx="1.5" fill="#F26522"/>
-            <polygon points="54,16.5 62,16.5 65,21 51,21" fill="#F26522"/>
-            {/* Circuit dots */}
-            <circle cx="30" cy="52" r="2.5" fill="#F26522"/>
-            <line x1="30" y1="52" x2="40" y2="52" stroke="#F26522" strokeWidth="1.5"/>
-            <circle cx="40" cy="52" r="1.8" fill="#F26522"/>
-            <line x1="40" y1="52" x2="40" y2="58" stroke="#F26522" strokeWidth="1.5"/>
+          <svg
+            width="210" height="48"
+            viewBox="0 0 420 96"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-label="IT Software Training Bangalore"
+          >
+            {/* ── "I" column — left stem with orange triangle accent ── */}
+            <rect x="0" y="8" width="12" height="62" rx="2" fill="#FFFFFF"/>
+            {/* Orange triangle accent on top-left of I — mirrors ASCENT's A inner orange */}
+            <polygon points="0,8 14,8 0,26" fill="#F26522"/>
 
-            {/* IT Software */}
-            <text x="100" y="32" fontFamily="Inter, Poppins, sans-serif" fontWeight="800" fontSize="24" fill="#FFFFFF" letterSpacing="-0.8">IT Software</text>
-            {/* Training */}
-            <text x="100" y="57" fontFamily="Inter, Poppins, sans-serif" fontWeight="800" fontSize="24" fill="#F26522" letterSpacing="-0.8">Training</text>
-            {/* Subtitle */}
-            <text x="100" y="74" fontFamily="Inter, sans-serif" fontWeight="600" fontSize="9.5" fill="rgba(255,255,255,0.38)" letterSpacing="2">BANGALORE&apos;S #1 IT INSTITUTE</text>
+            {/* ── "T" crossbar + stem ── */}
+            <rect x="18" y="8" width="52" height="12" rx="2" fill="#FFFFFF"/>
+            <rect x="37" y="18" width="14" height="52" rx="2" fill="#FFFFFF"/>
+
+            {/* ── SOFTWARE TRAINING — right wordmark ── */}
+            {/* SOFTWARE */}
+            <text
+              x="82" y="38"
+              fontFamily="'Poppins','Inter',sans-serif"
+              fontWeight="800"
+              fontSize="28"
+              fill="#FFFFFF"
+              letterSpacing="0.5"
+            >SOFTWARE</text>
+            {/* TRAINING */}
+            <text
+              x="82" y="68"
+              fontFamily="'Poppins','Inter',sans-serif"
+              fontWeight="800"
+              fontSize="28"
+              fill="#FFFFFF"
+              letterSpacing="0.5"
+            >TRAINING</text>
+
+            {/* ── Thin horizontal rule ── */}
+            <line x1="0" y1="78" x2="420" y2="78" stroke="rgba(255,255,255,0.25)" strokeWidth="1"/>
+
+            {/* ── Subtitle ── */}
+            <text
+              x="0" y="91"
+              fontFamily="'Inter',sans-serif"
+              fontWeight="500"
+              fontSize="9"
+              fill="rgba(255,255,255,0.4)"
+              letterSpacing="2.5"
+            >BANGALORE&apos;S #1 SOFTWARE TRAINING INSTITUTE</text>
           </svg>
         </Link>
-
-
         {/* ── Nav Links ── */}
         <ul className={styles.links}>
           <li>
