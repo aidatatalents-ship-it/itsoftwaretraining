@@ -10,10 +10,10 @@ const services = [
   { label: 'Salesforce Training',    href: '/services/salesforce' },
   { label: 'SAP Training',           href: '/services/sap' },
   { label: 'Cybersecurity & CEH',    href: '/services/cybersecurity' },
-  { label: 'Python & Data Science',  href: '/services/python-data-science' },
+  { label: 'Python & AI',            href: '/services/python-data-science' },
   { label: 'Cloud — AWS & Azure',    href: '/services/cloud' },
-  { label: 'Power BI & Analytics',   href: '/services/power-bi' },
   { label: 'DevOps & Kubernetes',    href: '/services/devops' },
+  { label: 'All Courses →',          href: '/all-courses' },
 ];
 
 const navLinks = [

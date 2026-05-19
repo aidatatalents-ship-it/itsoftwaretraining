@@ -112,20 +112,31 @@
 /* ── DROPDOWN ── */
 .dropWrap { position: relative; }
 
+/* Invisible bridge that fills the gap so the mouse never leaves the hover zone */
+.dropWrap::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  right: -20px;
+  height: 16px;
+  background: transparent;
+}
+
 .drop {
   position: absolute;
-  top: calc(100% + 12px);
+  top: calc(100% + 4px);
   left: 50%;
-  transform: translateX(-50%) translateY(-8px);
-  width: 240px;
+  transform: translateX(-50%) translateY(-6px);
+  width: 248px;
   background: #0D1B3E;
   border: 1px solid rgba(255, 255, 255, 0.10);
   border-radius: 14px;
-  padding: 8px;
+  padding: 12px 8px 8px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.18s ease, transform 0.18s ease;
+  transition: opacity 0.15s ease, transform 0.15s ease;
   z-index: 100;
 }
 
