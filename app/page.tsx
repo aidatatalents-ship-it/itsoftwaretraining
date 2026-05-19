@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import ServicesGrid from '@/components/home/ServicesGrid';
 import FaqSection from '@/components/home/FaqSection';
@@ -93,46 +94,28 @@ const packages = [
 /* ── TESTIMONIALS ── */
 const testimonials = [
   {
+    img: '/avatar-priya.jpg',
     init: 'PS', bg: 'linear-gradient(135deg,#1565C0,#5B9BD5)',
     name: 'Priya Sharma',  role: 'Salesforce Developer · Infosys',
     text: 'Completely practical from Day 1. The trainer walked us through actual Salesforce orgs used by real clients — not demo sandboxes. Got my ADM-201 in the 3rd month and landed my first IT role in Infosys within 90 days.',
     course: 'Salesforce', courseColor: '#2563EB', courseBg: '#EFF6FF',
-    salary: '₹3.4L → ₹8.2L LPA', package: 'Pro',
+    salary: '₹3.4L → ₹8.2L LPA',
   },
   {
+    img: '/avatar-rahul.jpg',
     init: 'RN', bg: 'linear-gradient(135deg,#0A7A45,#2DB876)',
     name: 'Rahul Nair',    role: 'AWS Solutions Architect · TCS',
     text: 'Cracked AWS SAA on the first attempt after 10 weeks. Labs were on real AWS accounts with actual billing — not simulators. The placement team lined up 6 interview calls within 45 days of course completion.',
     course: 'Cloud — AWS', courseColor: '#D97706', courseBg: '#FFFBEB',
-    salary: '₹5.5L → ₹11.2L LPA', package: 'Premium',
+    salary: '₹5.5L → ₹11.2L LPA',
   },
   {
+    img: '/avatar-divya.jpg',
     init: 'DM', bg: 'linear-gradient(135deg,#7A2DB8,#B060FF)',
     name: 'Divya Menon',   role: 'Senior Data Scientist · Wipro',
     text: 'From Python basics to building production ML pipelines in 5 months. The GenAI module covered real LLM APIs — not toy examples. My GitHub portfolio was already impressing interviewers before I finished the course.',
     course: 'Python & AI', courseColor: '#059669', courseBg: '#ECFDF5',
-    salary: 'First job: ₹9.4L LPA', package: 'Premium',
-  },
-  {
-    init: 'AK', bg: 'linear-gradient(135deg,#DC2626,#EF4444)',
-    name: 'Arun Kumar',    role: 'SAP FICO Consultant · Accenture',
-    text: 'The SAP FICO trainer had 18 years of SAP consulting experience and it showed every session. I was placed at Accenture 65 days after completing the course with a salary jump I did not expect so quickly.',
-    course: 'SAP', courseColor: '#7C3AED', courseBg: '#F5F3FF',
-    salary: '₹4.1L → ₹9.8L LPA', package: 'Pro',
-  },
-  {
-    init: 'SK', bg: 'linear-gradient(135deg,#0284C7,#38BDF8)',
-    name: 'Suresh Krishnan', role: 'DevOps Engineer · HCL',
-    text: 'I had zero Docker knowledge when I joined. By Week 6 I was building full CI/CD pipelines on Jenkins, deploying to Kubernetes. The placement team sent my profile directly to their recruiter network — 4 offers in 3 weeks.',
-    course: 'DevOps', courseColor: '#0284C7', courseBg: '#F0F9FF',
-    salary: '₹6.2L → ₹13.5L LPA', package: 'Premium',
-  },
-  {
-    init: 'NR', bg: 'linear-gradient(135deg,#065F46,#10B981)',
-    name: 'Neha Reddy',    role: 'Cybersecurity Analyst · IBM',
-    text: 'CEH preparation was intense — real Kali Linux labs, Metasploit exercises, and actual VAPT scenarios. Passed CEH v12 in my first attempt. IBM reached out via LinkedIn 2 weeks after my certification post.',
-    course: 'Cybersecurity', courseColor: '#DC2626', courseBg: '#FEF2F2',
-    salary: 'First job: ₹7.8L LPA', package: 'Pro',
+    salary: 'First job: ₹9.4L LPA',
   },
 ];
 
@@ -364,7 +347,15 @@ export default function HomePage() {
               <div key={t.name} className={styles.testCard}>
                 {/* Top row — avatar + name */}
                 <div className={styles.testTopRow}>
-                  <div className={styles.testAv} style={{ background: t.bg }}>{t.init}</div>
+                  <div className={styles.testAv} style={{ background: t.bg }}>
+                    <Image
+                      src={t.img}
+                      alt={t.name}
+                      width={48}
+                      height={48}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }}
+                    />
+                  </div>
                   <div className={styles.testMeta}>
                     <div className={styles.testName}>{t.name}</div>
                     <div className={styles.testRole}>{t.role}</div>
