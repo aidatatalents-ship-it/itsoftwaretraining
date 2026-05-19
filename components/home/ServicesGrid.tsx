@@ -92,7 +92,7 @@ export default function ServicesGrid() {
         {/* Bottom CTA */}
         <div style={{ textAlign: 'center', marginTop: 52 }}>
           <Link href="/contact" className={styles.viewMoreBtn}>
-            Book a Free Demo for Any Course →
+            Browse All Courses →
           </Link>
         </div>
 
