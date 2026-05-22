@@ -30,58 +30,6 @@ export default function Footer() {
   return (
     <footer style={{ background: '#070F28' }}>
 
-      {/* ── Top bar ── */}
-      <div style={{
-        background: 'linear-gradient(135deg, #0D1B3E 0%, #1B3369 60%, #1565C0 100%)',
-        padding: '36px 0'
-      }}>
-        <div className="container" style={{
-          display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-          flexWrap: 'wrap', gap: 24
-        }}>
-          <div>
-            <h3 style={{
-              fontFamily: "'Fraunces', serif",
-              fontSize: '1.5rem',
-              fontWeight: 900,
-              color: '#fff',
-              marginBottom: 6,
-              letterSpacing: '-0.5px',
-            }}>
-              Ready to start your IT career?
-            </h3>
-            <p style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: '0.9rem',
-              color: 'rgba(255,255,255,0.55)',
-            }}>
-              Join 10,000+ professionals who transformed their careers. Book a free demo today.
-            </p>
-          </div>
-          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', flexShrink: 0 }}>
-            <Link href="/contact" style={{
-              display: 'inline-flex', alignItems: 'center', gap: 8,
-              padding: '12px 24px',
-              background: '#F26522', color: '#fff',
-              fontFamily: "'Inter', sans-serif", fontSize: '0.9rem', fontWeight: 700,
-              borderRadius: 8, textDecoration: 'none',
-              boxShadow: '0 4px 16px rgba(242,101,34,0.4)',
-              whiteSpace: 'nowrap',
-            }}>
-              Book Free Demo →
-            </Link>
-            <a href={`tel:${PHONE_E164}`} style={{
-              display: 'inline-flex', alignItems: 'center', gap: 8,
-              padding: '12px 24px',
-              border: '1.5px solid rgba(255,255,255,0.25)', color: 'rgba(255,255,255,0.85)',
-              fontFamily: "'Inter', sans-serif", fontSize: '0.9rem', fontWeight: 600,
-              borderRadius: 8, textDecoration: 'none', whiteSpace: 'nowrap',
-            }}>
-              📞 {PHONE_DISPLAY}
-            </a>
-          </div>
-        </div>
-      </div>
 
       {/* ── Main footer grid ── */}
       <div className="container" style={{ padding: '60px 24px 48px' }}>
