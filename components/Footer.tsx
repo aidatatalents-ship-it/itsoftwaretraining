@@ -89,21 +89,29 @@ export default function Footer() {
 
           {/* Col 1 — Logo + description */}
           <div>
-            <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none', marginBottom: 18 }}>
-              <svg width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="40" height="40" rx="10" fill="#1D4ED8" />
-                <polyline points="14,12 7,20 14,28" stroke="white" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                <line x1="24" y1="29" x2="19" y2="11" stroke="white" strokeWidth="2.8" strokeLinecap="round" strokeOpacity="0.82" />
-                <polyline points="26,12 33,20 26,28" stroke="white" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            <Link href="/" style={{ display: 'inline-flex', textDecoration: 'none', marginBottom: 18 }}>
+              <svg
+                width="200" height="48"
+                viewBox="0 0 420 96"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-label="IT Software Training Bangalore"
+              >
+                {/* "I" stem with orange triangle accent */}
+                <rect x="0" y="8" width="12" height="62" rx="2" fill="#FFFFFF"/>
+                <polygon points="0,8 14,8 0,26" fill="#F26522"/>
+                {/* "T" crossbar + stem */}
+                <rect x="18" y="8" width="52" height="12" rx="2" fill="#FFFFFF"/>
+                <rect x="37" y="18" width="14" height="52" rx="2" fill="#FFFFFF"/>
+                {/* SOFTWARE */}
+                <text x="82" y="38" fontFamily="'Poppins','Inter',sans-serif" fontWeight="800" fontSize="28" fill="#FFFFFF" letterSpacing="0.5">SOFTWARE</text>
+                {/* TRAINING */}
+                <text x="82" y="68" fontFamily="'Poppins','Inter',sans-serif" fontWeight="800" fontSize="28" fill="#FFFFFF" letterSpacing="0.5">TRAINING</text>
+                {/* Rule */}
+                <line x1="0" y1="78" x2="420" y2="78" stroke="rgba(255,255,255,0.2)" strokeWidth="1"/>
+                {/* Subtitle */}
+                <text x="0" y="91" fontFamily="'Inter',sans-serif" fontWeight="500" fontSize="9" fill="rgba(255,255,255,0.35)" letterSpacing="2.5">BANGALORE&apos;S #1 SOFTWARE TRAINING INSTITUTE</text>
               </svg>
-              <div>
-                <div style={{ fontFamily: "'Fraunces', serif", fontWeight: 900, fontSize: '1rem', color: '#FFFFFF', letterSpacing: '-0.3px' }}>
-                  IT Software <span style={{ color: '#F26522' }}>Training</span>
-                </div>
-                <div style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.55rem', color: 'rgba(255,255,255,0.35)', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' }}>
-                  Bangalore&apos;s #1 IT Institute
-                </div>
-              </div>
             </Link>
             <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.83rem', color: 'rgba(255,255,255,0.4)', lineHeight: 1.75, maxWidth: 260, marginBottom: 20 }}>
               Transforming careers since 2010. Expert-led IT training with 100% placement support. 10,000+ students placed at India&apos;s top companies.
