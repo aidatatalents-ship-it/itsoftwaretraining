@@ -253,22 +253,22 @@
 .plDays { font-family: 'Poppins', sans-serif; font-size: 0.65rem; font-weight: 700; color: var(--t-muted); background: #fff; border: 1px solid var(--border); padding: 3px 8px; border-radius: 5px; flex-shrink: 0; }
 
 /* ── JOURNEY ── */
-.journeyLabel { font-family: 'Poppins', sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--t-muted); margin-bottom: 12px; }
+.journeyLabel { font-family: 'Poppins', sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 12px; }
 .journeyTabs { display: flex; gap: 6px; margin-bottom: 16px; }
-.jTab { padding: 7px 14px; border-radius: 7px; font-family: 'Poppins', sans-serif; font-size: 0.78rem; font-weight: 600; cursor: pointer; border: 1px solid var(--border); background: #fff; color: var(--t-muted); transition: all .2s; }
-.jTab:hover { border-color: var(--ink); color: var(--ink); }
-.jTabActive { background: var(--ink); color: #fff; border-color: var(--ink); }
+.jTab { padding: 7px 14px; border-radius: 7px; font-family: 'Poppins', sans-serif; font-size: 0.78rem; font-weight: 600; cursor: pointer; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.65); transition: all .2s; }
+.jTab:hover { border-color: rgba(255,255,255,0.5); color: #fff; }
+.jTabActive { background: #fff; color: var(--ink); border-color: #fff; }
 .journeySteps { display: flex; flex-direction: column; gap: 10px; }
 .jStep { display: flex; gap: 12px; align-items: flex-start; }
 .jDot { width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0; }
 .jDone   { background: #2E844A; color: #fff; }
 .jActive { background: #F26522; color: #fff; }
-.jNext   { background: var(--border); color: var(--muted); }
-.jTitle  { font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 1px; }
-.jSub    { font-size: 12px; color: var(--muted); line-height: 1.5; }
-.jOutcome { margin-top: 4px; padding: 12px 14px; border-radius: 8px; background: #EAF5EE; border: 1px solid #B8E8CE; }
-.jOutcome span { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: #2E844A; display: block; margin-bottom: 3px; }
-.jOutcome p { font-size: 12px; color: #2E844A; font-weight: 600; }
+.jNext   { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.5); }
+.jTitle  { font-size: 13px; font-weight: 600; color: #fff; margin-bottom: 1px; }
+.jSub    { font-size: 12px; color: rgba(255,255,255,0.55); line-height: 1.5; }
+.jOutcome { margin-top: 4px; padding: 12px 14px; border-radius: 8px; background: rgba(46,132,74,0.2); border: 1px solid rgba(46,132,74,0.4); }
+.jOutcome span { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: #4ADE80; display: block; margin-bottom: 3px; }
+.jOutcome p { font-size: 12px; color: #4ADE80; font-weight: 600; }
 
 /* ── STATS BAR ── */
 .statsBar {
