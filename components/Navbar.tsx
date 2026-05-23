@@ -166,6 +166,11 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
+          <li>
+            <Link href="/platforms" className={`${styles.link} ${path.startsWith('/platforms') ? styles.active : ''}`}>
+              Career Guides
+            </Link>
+          </li>
         </ul>
 
         {/* ── CTAs ── */}
@@ -238,6 +243,9 @@ export default function Navbar() {
               {l.label}
             </Link>
           ))}
+          <Link href="/platforms" className={styles.mobLink} onClick={() => setMenuOpen(false)}>
+            📋 Career Guides
+          </Link>
           <div style={{ padding: '12px 16px' }}>
             <Link href="/contact" className={styles.signIn} style={{ display: 'block', textAlign: 'center' }} onClick={() => setMenuOpen(false)}>
               Book Free Demo →
