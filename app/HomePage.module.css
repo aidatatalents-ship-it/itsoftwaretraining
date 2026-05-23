@@ -74,7 +74,7 @@
 
 .heroH1 {
   font-family: 'Fraunces', serif;
-  font-size: clamp(38px, 5vw, 64px);
+  font-size: clamp(28px, 3.8vw, 48px);
   font-weight: 900;
   line-height: 1.0;
   letter-spacing: -2.5px;
