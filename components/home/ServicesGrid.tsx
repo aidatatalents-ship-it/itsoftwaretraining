@@ -110,6 +110,9 @@ export default function ServicesGrid() {
                       Free Demo <ArrowRight size={13} />
                     </Link>
                   </div>
+                  <Link href={`/platforms/${s.slug}`} className={styles.careerGuideLink}>
+                    📋 Is {s.short} right for you? Read Career Guide →
+                  </Link>
                 </div>
               </div>
             );
