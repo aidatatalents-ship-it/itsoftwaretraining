@@ -174,6 +174,39 @@ export default function PlatformsIndexPage() {
         </div>
       </section>
 
+      {/* ── Always-visible platform strip ── */}
+      {step === 0 && (
+        <section style={{ background: '#fff', borderBottom: '1px solid #E8EDF4', padding: '32px 5%' }}>
+          <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+            <p style={{ fontFamily: "'Inter',sans-serif", fontSize: '0.72rem', fontWeight: 700, color: '#9CA3AF', textTransform: 'uppercase', letterSpacing: '0.1em', textAlign: 'center', marginBottom: 20 }}>
+              6 Platforms · Click Any to Start the Quiz
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12 }}>
+              {slugs.map(slug => {
+                const p = platforms[slug];
+                return (
+                  <button key={slug} onClick={() => setStep(1)}
+                    style={{ background: '#F5F7FB', border: '1.5px solid #E8EDF4', borderRadius: 12, padding: '16px 14px', cursor: 'pointer', textAlign: 'left', display: 'flex', alignItems: 'center', gap: 12, transition: 'all 0.2s' }}
+                    onMouseEnter={e => { (e.currentTarget).style.borderColor = p.color; (e.currentTarget).style.background = '#fff'; (e.currentTarget).style.transform = 'translateY(-2px)'; }}
+                    onMouseLeave={e => { (e.currentTarget).style.borderColor = '#E8EDF4'; (e.currentTarget).style.background = '#F5F7FB'; (e.currentTarget).style.transform = ''; }}
+                  >
+                    <div style={{ fontSize: '1.6rem', flexShrink: 0 }}>{p.icon}</div>
+                    <div>
+                      <div style={{ fontFamily: "'Inter',sans-serif", fontSize: '0.82rem', fontWeight: 700, color: '#1B3369' }}>{p.name}</div>
+                      <div style={{ fontFamily: "'Inter',sans-serif", fontSize: '0.68rem', color: p.color, fontWeight: 600, marginTop: 2 }}>{p.avgSalary.split('·')[0].trim()}</div>
+                      <div style={{ fontFamily: "'Inter',sans-serif", fontSize: '0.65rem', color: '#9CA3AF', marginTop: 1 }}>{p.timeToJob}</div>
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+            <p style={{ fontFamily: "'Inter',sans-serif", fontSize: '0.8rem', color: '#9CA3AF', textAlign: 'center', marginTop: 20 }}>
+              Not sure which one? Take the 3-question quiz above — we&apos;ll tell you exactly which fits your background.
+            </p>
+          </div>
+        </section>
+      )}
+
       {/* ── Quiz ── */}
       {step >= 1 && step <= questions.length && (
         <section style={{ maxWidth: 620, margin: '48px auto', padding: '0 24px' }}>
