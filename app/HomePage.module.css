@@ -1,4 +1,4 @@
-﻿/* ═══════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════
    HOMEPAGE — SkillForge / IT Software Training
    Palette: ink #1B3369 · accent #F26522 · cream #F5F7FB
 ═══════════════════════════════════════════════════ */
@@ -290,7 +290,7 @@
 .sSubLight { color: rgba(255,255,255,0.45); max-width: 540px; font-size: 15px; line-height: 1.75; }
 
 /* ── THREE PATHS ── */
-.pathsSec { background: #fff; padding: 80px 5%; }
+.pathsSec { background: #f5f7fb; padding: 80px 5%; }
 .pathsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
