@@ -139,7 +139,7 @@ export default function ParentCoursePage({ parent }: Props) {
                   {parent.children.map(child => (
                     <Link
                       key={child.slug}
-                      href={`/services/${child.slug}`}
+                      href={child.href ?? `/services/${child.slug}`}
                       className={styles.childCard}
                     >
                       <div className={styles.childCardTop}>

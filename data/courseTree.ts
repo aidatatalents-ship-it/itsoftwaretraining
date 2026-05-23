@@ -5,6 +5,7 @@
 
 export interface ChildCourse {
   slug: string;           // URL segment, also key in serviceDetails
+  href?: string;          // optional URL override (defaults to /services/[slug])
   title: string;
   tagline: string;
   duration: string;
@@ -39,6 +40,7 @@ export const courseTree: ParentCourse[] = [
     children: [
       {
         slug: 'salesforce-admin',
+        href: '/salesforce/admin-training',
         title: 'Salesforce Administrator',
         tagline: 'ADM-201 · CRM Config · Automation · Reports',
         duration: '2–3 Months',
@@ -50,6 +52,7 @@ export const courseTree: ParentCourse[] = [
       },
       {
         slug: 'salesforce-developer',
+        href: '/services/salesforce-developer',
         title: 'Salesforce Developer',
         tagline: 'Apex · Triggers · SOQL · REST API · PD1',
         duration: '2–3 Months',
@@ -61,6 +64,7 @@ export const courseTree: ParentCourse[] = [
       },
       {
         slug: 'salesforce-lightning',
+        href: '/salesforce/lightning-training',
         title: 'Salesforce Lightning (Aura)',
         tagline: 'Aura Framework · SLDS · Lightning App Builder',
         duration: '2 Months',
@@ -71,6 +75,7 @@ export const courseTree: ParentCourse[] = [
       },
       {
         slug: 'salesforce-lwc',
+        href: '/salesforce/lwc-training',
         title: 'Salesforce LWC',
         tagline: 'Lightning Web Components · ES6+ · Wire Adapters',
         duration: '2 Months',
@@ -82,6 +87,7 @@ export const courseTree: ParentCourse[] = [
       },
       {
         slug: 'salesforce-cpq',
+        href: '/salesforce/cpq-training',
         title: 'Salesforce CPQ',
         tagline: 'Configure · Price · Quote · Revenue Cloud',
         duration: '2 Months',
@@ -92,6 +98,7 @@ export const courseTree: ParentCourse[] = [
       },
       {
         slug: 'salesforce-vlocity',
+        href: '/salesforce/vlocity-training',
         title: 'Salesforce Vlocity / OmniStudio',
         tagline: 'OmniStudio · DataRaptors · Industry Cloud',
         duration: '2–3 Months',
@@ -103,6 +110,7 @@ export const courseTree: ParentCourse[] = [
       },
       {
         slug: 'salesforce-crm-analytics',
+        href: '/salesforce/crm-analytics-training',
         title: 'Salesforce CRM Analytics',
         tagline: 'Einstein Analytics · SAQL · Dashboards · AI Insights',
         duration: '2 Months',
