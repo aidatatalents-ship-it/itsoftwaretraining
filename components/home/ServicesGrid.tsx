@@ -19,7 +19,7 @@ const PLATFORM_ACCENTS: Record<string, { gradient: string; accent: string; icon:
 
 export default function ServicesGrid() {
   return (
-    <section style={{ background: '#fff', padding: '80px 0' }}>
+    <section style={{ background: '#fff', padding: '56px 0 48px' }}>
       <div className="container">
 
         {/* Header */}
@@ -117,7 +117,7 @@ export default function ServicesGrid() {
         </div>
 
         {/* Bottom CTA */}
-        <div style={{ textAlign: 'center', marginTop: 52 }}>
+        <div style={{ textAlign: 'center', marginTop: 32 }}>
           <Link href="/all-courses" className={styles.viewMoreBtn}>
             Browse All Courses →
           </Link>
