@@ -1,5 +1,6 @@
 import { services } from '@/data/services';
 import { serviceDetails } from '@/data/serviceDetails';
+import { getPlatformGuide } from '@/data/platformGuides';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import PlatformPage from '@/components/platform/PlatformPage';
@@ -15,8 +16,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const service = services.find((s) => s.slug === slug);
   if (!service) return {};
   return {
-    title: `${service.h1 || `${service.name} Training in Bangalore`} | IT Software Training`,
-    description: `${service.description} Industry-led ${service.short} training in Bangalore with live projects, global certifications & 100% placement support. Book a free demo class today.`,
+    title: `${service.short} Career Guide — Salary, Roadmap & Specialisations | IT Software Training Bangalore`,
+    description: `Is ${service.name} the right career for you? Explore the full ${service.short} career roadmap, salary expectations, job market data, and specialisations available in Bangalore.`,
     keywords: [
       `${service.short} training Bangalore`,
       `${service.short} course Bangalore`,
@@ -39,6 +40,7 @@ export default async function PlatformDetailPage({ params }: Props) {
   if (!service) notFound();
 
   const detail = serviceDetails[slug] || {};
+  const guide  = getPlatformGuide(slug);
 
-  return <PlatformPage service={service} detail={detail} />;
+  return <PlatformPage service={service} detail={detail} guide={guide} />;
 }
