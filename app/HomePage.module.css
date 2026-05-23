@@ -1,4 +1,4 @@
-﻿/* ═══════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════
    HOMEPAGE — SkillForge / IT Software Training
    Palette: ink #1B3369 · accent #F26522 · cream #F5F7FB
 ═══════════════════════════════════════════════════ */
@@ -290,7 +290,7 @@
 .sSubLight { color: rgba(255,255,255,0.45); max-width: 540px; font-size: 15px; line-height: 1.75; }
 
 /* ── THREE PATHS ── */
-.pathsSec { background: #f5f7fb; padding: 80px 5%; }
+.pathsSec { background: #f5f7fb; padding: 52px 5%; }
 .pathsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -324,7 +324,7 @@
 .outcomeBox p { font-size: 13px; font-weight: 600; line-height: 1.6; }
 
 /* ── HOW WE TRAIN ── */
-.howSec { background: linear-gradient(135deg, #1B3369 0%, #1565C0 100%); padding: 80px 5%; }
+.howSec { background: linear-gradient(135deg, #1B3369 0%, #1565C0 100%); padding: 52px 5%; }
 .howGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 48px; }
 .howCard { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 28px; transition: border-color .2s; }
 .howCard:hover { border-color: rgba(255,255,255,0.25); }
@@ -333,7 +333,7 @@
 .howCard p  { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.75; }
 
 /* ── PLACEMENT SUPPORT ── */
-.placeSec { background: #fff; padding: 80px 5%; }
+.placeSec { background: #fff; padding: 52px 5%; }
 .placeGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 48px; }
 .psCard { background: var(--cream); border: 1px solid var(--border); border-radius: 12px; padding: 24px 20px; transition: all .2s; }
 .psCard:hover { border-color: var(--ink); box-shadow: 0 8px 24px rgba(27,51,105,0.12); transform: translateY(-3px); }
@@ -347,7 +347,7 @@
 .psHighlight p    { color: rgba(255,255,255,0.5); }
 
 /* ── PRICING ── */
-.pkgSec { background: var(--cream); padding: 80px 5%; }
+.pkgSec { background: var(--cream); padding: 52px 5%; }
 .pkgIntro { font-size: 15px; color: var(--muted); max-width: 560px; line-height: 1.75; margin-bottom: 44px; }
 .pkgGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .pkg { background: #fff; border: 1.5px solid var(--border); border-radius: 16px; padding: 30px 26px; position: relative; transition: transform .2s; }
@@ -369,7 +369,7 @@
 .pkgBtnHot:hover { background: var(--ink); border-color: var(--ink); }
 
 /* ── COUNSELLING ── */
-.counselSec { background: linear-gradient(135deg, #0D1B3E 0%, #1B3369 55%, #1565C0 100%); padding: 80px 5%; }
+.counselSec { background: linear-gradient(135deg, #0D1B3E 0%, #1B3369 55%, #1565C0 100%); padding: 52px 5%; }
 .counselSub { font-family: 'Poppins', sans-serif; color: rgba(255,255,255,0.50); margin: 0 auto 32px; max-width: 560px; font-size: 0.95rem; line-height: 1.8; }
 .counselPoints { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; margin-bottom: 32px; }
 .cp { font-family: 'Poppins', sans-serif; display: flex; align-items: center; gap: 8px; font-size: 0.88rem; color: rgba(255,255,255,0.60); }
@@ -377,7 +377,7 @@
 .counselNote { font-family: 'Poppins', sans-serif; margin-top: 18px; font-size: 0.82rem; color: rgba(255,255,255,0.25); }
 
 /* ── TESTIMONIALS ── */
-.testSec { background: #F0F4FF; padding: 88px 5%; }
+.testSec { background: #F0F4FF; padding: 52px 5%; }
 
 .testGrid {
   display: grid;
