@@ -2,13 +2,15 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import {
   Phone, Mail, MessageCircle, MapPin,
-  CheckCircle, ArrowRight, Clock,
-  GraduationCap, Star, Lock,
+  CheckCircle, Clock,
+  GraduationCap, Star,
 } from 'lucide-react';
+import ContactForm from '@/components/contact/ContactForm';
+import { PHONE_DISPLAY, PHONE_E164, WHATSAPP_BASE, EMAIL } from '@/data/contact';
 
 export const metadata: Metadata = {
-  title: 'Book Free Demo | Contact Nexus Training Bangalore',
-  description: 'Book a free IT training demo class in Bangalore. Salesforce, SAP, Python, Cloud, Cybersecurity, Power BI, DevOps. Call +91 88888 88888. Centres in Koramangala, Whitefield, HSR Layout.',
+  title: 'Book Free Demo Class | IT Software Training Bangalore',
+  description: 'Book a free IT training demo class in Bangalore. Salesforce, SAP, Python, Cloud, Cybersecurity, DevOps. Call +91 99894 32324. Centres in Koramangala, Whitefield, HSR Layout.',
 };
 
 const courses = ['Salesforce', 'SAP', 'Cybersecurity', 'Python & Data Science', 'Cloud — AWS & Azure', 'Power BI & Analytics', 'DevOps'];
@@ -29,9 +31,9 @@ const whyDemo = [
 ];
 
 const contactCards = [
-  { Icon: Phone,         label: 'Call Us Now',     val: '+91 88888 88888',       href: 'tel:+918888888888',    iconBg: 'rgba(123,47,190,0.08)', iconColor: 'var(--purple)' },
-  { Icon: MessageCircle, label: 'WhatsApp Chat',   val: 'Get Instant Reply',     href: 'https://wa.me/918888888888', iconBg: 'rgba(37,211,102,0.1)', iconColor: 'var(--wa)' },
-  { Icon: Mail,          label: 'Email Us',         val: 'info@nexustraining.in', href: 'mailto:info@nexustraining.in', iconBg: 'rgba(2,132,199,0.08)', iconColor: '#0284C7' },
+  { Icon: Phone,         label: 'Call Us Now',     val: PHONE_DISPLAY,  href: `tel:${PHONE_E164}`,               iconBg: 'rgba(21,101,192,0.08)',  iconColor: '#1565C0' },
+  { Icon: MessageCircle, label: 'WhatsApp Chat',   val: 'Get Instant Reply', href: `${WHATSAPP_BASE}?text=${encodeURIComponent('Hi, I want to book a free demo class')}`, iconBg: 'rgba(37,211,102,0.1)', iconColor: '#16A34A' },
+  { Icon: Mail,          label: 'Email Us',        val: EMAIL,          href: `mailto:${EMAIL}`,                  iconBg: 'rgba(2,132,199,0.08)',   iconColor: '#0284C7' },
 ];
 
 export default function ContactPage() {
@@ -58,78 +60,15 @@ export default function ContactPage() {
         <div className="container">
           <div className="grid-contact" style={{ marginTop: -32, position: 'relative', zIndex: 10 }}>
 
-            {/* Registration Form */}
-            <div style={{ background: '#fff', border: '1px solid var(--gray-200)', borderRadius: 20, overflow: 'hidden', boxShadow: '0 12px 40px rgba(123,47,190,0.12)' }}>
-              <div style={{ padding: '16px 24px', background: 'var(--grad-purple)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            {/* Registration Form — live via Web3Forms */}
+            <div style={{ background: '#fff', border: '1px solid var(--gray-200)', borderRadius: 20, overflow: 'hidden', boxShadow: '0 12px 40px rgba(21,101,192,0.12)' }}>
+              <div style={{ padding: '16px 24px', background: 'linear-gradient(135deg,#1B3369,#1565C0)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <span style={{ fontFamily: "'Poppins',sans-serif", fontWeight: 700, color: '#fff', fontSize: '1rem' }}>Register for Free Demo</span>
                 <span style={{ fontSize: '.75rem', color: 'rgba(255,255,255,.75)', display: 'flex', alignItems: 'center', gap: 5 }}>
                   <Clock size={12} /> Reply within 30 mins
                 </span>
               </div>
-              <form style={{ padding: '24px', display: 'flex', flexDirection: 'column', gap: 14 }} suppressHydrationWarning>
-                <div className="form-grid">
-                  <div>
-                    <label style={{ display: 'block', fontSize: '.76rem', fontWeight: 600, color: 'var(--t-muted)', marginBottom: 6 }}>Full Name *</label>
-                    <input className="inp" type="text" placeholder="Your full name" required />
-                  </div>
-                  <div>
-                    <label style={{ display: 'block', fontSize: '.76rem', fontWeight: 600, color: 'var(--t-muted)', marginBottom: 6 }}>WhatsApp Number *</label>
-                    <input className="inp" type="tel" placeholder="+91 00000 00000" required />
-                  </div>
-                </div>
-                <div>
-                  <label style={{ display: 'block', fontSize: '.76rem', fontWeight: 600, color: 'var(--t-muted)', marginBottom: 6 }}>Email Address</label>
-                  <input className="inp" type="email" placeholder="your@email.com" />
-                </div>
-                <div className="form-grid">
-                  <div>
-                    <label style={{ display: 'block', fontSize: '.76rem', fontWeight: 600, color: 'var(--t-muted)', marginBottom: 6 }}>Course *</label>
-                    <select className="inp" required>
-                      <option value="">Select a course</option>
-                      {courses.map(c => <option key={c}>{c}</option>)}
-                    </select>
-                  </div>
-                  <div>
-                    <label style={{ display: 'block', fontSize: '.76rem', fontWeight: 600, color: 'var(--t-muted)', marginBottom: 6 }}>Training Mode</label>
-                    <select className="inp">
-                      <option>Classroom</option>
-                      <option>Online Live</option>
-                      <option>Weekend Batch</option>
-                      <option>Fast-Track</option>
-                    </select>
-                  </div>
-                </div>
-                <div className="form-grid">
-                  <div>
-                    <label style={{ display: 'block', fontSize: '.76rem', fontWeight: 600, color: 'var(--t-muted)', marginBottom: 6 }}>Experience</label>
-                    <select className="inp">
-                      <option>Fresher / Student</option>
-                      <option>0–2 Years</option>
-                      <option>2–5 Years</option>
-                      <option>5+ Years</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label style={{ display: 'block', fontSize: '.76rem', fontWeight: 600, color: 'var(--t-muted)', marginBottom: 6 }}>Preferred Time</label>
-                    <select className="inp">
-                      <option>Weekday Morning</option>
-                      <option>Weekday Evening</option>
-                      <option>Weekend</option>
-                      <option>Flexible</option>
-                    </select>
-                  </div>
-                </div>
-                <div>
-                  <label style={{ display: 'block', fontSize: '.76rem', fontWeight: 600, color: 'var(--t-muted)', marginBottom: 6 }}>Message (Optional)</label>
-                  <textarea className="inp" rows={3} placeholder="Any specific questions or requirements..." style={{ resize: 'vertical' }} />
-                </div>
-                <button type="submit" className="btn-primary" style={{ width: '100%', padding: '15px', fontSize: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8 }}>
-                  <ArrowRight size={18} /> Submit — Get Free Demo Details
-                </button>
-                <p style={{ textAlign: 'center', fontSize: '.7rem', color: 'var(--t-muted)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 5 }}>
-                  <Lock size={11} /> 100% Private · No Spam · No Commitment Required
-                </p>
-              </form>
+              <ContactForm />
             </div>
 
             {/* Info Panel */}
