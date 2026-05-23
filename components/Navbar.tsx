@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -52,14 +52,14 @@ export default function Navbar() {
         {/* ── Logo ── */}
         <Link href="/" className={styles.logo} style={{ gap: 0 }}>
           <svg width="210" height="48" viewBox="0 0 420 96" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="IT Software Training Bangalore">
-            <rect x="0" y="8" width="12" height="62" rx="2" fill="#FFFFFF"/>
+            <rect x="0" y="8" width="12" height="62" rx="2" fill="#1B3369"/>
             <polygon points="0,8 14,8 0,26" fill="#F26522"/>
-            <rect x="18" y="8" width="52" height="12" rx="2" fill="#FFFFFF"/>
-            <rect x="37" y="18" width="14" height="52" rx="2" fill="#FFFFFF"/>
-            <text x="82" y="38" fontFamily="'Poppins','Poppins',sans-serif" fontWeight="800" fontSize="28" fill="#FFFFFF" letterSpacing="0.5">SOFTWARE</text>
-            <text x="82" y="68" fontFamily="'Poppins','Poppins',sans-serif" fontWeight="800" fontSize="28" fill="#FFFFFF" letterSpacing="0.5">TRAINING</text>
-            <line x1="0" y1="78" x2="420" y2="78" stroke="rgba(255,255,255,0.25)" strokeWidth="1"/>
-            <text x="0" y="91" fontFamily="'Poppins',sans-serif" fontWeight="500" fontSize="9" fill="rgba(255,255,255,0.4)" letterSpacing="2.5">BANGALORE&apos;S #1 SOFTWARE TRAINING INSTITUTE</text>
+            <rect x="18" y="8" width="52" height="12" rx="2" fill="#1B3369"/>
+            <rect x="37" y="18" width="14" height="52" rx="2" fill="#1B3369"/>
+            <text x="82" y="38" fontFamily="'Poppins','Poppins',sans-serif" fontWeight="800" fontSize="28" fill="#1B3369" letterSpacing="0.5">SOFTWARE</text>
+            <text x="82" y="68" fontFamily="'Poppins','Poppins',sans-serif" fontWeight="800" fontSize="28" fill="#1B3369" letterSpacing="0.5">TRAINING</text>
+            <line x1="0" y1="78" x2="420" y2="78" stroke="rgba(27,51,105,0.15)" strokeWidth="1"/>
+            <text x="0" y="91" fontFamily="'Poppins',sans-serif" fontWeight="500" fontSize="9" fill="rgba(27,51,105,0.35)" letterSpacing="2.5">BANGALORE&apos;S #1 SOFTWARE TRAINING INSTITUTE</text>
           </svg>
         </Link>
 

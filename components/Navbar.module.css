@@ -1,17 +1,16 @@
-﻿/* ═══════════════════════════════════════════
-   NAVBAR — Mega-Menu Edition
+/* ═══════════════════════════════════════════
+   NAVBAR — White + Orange Premium Edition
 ═══════════════════════════════════════════ */
 
 .nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-  background: rgba(11,26,61,.92);
-  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255,255,255,.08);
-  transition: background .3s, box-shadow .3s;
+  background: #ffffff;
+  border-bottom: 2px solid #F26522;
+  box-shadow: 0 2px 20px rgba(27,51,105,0.10);
+  transition: box-shadow .3s;
 }
 .navScrolled {
-  background: rgba(11,26,61,.97);
-  box-shadow: 0 4px 24px rgba(0,0,0,.3);
+  box-shadow: 0 4px 32px rgba(27,51,105,0.15);
 }
 .row {
   display: flex; align-items: center; justify-content: space-between;
@@ -29,16 +28,17 @@
 }
 .link {
   display: inline-flex; align-items: center; gap: 4px;
-  padding: 7px 13px; color: rgba(255,255,255,.65);
+  padding: 7px 13px; color: #1B3369;
   text-decoration: none; font-family: 'Poppins', sans-serif;
   font-size: .875rem; font-weight: 500; border-radius: 7px;
   transition: color .2s, background .2s;
   background: none; border: none; cursor: pointer; white-space: nowrap;
 }
-.link:hover { color: #fff; background: rgba(255,255,255,.08); }
-.active { color: #fff !important; font-weight: 600; background: rgba(255,255,255,.10) !important; }
-.dropBtn svg { transition: transform .22s; }
-.dropBtnOpen svg { transform: rotate(180deg); }
+.link:hover { color: #F26522; background: rgba(242,101,34,0.07); }
+.active { color: #F26522 !important; font-weight: 700; background: rgba(242,101,34,0.08) !important; }
+.dropBtn svg { transition: transform .22s; color: #1B3369; }
+.dropBtnOpen { color: #F26522 !important; }
+.dropBtnOpen svg { transform: rotate(180deg); color: #F26522; }
 
 /* CTAs */
 .ctas { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
@@ -48,17 +48,17 @@
   font-family: 'Poppins', sans-serif; font-size: .875rem; font-weight: 700;
   border-radius: 8px; text-decoration: none; white-space: nowrap;
   transition: background .2s, transform .15s, box-shadow .2s;
-  box-shadow: 0 4px 12px rgba(242,101,34,.4);
+  box-shadow: 0 4px 14px rgba(242,101,34,.35);
 }
 .signIn:hover { background: #D4531A; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(242,101,34,.5); }
 
 /* BURGER */
 .burger {
-  display: none; background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.15); border-radius: 8px;
-  cursor: pointer; padding: 7px; color: #fff; transition: background .2s;
+  display: none; background: rgba(27,51,105,0.06);
+  border: 1px solid rgba(27,51,105,0.15); border-radius: 8px;
+  cursor: pointer; padding: 7px; color: #1B3369; transition: background .2s;
 }
-.burger:hover { background: rgba(255,255,255,.14); }
+.burger:hover { background: rgba(27,51,105,0.10); }
 
 /* ══════════════════════════════════
    MEGA-MENU
@@ -184,9 +184,10 @@
 ══════════════════════════════════ */
 .mob {
   position: fixed; top: 68px; left: 0; right: 0;
-  background: rgba(9,19,48,.98); backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255,255,255,.08);
-  z-index: 199; box-shadow: 0 20px 48px rgba(0,0,0,.4);
+  background: #fff;
+  border-top: 2px solid #F26522;
+  border-bottom: 1px solid #E8EDF4;
+  z-index: 199; box-shadow: 0 20px 48px rgba(27,51,105,0.15);
   animation: slideDown .2s ease;
   max-height: calc(100vh - 68px); overflow-y: auto;
 }
@@ -196,16 +197,18 @@
 }
 .mobLink {
   display: block; padding: 11px 24px;
-  color: rgba(255,255,255,.75); text-decoration: none;
+  color: #1B3369; text-decoration: none;
   font-family: 'Poppins', sans-serif; font-size: .92rem; font-weight: 500;
   transition: background .15s, color .15s;
+  border-bottom: 1px solid #F5F7FB;
 }
-.mobLink:hover { background: rgba(255,255,255,.06); color: #fff; }
+.mobLink:hover { background: rgba(242,101,34,0.06); color: #F26522; }
 .mobSec {
   padding: 10px 24px 4px; font-family: 'Poppins', sans-serif;
   font-size: .65rem; font-weight: 700; letter-spacing: 1.5px;
-  text-transform: uppercase; color: rgba(255,255,255,.28);
-  margin-top: 8px; border-top: 1px solid rgba(255,255,255,.06);
+  text-transform: uppercase; color: #9CA3AF;
+  margin-top: 8px; border-top: 1px solid #F0F4FF;
+  background: #F5F7FB;
 }
 
 /* Mobile platform accordion */
@@ -214,32 +217,33 @@
   display: flex; align-items: center; justify-content: space-between;
   width: 100%; padding: 12px 24px;
   background: none; border: none; cursor: pointer;
-  color: rgba(255,255,255,.75); font-family: 'Poppins', sans-serif;
+  color: #1B3369; font-family: 'Poppins', sans-serif;
   font-size: .92rem; font-weight: 600; text-align: left;
-  border-top: 1px solid rgba(255,255,255,.04);
+  border-bottom: 1px solid #F0F4FF;
   transition: background .15s;
 }
-.mobPlatformBtn:hover { background: rgba(255,255,255,.05); }
+.mobPlatformBtn:hover { background: rgba(242,101,34,0.05); color: #F26522; }
 .mobPlatformBtnLeft { display: flex; align-items: center; gap: 10px; }
 .mobPlatformIcon { font-size: 1rem; }
-.mobPlatformChevron { color: rgba(255,255,255,.35); transition: transform .22s; }
+.mobPlatformChevron { color: #9CA3AF; transition: transform .22s; }
 .mobPlatformChevronOpen { transform: rotate(180deg); }
 
 .mobChildren {
-  background: rgba(0,0,0,.2);
+  background: #F5F7FB;
   padding: 4px 0 8px;
+  border-bottom: 1px solid #F0F4FF;
 }
 .mobChild {
   display: flex; align-items: center; gap: 8px;
   padding: 8px 24px 8px 42px;
-  text-decoration: none; color: rgba(255,255,255,.55);
+  text-decoration: none; color: #374151;
   font-size: .83rem; font-weight: 500;
   transition: color .15s, background .15s;
 }
-.mobChild:hover { color: #fff; background: rgba(255,255,255,.05); }
+.mobChild:hover { color: #F26522; background: rgba(242,101,34,0.05); }
 .mobChildDot {
   width: 5px; height: 5px; border-radius: 50%;
-  background: rgba(255,255,255,.3); flex-shrink: 0;
+  background: #D1D5DB; flex-shrink: 0;
 }
 .mobViewAll {
   display: flex; align-items: center; gap: 6px;
