@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import Link from 'next/link';
 import { CheckCircle2, Users, Award } from 'lucide-react';
 import styles from './HeroSection.module.css';

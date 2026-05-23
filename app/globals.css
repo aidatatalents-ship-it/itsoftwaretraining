@@ -103,7 +103,7 @@
   --border-card: rgba(29, 78, 216, 0.25);
 
   /* ── Typography ── */
-  --font-head: 'Fraunces', serif;
+  --font-head: 'Poppins', sans-serif;
   --font-body: 'Poppins', 'DM Sans', 'Hind', sans-serif;
   --font-ui: 'Poppins', 'Hind', sans-serif;
 
@@ -159,7 +159,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Poppins', sans-serif;
   color: var(--ink);
   line-height: 1.1;
   letter-spacing: -0.5px;
@@ -191,7 +191,7 @@ a {
 }
 
 .section-header h2 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: clamp(1.9rem, 3.5vw, 2.8rem);
   font-weight: 900;
   color: var(--ink);
@@ -256,7 +256,7 @@ a {
 
 /* ── Section Heading ── */
 .sec-title {
-  font-family: 'Fraunces', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   font-weight: 900;
   color: var(--t-dark);

@@ -44,7 +44,7 @@
 }
 
 .name {
-  font-family: 'Fraunces', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.95rem;
   font-weight: 800;
   color: var(--ink);
@@ -115,7 +115,7 @@
 }
 
 .googleRating {
-  font-family: 'Fraunces', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 2.2rem;
   font-weight: 900;
   color: var(--ink);

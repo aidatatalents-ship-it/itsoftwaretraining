@@ -1,4 +1,4 @@
-import styles from './PlacementsSection.module.css';
+﻿import styles from './PlacementsSection.module.css';
 
 const placements = [
   { company: 'Infosys', count: '1,200+', logo: 'IN', color: '#0066CC' },

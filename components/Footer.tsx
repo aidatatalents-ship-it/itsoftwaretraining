@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock, ArrowRight } from 'lucide-react';
 import { PHONE_DISPLAY, PHONE_E164, WHATSAPP_BASE, EMAIL, ADDRESS, HOURS } from '@/data/contact';

@@ -1,4 +1,4 @@
-import { WHATSAPP_BASE } from '@/data/contact';
+﻿import { WHATSAPP_BASE } from '@/data/contact';
 
 export default function WhatsAppFloat() {
   const href = `${WHATSAPP_BASE}?text=Hi%2C+I+want+to+know+more+about+IT+Software+Training+in+Bangalore`;

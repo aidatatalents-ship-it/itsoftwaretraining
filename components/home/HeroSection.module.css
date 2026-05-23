@@ -90,7 +90,7 @@
 }
 
 .h1 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: clamp(2.8rem, 5vw, 4rem);
   font-weight: 900;
   color: #FFFFFF;
@@ -227,7 +227,7 @@
 }
 
 .formHeader h3 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.3rem;
   font-weight: 900;
   color: #FFFFFF;

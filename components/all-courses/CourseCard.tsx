@@ -77,7 +77,7 @@ export function CourseCard({ s }: { s: ServiceItem }) {
       {/* Body */}
       <div style={{ padding: '22px 22px 20px', display: 'flex', flexDirection: 'column', flex: 1 }}>
         <h2 style={{
-          fontFamily: 'Fraunces, serif', fontSize: '1.1rem', fontWeight: 800,
+          fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 800,
           color: '#0B1A3D', letterSpacing: '-0.4px', marginBottom: 6, lineHeight: 1.2,
         }}>{s.name}</h2>
 

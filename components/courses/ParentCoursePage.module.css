@@ -42,7 +42,7 @@
   margin-bottom: 18px;
 }
 .heroH1 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: clamp(2rem, 3.5vw, 2.9rem);
   font-weight: 900; color: #fff;
   line-height: 1.12; letter-spacing: -1px; margin-bottom: 12px;
@@ -146,7 +146,7 @@
   border-radius: 16px; padding: 24px;
 }
 .sideEnquiryTitle {
-  font-family: 'Fraunces', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.1rem; font-weight: 900; color: #fff; margin-bottom: 4px;
 }
 .sideEnquirySub { font-size: .78rem; color: rgba(255,255,255,.55); margin-bottom: 18px; line-height: 1.6; }
@@ -218,7 +218,7 @@
   margin-bottom: 20px; box-shadow: var(--sh-xs);
 }
 .secTitle {
-  font-family: 'Fraunces', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.25rem; font-weight: 900; color: var(--ink);
   margin-bottom: 6px; letter-spacing: -.4px;
 }

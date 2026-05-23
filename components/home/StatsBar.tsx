@@ -1,4 +1,4 @@
-import styles from './StatsBar.module.css';
+﻿import styles from './StatsBar.module.css';
 
 const stats = [
   { icon: '👨‍💻', number: '10,000+', label: 'Professionals Trained' },

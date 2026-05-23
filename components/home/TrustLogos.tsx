@@ -1,4 +1,4 @@
-import styles from './TrustLogos.module.css';
+﻿import styles from './TrustLogos.module.css';
 
 const companies = [
   'Infosys', 'Wipro', 'TCS', 'Accenture', 'Cognizant',

@@ -1,4 +1,4 @@
-/* ═══════════════════════════════════════════════════
+﻿/* ═══════════════════════════════════════════════════
    HOMEPAGE — SkillForge / IT Software Training
    Palette: ink #1B3369 · accent #F26522 · cream #F5F7FB
 ═══════════════════════════════════════════════════ */
@@ -73,7 +73,7 @@
 }
 
 .heroH1 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: clamp(28px, 3.8vw, 48px);
   font-weight: 900;
   line-height: 1.0;
@@ -279,7 +279,7 @@
 .stat { padding: 32px 20px; text-align: center; border-right: 1px solid rgba(255,255,255,0.07); transition: background 0.2s; }
 .stat:hover { background: rgba(255,255,255,0.04); }
 .stat:last-child { border: none; }
-.statN { font-family: 'Fraunces', serif; font-size: 32px; font-weight: 900; color: #F26522; letter-spacing: -1px; line-height: 1; }
+.statN { font-family: 'Poppins', sans-serif; font-size: 32px; font-weight: 900; color: #F26522; letter-spacing: -1px; line-height: 1; }
 .statL { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 5px; font-weight: 500; }
 
 /* ── SHARED SECTION HELPERS ── */
@@ -306,7 +306,7 @@
 .pTagBlue   { background: #E8F0FE; color: #1565C0; }
 .pTagOrange { background: #FFF3EB; color: #F26522; }
 .pTagGreen  { background: #EAF5EE; color: #2E844A; }
-.pathCard h3 { font-family: 'Fraunces', serif; font-size: 19px; font-weight: 900; letter-spacing: -.5px; line-height: 1.1; margin-bottom: 12px; color: var(--ink); }
+.pathCard h3 { font-family: 'Poppins', sans-serif; font-size: 19px; font-weight: 900; letter-spacing: -.5px; line-height: 1.1; margin-bottom: 12px; color: var(--ink); }
 .pathStory { font-size: 13px; color: var(--muted); line-height: 1.75; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
 .stepsList { display: flex; flex-direction: column; gap: 12px; }
 .slItem { display: flex; gap: 10px; align-items: flex-start; }
@@ -328,8 +328,8 @@
 .howGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 48px; }
 .howCard { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 28px; transition: border-color .2s; }
 .howCard:hover { border-color: rgba(255,255,255,0.25); }
-.howNum { font-family: 'Fraunces', serif; font-size: 44px; font-weight: 900; color: rgba(255,255,255,0.05); line-height: 1; margin-bottom: 12px; letter-spacing: -2px; }
-.howCard h4 { font-family: 'Fraunces', serif; font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 10px; letter-spacing: -.3px; }
+.howNum { font-family: 'Poppins', sans-serif; font-size: 44px; font-weight: 900; color: rgba(255,255,255,0.05); line-height: 1; margin-bottom: 12px; letter-spacing: -2px; }
+.howCard h4 { font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 10px; letter-spacing: -.3px; }
 .howCard p  { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.75; }
 
 /* ── PLACEMENT SUPPORT ── */
@@ -337,8 +337,8 @@
 .placeGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 48px; }
 .psCard { background: var(--cream); border: 1px solid var(--border); border-radius: 12px; padding: 24px 20px; transition: all .2s; }
 .psCard:hover { border-color: var(--ink); box-shadow: 0 8px 24px rgba(27,51,105,0.12); transform: translateY(-3px); }
-.psN { font-family: 'Fraunces', serif; font-size: 34px; font-weight: 900; color: var(--border); letter-spacing: -1px; line-height: 1; margin-bottom: 10px; }
-.psCard h4 { font-family: 'Fraunces', serif; font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 7px; }
+.psN { font-family: 'Poppins', sans-serif; font-size: 34px; font-weight: 900; color: var(--border); letter-spacing: -1px; line-height: 1; margin-bottom: 10px; }
+.psCard h4 { font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 7px; }
 .psCard p  { font-size: 13px; color: var(--muted); line-height: 1.65; }
 .psHighlight { background: #1B3369; border-color: #1B3369; }
 .psHighlight:hover { background: #1B3369 !important; border-color: #2451A3 !important; box-shadow: 0 8px 28px rgba(27,51,105,0.35); }
@@ -355,7 +355,7 @@
 .pkgHot { border-color: #F26522; }
 .pkgBadge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: #F26522; color: #fff; font-size: 11px; font-weight: 700; padding: 4px 16px; border-radius: 10px; white-space: nowrap; }
 .pkgTier  { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
-.pkgPrice { font-family: 'Fraunces', serif; font-size: 36px; font-weight: 900; letter-spacing: -1.5px; color: var(--ink); line-height: 1; margin-bottom: 4px; }
+.pkgPrice { font-family: 'Poppins', sans-serif; font-size: 36px; font-weight: 900; letter-spacing: -1.5px; color: var(--ink); line-height: 1; margin-bottom: 4px; }
 .pkgFor   { font-size: 13px; color: var(--muted); margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid var(--border); line-height: 1.6; }
 .pkgFeats { list-style: none; display: flex; flex-direction: column; gap: 9px; }
 .pkgFeats li { font-size: 13px; display: flex; gap: 8px; align-items: flex-start; }
@@ -406,7 +406,7 @@
   position: absolute;
   top: 12px;
   right: 22px;
-  font-family: 'Fraunces', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 80px;
   line-height: 1;
   color: #1B3369;
@@ -446,7 +446,7 @@
 }
 
 .testMeta { flex: 1; }
-.testName { font-family: 'Fraunces', serif; font-weight: 800; color: var(--ink); font-size: 0.95rem; letter-spacing: -0.2px; margin-bottom: 2px; }
+.testName { font-family: 'Poppins', sans-serif; font-weight: 800; color: var(--ink); font-size: 0.95rem; letter-spacing: -0.2px; margin-bottom: 2px; }
 .testRole { font-family: 'Poppins', sans-serif; font-size: 0.72rem; color: var(--t-muted); font-weight: 500; }
 
 .testStars {
@@ -508,7 +508,7 @@
   flex-wrap: wrap;
 }
 .googleRating {
-  font-family: 'Fraunces', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 2rem;
   font-weight: 900;
   color: var(--ink);
@@ -563,7 +563,7 @@
 }
 
 .finalH2 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 900;
   color: #fff;
@@ -603,7 +603,7 @@
 }
 .finalStat:last-child { border-right: none; }
 .finalStatN {
-  font-family: 'Fraunces', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.6rem;
   font-weight: 900;
   color: #F26522;

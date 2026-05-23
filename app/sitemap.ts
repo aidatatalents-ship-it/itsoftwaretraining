@@ -1,4 +1,4 @@
-import type { MetadataRoute } from 'next';
+﻿import type { MetadataRoute } from 'next';
 import { courseTree } from '@/data/courseTree';
 import { salesforceModules } from '@/data/salesforceModules';
 import { cloudModules } from '@/data/cloudModules';

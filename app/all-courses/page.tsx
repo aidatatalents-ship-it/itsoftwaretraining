@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import AllCoursesClient from './AllCoursesClient';
 
 export const metadata: Metadata = {
