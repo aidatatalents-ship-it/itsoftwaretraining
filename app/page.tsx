@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -253,23 +253,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ══ 5. HOW WE TRAIN ══ */}
-      <section className={styles.howSec} id="how">
-        <div className={styles.wrap}>
-          <div className={styles.sTagLight}>The Method</div>
-          <h2 style={{ color: '#fff' }}>This Is How We Actually Teach.</h2>
-          <p className={styles.sSubLight}>Four things we do differently — and why they produce better results.</p>
-          <div className={styles.howGrid}>
-            {methods.map(m => (
-              <div key={m.n} className={styles.howCard}>
-                <div className={styles.howNum}>{m.n}</div>
-                <h4>{m.title}</h4>
-                <p>{m.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ══ 6. PLACEMENT SUPPORT ══ */}
       <section className={styles.placeSec} id="placement">
