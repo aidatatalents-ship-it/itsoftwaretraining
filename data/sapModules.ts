@@ -93,7 +93,7 @@ export const sapModules: TrainingModule[] = [
     careerRoles: ['SAP ABAP Developer', 'SAP Technical Consultant', 'S/4HANA Developer', 'SAP Integration Developer', 'SAP Fiori Developer'],
     certifications: ['SAP Certified Development Associate – ABAP with SAP NetWeaver', 'SAP Certified Development Associate – SAP S/4HANA Cloud'],
     faqs: [
-      { q: 'Is ABAP still relevant in 2025?', a: 'Yes — S/4HANA ABAP with CDS Views, OData and RAP is in very high demand. All SAP implementations require ABAP developers for customisation.' },
+      { q: 'Is ABAP still relevant in 2026?', a: 'Yes — S/4HANA ABAP with CDS Views, OData and RAP is in very high demand. All SAP implementations require ABAP developers for customisation.' },
       { q: 'Do I need programming experience for ABAP?', a: 'Basic programming awareness helps but is not mandatory. We start from ABAP fundamentals and cover everything step by step.' },
       { q: 'What is the salary of an SAP ABAP developer?', a: 'Entry-level: ₹5–7 LPA. With 2–3 years: ₹12–20 LPA. S/4HANA ABAP specialists earn ₹20–35 LPA.' },
       { q: 'Does the course cover S/4HANA ABAP?', a: 'Yes — CDS Views, OData services, AMDP and the new RAP (Restful ABAP Programming Model) are all covered.' },

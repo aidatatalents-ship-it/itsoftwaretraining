@@ -33,7 +33,7 @@ export default function AllCoursesClient() {
         <div className={styles.heroInner}>
           <div className={styles.heroBadge}>
             <span className={styles.heroBadgeDot} />
-            Admissions Open · June 2025 Batch
+            Admissions Open · June 2026 Batch
           </div>
           <h1 className={styles.heroH1}>
             All IT Training Courses<br />

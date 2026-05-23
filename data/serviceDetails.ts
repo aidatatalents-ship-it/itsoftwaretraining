@@ -59,7 +59,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     careerRoles: ['Security Analyst', 'Penetration Tester', 'SOC Analyst', 'Ethical Hacker', 'Cloud Security Engineer', 'CISO (Advanced)'],
     certifications: ['Certified Ethical Hacker (CEH)', 'CompTIA Security+', 'CISSP', 'Offensive Security OSCP', 'AWS Security Specialty'],
     faqs: [
-      { q: 'Is cybersecurity a good career in Bangalore 2025?', a: 'One of the best. India faces 3,000+ cyberattacks daily and there is a massive talent shortage. Salaries are premium.' },
+      { q: 'Is cybersecurity a good career in Bangalore 2026?', a: 'One of the best. India faces 3,000+ cyberattacks daily and there is a massive talent shortage. Salaries are premium.' },
       { q: 'Do I need a programming background for cybersecurity?', a: 'Not mandatory. Basic understanding of networks and Linux is helpful. We start from fundamentals.' },
       { q: 'What is the salary of a cybersecurity analyst in Bangalore?', a: 'Entry level: ₹5–8 LPA. Mid-level (3 yrs): ₹12–20 LPA. Specialised pentesters: ₹20–35+ LPA.' },
       { q: 'Does the training include real hacking labs?', a: 'Absolutely. We have dedicated hacking labs with vulnerable VM environments. All practice is on legal, isolated systems.' },
@@ -83,7 +83,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       { q: 'What is the salary of a Data Scientist in Bangalore?', a: 'Freshers: ₹6–12 LPA. Mid-level: ₹15–30 LPA. Senior Data Scientists at top firms earn ₹40–60 LPA.' },
       { q: 'Do you cover Generative AI and ChatGPT in the curriculum?', a: 'Yes! Our curriculum includes LLMs, ChatGPT API integration, LangChain, and building GenAI applications — very current content.' },
       { q: 'What kind of projects will I work on?', a: 'Real-world projects: Stock prediction, sentiment analysis, recommendation systems, customer churn prediction, image classification.' },
-      { q: 'How is the job market for Python/Data Science in Bangalore 2025?', a: 'Phenomenal. Every product company and MNC in Bangalore is hiring data scientists. It is the #1 in-demand skill globally.' },
+      { q: 'How is the job market for Python/Data Science in Bangalore 2026?', a: 'Phenomenal. Every product company and MNC in Bangalore is hiring data scientists. It is the #1 in-demand skill globally.' },
     ],
   },
 
@@ -220,7 +220,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     certifications: ['Salesforce JavaScript Developer I', 'Salesforce Platform Developer I (PD1)', 'Salesforce Platform Developer II (PD2)'],
     faqs: [
       { q: 'What are the prerequisites for LWC training?', a: 'Basic Salesforce Apex and JavaScript knowledge is helpful. The course starts from modern JS fundamentals, so beginners are welcome.' },
-      { q: 'Why learn LWC over Aura in 2025?', a: 'LWC is the current Salesforce standard — faster, closer to web standards, and all new Salesforce features are built on LWC.' },
+      { q: 'Why learn LWC over Aura in 2026?', a: 'LWC is the current Salesforce standard — faster, closer to web standards, and all new Salesforce features are built on LWC.' },
       { q: 'What salary does an LWC developer earn in Bangalore?', a: 'LWC is a premium skill. Developers with LWC expertise earn ₹7–18 LPA, with senior roles reaching ₹25+ LPA.' },
       { q: 'How is LWC different from React or Angular?', a: 'LWC is a Salesforce-specific web component framework built on web standards. Skills transfer well to React and Vue.' },
       { q: 'How many modules are in the LWC course?', a: '28 modules across 25 hours, covering everything from VS Code setup to Heroku deployment of LWC Open Source.' },

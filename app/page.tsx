@@ -387,7 +387,7 @@ export default function HomePage() {
           {/* Badge */}
           <div className={styles.finalBadge}>
             <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#F26522', animation: 'pulse 2s infinite', display: 'inline-block' }} />
-            Admissions Open · June 2025 Batch
+            Admissions Open · June 2026 Batch
           </div>
 
           <h2 className={styles.finalH2}>

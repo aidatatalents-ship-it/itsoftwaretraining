@@ -88,9 +88,9 @@ export const pythonModules: TrainingModule[] = [
     title: 'Generative AI Training in Bangalore',
     h1: 'Generative AI Training in Bangalore — LLMs, LangChain, RAG, Prompt Engineering & AI Application Development',
     short: 'Generative AI',
-    description: 'Master Generative AI — Large Language Models (ChatGPT, Gemini, Llama), LangChain, RAG (Retrieval-Augmented Generation), prompt engineering, fine-tuning, vector databases and building production AI applications. The hottest skill in tech in 2025.',
+    description: 'Master Generative AI — Large Language Models (ChatGPT, Gemini, Llama), LangChain, RAG (Retrieval-Augmented Generation), prompt engineering, fine-tuning, vector databases and building production AI applications. The hottest skill in tech in 2026.',
     duration: '2–3 Months', salary: '₹12–45 LPA', demand: 'Extremely High',
-    students: '300+', badge: '🔥 Hottest Skill 2025', modules: 5, rating: '4.9', nextBatch: 'Enquire now',
+    students: '300+', badge: '🔥 Hottest Skill 2026', modules: 5, rating: '4.9', nextBatch: 'Enquire now',
     curriculum: [
       { module: 'LLM & GenAI Fundamentals', topics: ['How Large Language Models Work', 'GPT, Gemini, Claude & Llama Architecture', 'Tokens, Context Windows & Embeddings', 'OpenAI API & Google Gemini API', 'Use Cases: Chatbots, Summarisation, Code Gen'] },
       { module: 'Prompt Engineering', topics: ['Zero-shot & Few-shot Prompting', 'Chain-of-Thought (CoT) Reasoning', 'Structured Output & JSON Mode', 'System Prompts & Role Definitions', 'Prompt Injection & Safety'] },
@@ -103,7 +103,7 @@ export const pythonModules: TrainingModule[] = [
     certifications: ['Microsoft Azure AI Fundamentals (AI-900)', 'Google Cloud Professional ML Engineer', 'AWS Certified Machine Learning – Specialty', 'DeepLearning.AI Generative AI Specialization'],
     faqs: [
       { q: 'Do I need to know machine learning for GenAI training?', a: 'No — while ML knowledge helps, our GenAI course is structured for developers who understand Python and APIs. We cover all foundational concepts within the programme.' },
-      { q: 'What salary does a GenAI engineer earn?', a: 'Generative AI engineers are the highest-paid tech professionals in 2025 — earning ₹15–45 LPA in Bangalore. Senior AI architects earn ₹50–100 LPA at top product companies.' },
+      { q: 'What salary does a GenAI engineer earn?', a: 'Generative AI engineers are the highest-paid tech professionals in 2026 — earning ₹15–45 LPA in Bangalore. Senior AI architects earn ₹50–100 LPA at top product companies.' },
       { q: 'Is GenAI just about using ChatGPT?', a: 'No — this course teaches you to BUILD AI applications using LLMs as the engine. LangChain, RAG systems, vector databases, fine-tuning and production deployment are core skills.' },
       { q: 'What is LangChain?', a: 'LangChain is the most popular framework for building LLM-powered applications — connecting prompts, memory, tools, and vector databases into production-grade AI systems.' },
       { q: 'What can I build after this course?', a: 'AI chatbots, document Q&A systems, code review agents, automated report generators, semantic search engines, and multi-agent AI workflows — all with real code and production deployment.' },

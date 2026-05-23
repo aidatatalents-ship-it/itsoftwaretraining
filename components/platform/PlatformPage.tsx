@@ -37,7 +37,7 @@ export default function PlatformPage({ service, detail, guide }: Props) {
           <div className={styles.heroInner}>
             <div className={styles.heroLeft}>
               <div className={styles.heroPlatformBadge}>
-                📋 Career Guide · Updated May 2025
+                📋 Career Guide · Updated May 2026
               </div>
               <h1 className={styles.heroH1}>
                 {guide?.tagline ?? `Is ${service.name} the right career for you?`}
@@ -80,7 +80,7 @@ export default function PlatformPage({ service, detail, guide }: Props) {
         <section className={styles.section}>
           <div className="container">
             <div className={styles.sectionLabel}><TrendingUp size={11} /> Market Opportunity</div>
-            <h2 className={styles.sectionH2}>Why {service.short} is a <em>Smart Career Move</em> in 2025</h2>
+            <h2 className={styles.sectionH2}>Why {service.short} is a <em>Smart Career Move</em> in 2026</h2>
             <div className={styles.whyNowGrid}>
               {guide.whyNow.map((point, i) => (
                 <div key={i} className={styles.whyNowCard}>

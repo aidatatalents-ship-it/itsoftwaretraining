@@ -23,7 +23,7 @@ const highlightIcons = [
 const highlights = (s: ServiceItem) => [
   { k: 'Duration',        v: s.duration,                red: false },
   { k: 'Avg Salary',      v: s.salary,                  red: false },
-  { k: 'Next Batch',      v: `${s.nextBatch} 2025`,     red: true  },
+  { k: 'Next Batch',      v: `${s.nextBatch} 2026`,     red: true  },
   { k: 'Placement Rate',  v: '98%',                     red: false },
   { k: 'Training Mode',   v: 'Classroom + Online',       red: false },
   { k: 'EMI Available',   v: '0% Interest',              red: false },
@@ -125,7 +125,7 @@ export default function ServiceHero({ service }: Props) {
             <div className={styles.enrolCard}>
               <div className={styles.enrolHead}>
                 <span style={{ fontFamily: "'Poppins',sans-serif", fontWeight: 700, color: '#fff' }}>Course Highlights</span>
-                <span style={{ fontSize: '.72rem', color: 'rgba(255,255,255,.7)' }}>Updated June 2025</span>
+                <span style={{ fontSize: '.72rem', color: 'rgba(255,255,255,.7)' }}>Updated June 2026</span>
               </div>
               <div className={styles.enrolBody}>
                 {highlights(service).map(r => {

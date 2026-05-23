@@ -24,7 +24,7 @@ export default function ServiceWhy({ service, detail }: Props) {
         <div style={{ textAlign: 'center', marginBottom: 48 }}>
           <div className="sec-pill" style={{ justifyContent: 'center' }}>Why Learn This</div>
           <h2 className="sec-title" style={{ textAlign: 'center' }}>
-            Why <span style={{ color: 'var(--purple)' }}>{service.short}</span> in 2025?
+            Why <span style={{ color: 'var(--purple)' }}>{service.short}</span> in 2026?
           </h2>
         </div>
 

@@ -29,13 +29,13 @@ const faqs: Faq[] = [
   // -- CLUSTER 1: Course & Platform Selection --
   {
     category: 'Course Selection',
-    q: 'Which IT course has the highest salary in Bangalore in 2025?',
+    q: 'Which IT course has the highest salary in Bangalore in 2026?',
     a: 'Salesforce (particularly LWC and CPQ specialists), Cloud Architecture (AWS/Azure), and SAP are the highest-paying IT courses in Bangalore. Freshers with Salesforce Admin certification earn Rs.4-7 LPA, while experienced cloud architects earn Rs.25-45 LPA. DevOps and cybersecurity roles also show consistent 25-35% year-on-year salary growth.',
   },
   {
     category: 'Course Selection',
     q: 'Which IT software training course is best in Bangalore for freshers?',
-    a: 'Salesforce Administrator, Power BI, and Python with Data Science are the three best IT software courses for freshers in Bangalore in 2025. These platforms have the lowest prior-knowledge barrier, the highest volume of entry-level job openings in Bangalore, and deliver an average first salary of Rs.5.5-7.8 LPA. A free career counselling session can match the right platform to your specific background and goals.',
+    a: 'Salesforce Administrator, Power BI, and Python with Data Science are the three best IT software courses for freshers in Bangalore in 2026. These platforms have the lowest prior-knowledge barrier, the highest volume of entry-level job openings in Bangalore, and deliver an average first salary of Rs.5.5-7.8 LPA. A free career counselling session can match the right platform to your specific background and goals.',
   },
   {
     category: 'Course Selection',
@@ -89,7 +89,7 @@ const faqs: Faq[] = [
   // -- CLUSTER 6: Bangalore IT Market --
   {
     category: 'Bangalore Market',
-    q: 'Is Bangalore still the best city for IT jobs in India in 2025?',
+    q: 'Is Bangalore still the best city for IT jobs in India in 2026?',
     a: 'Yes. Bangalore accounts for approximately 35% of India\'s IT exports and houses over 5,000 IT companies including Infosys, Wipro, TCS, and 400+ MNCs. The city\'s IT sector continues to grow at 12-15% annually, making it the strongest job market for freshly trained IT professionals. Salesforce, Cloud, and DevOps roles in Bangalore pay 20-35% more than the same roles in any other Indian city.',
   },
 
@@ -97,7 +97,7 @@ const faqs: Faq[] = [
   {
     category: 'Certification',
     q: 'Which IT certifications are most valued by employers in Bangalore?',
-    a: 'The most valued IT certifications by Bangalore employers in 2025 are: Salesforce Administrator (ADM 201), AWS Solutions Architect Associate (SAA-C03), Microsoft Azure Administrator (AZ-104), Certified Kubernetes Administrator (CKA), CompTIA Security+, SAP Certified Application Associate, and Google Professional Data Engineer. Certified candidates receive 2-3 times more interview calls on Naukri and LinkedIn than non-certified candidates with equivalent training hours.',
+    a: 'The most valued IT certifications by Bangalore employers in 2026 are: Salesforce Administrator (ADM 201), AWS Solutions Architect Associate (SAA-C03), Microsoft Azure Administrator (AZ-104), Certified Kubernetes Administrator (CKA), CompTIA Security+, SAP Certified Application Associate, and Google Professional Data Engineer. Certified candidates receive 2-3 times more interview calls on Naukri and LinkedIn than non-certified candidates with equivalent training hours.',
   },
 ];
 

@@ -11,7 +11,7 @@ export default function CtaBanner() {
           <div className={styles.left}>
             <div className={styles.liveDot}>
               <span className="pulse-dot" />
-              <span>Admissions Open — June 2025</span>
+              <span>Admissions Open — June 2026</span>
             </div>
             <h2 className={styles.h2}>
               Take the First Step Towards<br />
@@ -43,7 +43,7 @@ export default function CtaBanner() {
           {/* Right — Offer box */}
           <div className={styles.right}>
             <div className={styles.offerCard}>
-              <div className={styles.offerTag}>🔥 June 2025 Special</div>
+              <div className={styles.offerTag}>🔥 June 2026 Special</div>
               <h3 className={styles.offerTitle}>What You Get — Free!</h3>
               <ul className={styles.offerList}>
                 {[

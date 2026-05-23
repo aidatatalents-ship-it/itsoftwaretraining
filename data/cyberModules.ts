@@ -21,7 +21,7 @@ export const cyberModules: TrainingModule[] = [
     careerRoles: ['Ethical Hacker', 'Penetration Tester', 'Security Analyst', 'Vulnerability Assessment Engineer', 'Red Team Specialist'],
     certifications: ['EC-Council Certified Ethical Hacker (CEH v12)', 'CompTIA Security+', 'Offensive Security Certified Professional (OSCP)'],
     faqs: [
-      { q: 'Is CEH worth it in 2025?', a: 'Yes — CEH is the most recognised entry-level ethical hacking certification. It is required for many government, banking, and IT security roles in India.' },
+      { q: 'Is CEH worth it in 2026?', a: 'Yes — CEH is the most recognised entry-level ethical hacking certification. It is required for many government, banking, and IT security roles in India.' },
       { q: 'What salary does a CEH certified professional earn?', a: 'Freshers earn ₹5–8 LPA. CEH-certified professionals with 2–3 years earn ₹12–22 LPA. Senior pentesters earn ₹25–40 LPA.' },
       { q: 'Is CEH difficult?', a: 'CEH v12 is a 125-question MCQ exam. With our structured prep and 300+ practice questions, most students clear it in the first attempt.' },
       { q: 'Do I need programming knowledge for CEH?', a: 'No programming required. Basic networking and Linux knowledge is helpful — both are covered in our course.' },

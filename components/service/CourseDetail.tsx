@@ -328,7 +328,7 @@ export default function CourseDetail({ service, detail }: Props) {
                 )}
 
                 <div className={styles.sec}>
-                  <div className={styles.secTitle}>Why This Career in 2025?</div>
+                  <div className={styles.secTitle}>Why This Career in 2026?</div>
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
                     {[
                       { Icon: TrendingUp, title: 'Fastest Growing Field',    body: 'Among the top 10 fastest growing job categories globally.', color: '#0D1B3E' },

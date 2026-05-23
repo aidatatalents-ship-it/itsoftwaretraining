@@ -34,7 +34,7 @@ export interface PlatformGuide {
 export const platformGuides: Record<string, PlatformGuide> = {
   salesforce: {
     slug: 'salesforce',
-    tagline: 'Is a Salesforce career the right move for you in 2025?',
+    tagline: 'Is a Salesforce career the right move for you in 2026?',
     marketOverview: 'Salesforce is the world\'s #1 CRM platform, used by 150,000+ companies globally — from startups to Fortune 500s. India has the second-largest Salesforce talent pool in the world, and Bangalore is its epicentre. With every company digitising their sales operations, certified Salesforce professionals command premium salaries and face virtually zero unemployment.',
     whyNow: [
       'Salesforce has 21.7% share of the global CRM market — growing at 12% YoY',
@@ -75,7 +75,7 @@ export const platformGuides: Record<string, PlatformGuide> = {
 
   cloud: {
     slug: 'cloud',
-    tagline: 'Is Cloud Computing (AWS / Azure) the right career for you in 2025?',
+    tagline: 'Is Cloud Computing (AWS / Azure) the right career for you in 2026?',
     marketOverview: 'Cloud computing is the backbone of modern technology — every application, startup, and enterprise runs on cloud infrastructure. AWS alone powers 32% of global cloud infrastructure, with Azure at 23%. Cloud professionals in Bangalore are among the highest-paid IT workers, and the talent shortage means certified professionals get placed within weeks.',
     whyNow: [
       'Global cloud market reaching $1.6 trillion by 2030 — fastest growing IT sector',
@@ -115,7 +115,7 @@ export const platformGuides: Record<string, PlatformGuide> = {
 
   sap: {
     slug: 'sap',
-    tagline: 'Is an SAP career the right move for you in 2025?',
+    tagline: 'Is an SAP career the right move for you in 2026?',
     marketOverview: 'SAP is the ERP backbone of over 400,000 companies in 180 countries — including 92% of Forbes Global 2000 companies. With the mandatory migration to SAP S/4HANA by 2027, millions of businesses worldwide are upgrading, creating a massive and sustained demand for SAP professionals. India\'s SAP consulting ecosystem is one of the largest globally, centred in Bangalore, Hyderabad, and Chennai.',
     whyNow: [
       'SAP has mandated all clients to migrate to S/4HANA by 2027 — creating 5+ years of project demand',
@@ -156,12 +156,12 @@ export const platformGuides: Record<string, PlatformGuide> = {
 
   'python-data-science': {
     slug: 'python-data-science',
-    tagline: 'Is Python, Data Science, or AI the right career path for you in 2025?',
+    tagline: 'Is Python, Data Science, or AI the right career path for you in 2026?',
     marketOverview: 'Python is the world\'s most popular programming language (TIOBE Index, 2024) and the primary language of data science, machine learning, and generative AI. With the AI revolution accelerating, Python and ML skills are the most universally in-demand across all industries — from banking and healthcare to e-commerce and manufacturing.',
     whyNow: [
       'ChatGPT sparked a global AI arms race — every company is hiring AI/ML engineers urgently',
       'Python developers have the lowest unemployment rate of any tech specialty globally',
-      'Generative AI engineers are the highest-paid tech professionals in India in 2025',
+      'Generative AI engineers are the highest-paid tech professionals in India in 2026',
       'Data-driven decision-making is now mandatory in every industry sector',
       'Python skills open doors to web dev, automation, data science, ML, and AI — maximum versatility',
     ],
@@ -196,7 +196,7 @@ export const platformGuides: Record<string, PlatformGuide> = {
 
   devops: {
     slug: 'devops',
-    tagline: 'Is a DevOps career the right choice for you in 2025?',
+    tagline: 'Is a DevOps career the right choice for you in 2026?',
     marketOverview: 'DevOps has fundamentally changed how software is built and delivered. With every company moving to cloud-native architectures, the demand for engineers who can bridge development and operations — using Docker, Kubernetes, Terraform, and CI/CD pipelines — has exploded. DevOps engineers in Bangalore are among the most sought-after IT professionals, with job offers arriving within days of certification.',
     whyNow: [
       'Kubernetes adoption grew 300% in 3 years — every cloud deployment now uses containers',
@@ -236,7 +236,7 @@ export const platformGuides: Record<string, PlatformGuide> = {
 
   cybersecurity: {
     slug: 'cybersecurity',
-    tagline: 'Is a Cybersecurity career the right path for you in 2025?',
+    tagline: 'Is a Cybersecurity career the right path for you in 2026?',
     marketOverview: 'Cybersecurity is the fastest-growing sector in IT, driven by escalating cyber threats, new compliance mandates (RBI, SEBI, DPDP Act), and the explosion of cloud infrastructure. India faces a critical shortage of 800,000+ cybersecurity professionals, and organisations are paying premium salaries to fill the gap. Every breach headline creates 100 new job openings.',
     whyNow: [
       'India\'s DPDP Act (Data Protection) mandates cybersecurity investments across all sectors',
@@ -250,7 +250,7 @@ export const platformGuides: Record<string, PlatformGuide> = {
       { val: '₹6–40 LPA', label: 'Salary range in Bangalore' },
       { val: '300%',     label: 'Rise in cyberattacks in India (2023)' },
       { val: '0%',       label: 'Unemployment for certified professionals' },
-      { val: '$10.5T',   label: 'Global cybercrime cost by 2025' },
+      { val: '$10.5T',   label: 'Global cybercrime cost by 2026' },
     ],
     roadmap: [
       { level: '01', title: 'Security Analyst (Junior)', timeline: '0–6 months', salary: '₹4–8 LPA', skills: ['Networking Fundamentals', 'Linux & Kali', 'CEH v12 Certification', 'SIEM Basics (Splunk)'], color: '#DC2626' },
