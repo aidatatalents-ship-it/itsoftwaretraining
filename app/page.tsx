@@ -381,58 +381,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ══ 11. FINAL CTA ══ */}
-      <section className={styles.finalSec}>
-        <div className={styles.finalInner}>
-          {/* Badge */}
-          <div className={styles.finalBadge}>
-            <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#F26522', animation: 'pulse 2s infinite', display: 'inline-block' }} />
-            Admissions Open · June 2026 Batch
-          </div>
 
-          <h2 className={styles.finalH2}>
-            One Call. Clear Direction.<br />
-            <em>No Pressure.</em>
-          </h2>
-
-          <p className={styles.finalSub}>
-            Whether you&apos;re a fresher, a professional ready to upskill, or switching careers —
-            we&apos;ll give you an honest answer on your best path forward. Free, 30-minute call.
-          </p>
-
-          {/* Inline stats */}
-          <div className={styles.finalStats}>
-            <div className={styles.finalStat}>
-              <div className={styles.finalStatN}>10,000+</div>
-              <div className={styles.finalStatL}>Students Placed</div>
-            </div>
-            <div className={styles.finalStat}>
-              <div className={styles.finalStatN}>60 Days</div>
-              <div className={styles.finalStatL}>Avg. Time to Offer</div>
-            </div>
-            <div className={styles.finalStat}>
-              <div className={styles.finalStatN}>4.9 ★</div>
-              <div className={styles.finalStatL}>Google Rating</div>
-            </div>
-          </div>
-
-          {/* CTAs */}
-          <div className={styles.finalBtns}>
-            <Link href="/contact" className={styles.btnAccent}>Book Free Counselling Call →</Link>
-            <a href={WHATSAPP_BASE} target="_blank" rel="noopener" style={{
-              display: 'inline-flex', alignItems: 'center', gap: 8,
-              padding: '14px 26px', border: '1.5px solid rgba(255,255,255,0.2)',
-              borderRadius: 8, color: 'rgba(255,255,255,0.8)',
-              fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 600,
-              textDecoration: 'none', transition: 'all 0.2s',
-            }}>
-              💬 Chat on WhatsApp
-            </a>
-          </div>
-
-          <p className={styles.finalNote}>No pitch. No pressure. Just 30 minutes of honest career guidance.</p>
-        </div>
-      </section>
 
     </main>
   );
