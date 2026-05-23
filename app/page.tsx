@@ -60,7 +60,7 @@ const methods = [
 const placementSteps = [
   { n: '01', title: 'AI-Built Resume',            body: 'Written around the exact keywords your platform\'s recruiters search for — custom built around your background, projects, and certification.' },
   { n: '02', title: 'LinkedIn Profile Overhaul',  body: 'Your headline, summary, and skills section completely rewritten for recruiter discovery. 70% of IT hiring in Bangalore happens via LinkedIn searches.' },
-  { n: '03', title: 'Paid Naukri Activation',     body: 'We set up a paid Naukri subscription for you. Paid profiles get 3–5x more recruiter visibility and receive direct recruiter calls.', highlight: true },
+  { n: '03', title: 'Paid Naukri Activation',     body: 'We set up a paid Naukri subscription for you. Paid profiles get 3–5x more recruiter visibility and receive direct recruiter calls.' },
   { n: '04', title: 'AI Interview Simulation',    body: 'Many companies now use HireVue and Talview for AI-powered first-round screening. We run you through a full mock session before you face the real thing.' },
   { n: '05', title: 'Direct Recruiter Submissions', body: 'We personally send your profile to our active network of hiring managers and platform-specific recruiters in Bangalore — with a direct recommendation.' },
   { n: '06', title: '90-Day Active Follow-Up',    body: 'Day 30, 60, and 90 check-ins after your course. If something isn\'t working, we diagnose and fix it. We keep pushing until your offer letter is signed.' },
