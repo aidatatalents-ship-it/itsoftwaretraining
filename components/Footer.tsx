@@ -4,12 +4,12 @@ import { Phone, Mail, MapPin, Clock, ArrowRight } from 'lucide-react';
 import { PHONE_DISPLAY, PHONE_E164, WHATSAPP_BASE, EMAIL, ADDRESS, HOURS } from '@/data/contact';
 
 const quickLinks = [
-  { label: 'Salesforce Training', href: '/services/salesforce' },
-  { label: 'Cloud (AWS & Azure)', href: '/services/cloud' },
-  { label: 'SAP Training',        href: '/services/sap' },
-  { label: 'Python & AI',         href: '/services/python-data-science' },
-  { label: 'DevOps & Kubernetes', href: '/services/devops' },
-  { label: 'Cybersecurity / CEH', href: '/services/cybersecurity' },
+  { label: 'Salesforce Training', href: '/courses/salesforce' },
+  { label: 'Cloud (AWS & Azure)', href: '/courses/cloud' },
+  { label: 'SAP Training',        href: '/courses/sap' },
+  { label: 'Python & AI',         href: '/courses/python-data-science' },
+  { label: 'DevOps & Kubernetes', href: '/courses/devops' },
+  { label: 'Cybersecurity / CEH', href: '/courses/cybersecurity' },
 ];
 
 const companyLinks = [
