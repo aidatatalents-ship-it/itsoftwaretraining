@@ -336,11 +336,12 @@
 .placeSec { background: #fff; padding: 80px 5%; }
 .placeGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 48px; }
 .psCard { background: var(--cream); border: 1px solid var(--border); border-radius: 12px; padding: 24px 20px; transition: all .2s; }
-.psCard:hover { border-color: var(--ink); background: #fff; }
+.psCard:hover { border-color: var(--ink); box-shadow: 0 8px 24px rgba(27,51,105,0.12); transform: translateY(-3px); }
 .psN { font-family: 'Fraunces', serif; font-size: 34px; font-weight: 900; color: var(--border); letter-spacing: -1px; line-height: 1; margin-bottom: 10px; }
 .psCard h4 { font-family: 'Fraunces', serif; font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 7px; }
 .psCard p  { font-size: 13px; color: var(--muted); line-height: 1.65; }
 .psHighlight { background: #1B3369; border-color: #1B3369; }
+.psHighlight:hover { background: #1B3369 !important; border-color: #2451A3 !important; box-shadow: 0 8px 28px rgba(27,51,105,0.35); }
 .psHighlight .psN { color: rgba(255,255,255,0.06); }
 .psHighlight h4   { color: #fff; }
 .psHighlight p    { color: rgba(255,255,255,0.5); }
