@@ -279,7 +279,7 @@ export default function HomePage() {
           <p className={styles.sSub}>Your WhatsApp group stays active for 2 years after course completion. Our alumni have re-used our mock interview sessions up to 3 times when switching jobs. This isn&apos;t a transaction — it&apos;s a long-term career partnership. Here&apos;s exactly what we do for every student — step by step.</p>
           <div className={styles.placeGrid}>
             {placementSteps.map(s => (
-              <div key={s.n} className={`${styles.psCard} ${s.highlight ? styles.psHighlight : ''}`}>
+              <div key={s.n} className={styles.psCard}>
                 <div className={styles.psN}>{s.n}</div>
                 <h4>{s.title}</h4>
                 <p>{s.body}</p>
