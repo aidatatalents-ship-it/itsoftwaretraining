@@ -52,7 +52,7 @@ export const courseTree: ParentCourse[] = [
       },
       {
         slug: 'salesforce-developer',
-        href: '/services/salesforce-developer',
+        href: '/salesforce/developer-training',
         title: 'Salesforce Developer',
         tagline: 'Apex · Triggers · SOQL · REST API · PD1',
         duration: '2–3 Months',
