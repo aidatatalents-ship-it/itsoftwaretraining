@@ -55,9 +55,6 @@ export default function ServicesGrid() {
                   {/* Animated shimmer on hover */}
                   <div className={styles.imgShimmer} />
 
-                  {/* Platform icon — floats top-right */}
-                  <div className={styles.platformIcon}>{accent.icon}</div>
-
                   {/* Badge */}
                   {s.badge && (
                     <span className={`${styles.cardBadge} ${
