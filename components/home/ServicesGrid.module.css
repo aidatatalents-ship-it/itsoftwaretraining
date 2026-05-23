@@ -1,4 +1,4 @@
-/* ══════════════════════════════════════
+﻿/* ══════════════════════════════════════
    SERVICES GRID — Lively Cards
    ══════════════════════════════════════ */
 
@@ -107,7 +107,7 @@
   border-radius: 5px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.65rem;
   font-weight: 700;
   padding: 4px 10px;
@@ -133,14 +133,14 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.72rem;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.88);
 }
 .imgStripDemand {
   margin-left: auto;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.63rem;
   font-weight: 800;
   color: #fff;
@@ -210,7 +210,7 @@
 .careerGuideLink {
   display: block;
   text-align: center;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.7rem;
   font-weight: 600;
   color: var(--t-muted);
@@ -231,7 +231,7 @@
   border: 1.5px solid var(--card-accent, #1B3369);
   background: transparent;
   color: var(--card-accent, #1B3369);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.76rem;
   font-weight: 600;
   text-decoration: none;
@@ -253,7 +253,7 @@
   border-radius: 7px;
   background: linear-gradient(135deg, #F26522 0%, #FF8A50 100%);
   color: #fff;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.76rem;
   font-weight: 700;
   text-decoration: none;
@@ -282,7 +282,7 @@
   background: var(--ink);
   color: #fff;
   border-radius: 999px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
   text-decoration: none;

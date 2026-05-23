@@ -1,4 +1,4 @@
-export interface TrainingModule {
+﻿export interface TrainingModule {
   moduleSlug: string;
   title: string;
   h1: string;

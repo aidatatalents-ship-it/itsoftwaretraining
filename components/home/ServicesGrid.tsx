@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Clock, BookOpen, Star, Users, TrendingUp, ArrowRight } from 'lucide-react';
@@ -26,7 +26,7 @@ export default function ServicesGrid() {
         <div style={{ marginBottom: 40 }}>
           <div className="sec-pill">🎓 6 Core IT Programmes · Online &amp; Offline</div>
           <h2 className="sec-title">Our <span>Core Courses</span></h2>
-          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '1rem', color: '#6B7280', marginTop: 10, maxWidth: 540 }}>
+          <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: '1rem', color: '#6B7280', marginTop: 10, maxWidth: 540 }}>
             Six industry-leading IT programmes with live projects, global certifications, and 100% placement support.
           </p>
         </div>

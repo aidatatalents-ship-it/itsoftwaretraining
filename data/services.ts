@@ -1,4 +1,4 @@
-// Shared services data — imported by both client components and server pages
+﻿// Shared services data — imported by both client components and server pages
 
 export interface ServiceItem {
   slug: string;

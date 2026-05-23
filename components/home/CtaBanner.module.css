@@ -1,4 +1,4 @@
-.section {
+﻿.section {
   position: relative;
   background: linear-gradient(135deg, #070F28 0%, #0D1B3E 40%, #1B3369 100%);
   padding: 80px 0;
@@ -28,7 +28,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.82rem;
   color: rgba(255,255,255,0.65);
 }
@@ -43,7 +43,7 @@
 }
 
 .sub {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: rgba(255,255,255,0.60);
   font-size: 0.95rem;
   line-height: 1.75;
@@ -53,7 +53,7 @@
 .ctas { display: flex; gap: 12px; flex-wrap: wrap; }
 
 .phoneLink {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: rgba(255,255,255,0.5);
   text-decoration: none;
   font-size: 0.85rem;
@@ -75,7 +75,7 @@
   background: linear-gradient(135deg, #F26522 0%, #FF8A50 100%);
   color: #fff;
   border-radius: 999px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -104,7 +104,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.88rem;
   color: var(--t-body);
 }
@@ -127,7 +127,7 @@
   background: #FEF2F2;
   border: 1px solid #FECACA;
   border-radius: 8px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.82rem;
   color: #DC2626;
 }

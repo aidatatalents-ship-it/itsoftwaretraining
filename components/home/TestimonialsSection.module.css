@@ -1,4 +1,4 @@
-.grid {
+﻿.grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -37,7 +37,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 800;
   font-size: 0.875rem;
   flex-shrink: 0;
@@ -51,7 +51,7 @@
 }
 
 .role {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.72rem;
   color: var(--t-muted);
   margin-bottom: 3px;
@@ -59,7 +59,7 @@
 
 .text {
   color: #374151;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.875rem;
   line-height: 1.75;
   font-style: italic;
@@ -77,7 +77,7 @@
 }
 
 .coursePill {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
   padding: 4px 12px;
@@ -85,7 +85,7 @@
 }
 
 .package {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
   color: #059669;
@@ -123,14 +123,14 @@
 }
 
 .googleCount {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.85rem;
   color: var(--t-muted);
   margin-top: 2px;
 }
 
 .googleVerified {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.88rem;
   font-weight: 600;
   color: #059669;

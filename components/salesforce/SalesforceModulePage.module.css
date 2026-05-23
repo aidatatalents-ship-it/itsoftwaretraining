@@ -1,4 +1,4 @@
-/* SalesforceModulePage.module.css */
+﻿/* SalesforceModulePage.module.css */
 
 .hero {
   background: linear-gradient(135deg, #0D1B3E 0%, #1B3369 55%, #1565C0 100%);
@@ -62,7 +62,7 @@
   display: inline-flex; align-items: center; gap: 8px;
   padding: 13px 26px;
   background: linear-gradient(135deg, #F26522, #FF8A50);
-  color: #fff; border-radius: 8px; font-family: 'Inter', sans-serif;
+  color: #fff; border-radius: 8px; font-family: 'Poppins', sans-serif;
   font-size: .9rem; font-weight: 700; text-decoration: none;
   box-shadow: 0 6px 22px rgba(242,101,34,.45); transition: all .25s;
 }
@@ -71,7 +71,7 @@
   display: inline-flex; align-items: center; gap: 8px;
   padding: 12px 22px;
   background: rgba(255,255,255,.10); border: 1.5px solid rgba(255,255,255,.25);
-  color: #fff; border-radius: 8px; font-family: 'Inter', sans-serif;
+  color: #fff; border-radius: 8px; font-family: 'Poppins', sans-serif;
   font-size: .9rem; font-weight: 600; text-decoration: none; transition: all .25s;
 }
 .ctaGhost:hover { background: rgba(255,255,255,.18); transform: translateY(-2px); }
@@ -226,14 +226,14 @@
 .sideInp {
   width: 100%; padding: 10px 13px;
   background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2);
-  border-radius: 8px; color: #fff; font-family: 'Inter', sans-serif;
+  border-radius: 8px; color: #fff; font-family: 'Poppins', sans-serif;
   font-size: .84rem; outline: none; margin-bottom: 9px; box-sizing: border-box;
 }
 .sideInp::placeholder { color: rgba(255,255,255,.4); }
 .sideBtn {
   display: flex; align-items: center; justify-content: center; gap: 8px;
   width: 100%; padding: 12px; background: #fff; color: var(--ink);
-  border-radius: 8px; font-family: 'Inter', sans-serif;
+  border-radius: 8px; font-family: 'Poppins', sans-serif;
   font-size: .87rem; font-weight: 800; text-decoration: none; border: none; cursor: pointer; transition: all .2s;
 }
 .sideBtn:hover { background: #F5F7FB; }

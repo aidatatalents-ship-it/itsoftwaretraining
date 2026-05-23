@@ -1,4 +1,4 @@
-/* ═══════════════════════════════════════════════════
+﻿/* ═══════════════════════════════════════════════════
    HOMEPAGE — SkillForge / IT Software Training
    Palette: ink #1B3369 · accent #F26522 · cream #F5F7FB
 ═══════════════════════════════════════════════════ */
@@ -51,7 +51,7 @@
   background: rgba(242, 101, 34, 0.15);
   border: 1px solid rgba(242, 101, 34, 0.35);
   color: #FF9966;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -84,7 +84,7 @@
 .heroH1 em { font-style: italic; color: #F26522; }
 
 .heroDesc {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: rgba(255, 255, 255, 0.55);
   font-size: 1rem;
   line-height: 1.8;
@@ -98,7 +98,7 @@
   margin-bottom: 24px;
 }
 .hp {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.15);
   color: rgba(255, 255, 255, 0.75);
@@ -109,7 +109,7 @@
   letter-spacing: 0.01em;
 }
 .heroNote {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.88rem;
   color: rgba(255, 255, 255, 0.40);
   margin-bottom: 28px;
@@ -125,7 +125,7 @@
 
 /* ── SHARED BUTTONS ── */
 .btnInk {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: #F26522;
   color: #fff;
   padding: 14px 28px;
@@ -143,7 +143,7 @@
 .btnInk:hover { background: #D4531A; transform: translateY(-2px); box-shadow: 0 10px 28px rgba(242,101,34,0.50); }
 
 .btnGhost {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   border: 1.5px solid rgba(255, 255, 255, 0.25);
   color: rgba(255, 255, 255, 0.85);
   padding: 13px 26px;
@@ -158,7 +158,7 @@
 .btnGhost:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.08); transform: translateY(-2px); }
 
 .btnAccent {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: #F26522;
   color: #fff;
   padding: 15px 40px;
@@ -189,7 +189,7 @@
   margin-left: -8px;
 }
 .av:first-child { margin-left: 0; }
-.trustTxt { font-family: 'Inter', sans-serif; font-size: 0.82rem; color: rgba(255,255,255,0.45); }
+.trustTxt { font-family: 'Poppins', sans-serif; font-size: 0.82rem; color: rgba(255,255,255,0.45); }
 .trustTxt strong { color: rgba(255,255,255,0.80); }
 
 /* ── PLACEMENTS CARD ── */
@@ -206,7 +206,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -239,23 +239,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 11px;
   font-weight: 700;
   color: #fff;
   flex-shrink: 0;
 }
 .plInfo { flex: 1; min-width: 0; }
-.plName { font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 600; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.plName { font-family: 'Poppins', sans-serif; font-size: 0.78rem; font-weight: 600; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .plRole { font-weight: 400; color: #F26522; }
-.plDetail { font-family: 'Inter', sans-serif; font-size: 0.7rem; color: var(--t-muted); margin-top: 1px; }
+.plDetail { font-family: 'Poppins', sans-serif; font-size: 0.7rem; color: var(--t-muted); margin-top: 1px; }
 .plDetail strong { color: #2E844A; font-weight: 700; }
-.plDays { font-family: 'Inter', sans-serif; font-size: 0.65rem; font-weight: 700; color: var(--t-muted); background: #fff; border: 1px solid var(--border); padding: 3px 8px; border-radius: 5px; flex-shrink: 0; }
+.plDays { font-family: 'Poppins', sans-serif; font-size: 0.65rem; font-weight: 700; color: var(--t-muted); background: #fff; border: 1px solid var(--border); padding: 3px 8px; border-radius: 5px; flex-shrink: 0; }
 
 /* ── JOURNEY ── */
-.journeyLabel { font-family: 'Inter', sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--t-muted); margin-bottom: 12px; }
+.journeyLabel { font-family: 'Poppins', sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--t-muted); margin-bottom: 12px; }
 .journeyTabs { display: flex; gap: 6px; margin-bottom: 16px; }
-.jTab { padding: 7px 14px; border-radius: 7px; font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 600; cursor: pointer; border: 1px solid var(--border); background: #fff; color: var(--t-muted); transition: all .2s; }
+.jTab { padding: 7px 14px; border-radius: 7px; font-family: 'Poppins', sans-serif; font-size: 0.78rem; font-weight: 600; cursor: pointer; border: 1px solid var(--border); background: #fff; color: var(--t-muted); transition: all .2s; }
 .jTab:hover { border-color: var(--ink); color: var(--ink); }
 .jTabActive { background: var(--ink); color: #fff; border-color: var(--ink); }
 .journeySteps { display: flex; flex-direction: column; gap: 10px; }
@@ -370,11 +370,11 @@
 
 /* ── COUNSELLING ── */
 .counselSec { background: linear-gradient(135deg, #0D1B3E 0%, #1B3369 55%, #1565C0 100%); padding: 80px 5%; }
-.counselSub { font-family: 'Inter', sans-serif; color: rgba(255,255,255,0.50); margin: 0 auto 32px; max-width: 560px; font-size: 0.95rem; line-height: 1.8; }
+.counselSub { font-family: 'Poppins', sans-serif; color: rgba(255,255,255,0.50); margin: 0 auto 32px; max-width: 560px; font-size: 0.95rem; line-height: 1.8; }
 .counselPoints { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; margin-bottom: 32px; }
-.cp { font-family: 'Inter', sans-serif; display: flex; align-items: center; gap: 8px; font-size: 0.88rem; color: rgba(255,255,255,0.60); }
+.cp { font-family: 'Poppins', sans-serif; display: flex; align-items: center; gap: 8px; font-size: 0.88rem; color: rgba(255,255,255,0.60); }
 .cp::before { content: '✓'; color: #4ADE80; font-weight: 700; }
-.counselNote { font-family: 'Inter', sans-serif; margin-top: 18px; font-size: 0.82rem; color: rgba(255,255,255,0.25); }
+.counselNote { font-family: 'Poppins', sans-serif; margin-top: 18px; font-size: 0.82rem; color: rgba(255,255,255,0.25); }
 
 /* ── TESTIMONIALS ── */
 .testSec { background: #F0F4FF; padding: 88px 5%; }
@@ -434,7 +434,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 13px;
   font-weight: 800;
   color: #fff;
@@ -447,7 +447,7 @@
 
 .testMeta { flex: 1; }
 .testName { font-family: 'Fraunces', serif; font-weight: 800; color: var(--ink); font-size: 0.95rem; letter-spacing: -0.2px; margin-bottom: 2px; }
-.testRole { font-family: 'Inter', sans-serif; font-size: 0.72rem; color: var(--t-muted); font-weight: 500; }
+.testRole { font-family: 'Poppins', sans-serif; font-size: 0.72rem; color: var(--t-muted); font-weight: 500; }
 
 .testStars {
   display: flex;
@@ -456,7 +456,7 @@
 }
 
 .testQuote {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.875rem;
   color: #374151;
   line-height: 1.8;
@@ -473,7 +473,7 @@
 }
 
 .testCoursePill {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.68rem;
   font-weight: 700;
   padding: 4px 12px;
@@ -483,7 +483,7 @@
 }
 
 .testPackage {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
   color: #059669;
@@ -515,9 +515,9 @@
   letter-spacing: -1px;
   line-height: 1;
 }
-.googleLabel { font-family: 'Inter', sans-serif; font-size: 0.78rem; color: var(--t-muted); margin-top: 3px; }
+.googleLabel { font-family: 'Poppins', sans-serif; font-size: 0.78rem; color: var(--t-muted); margin-top: 3px; }
 .googleDivider { width: 1px; height: 40px; background: #F0F0F0; }
-.googleVerified { font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; color: #059669; }
+.googleVerified { font-family: 'Poppins', sans-serif; font-size: 0.85rem; font-weight: 600; color: #059669; }
 
 /* ── FINAL CTA ── */
 .finalSec {
@@ -552,7 +552,7 @@
   background: rgba(242,101,34,0.15);
   border: 1px solid rgba(242,101,34,0.35);
   color: #FF9966;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -575,7 +575,7 @@
 .finalH2 em { font-style: italic; color: #F26522; }
 
 .finalSub {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: rgba(255,255,255,0.50);
   max-width: 480px;
   margin: 0 auto 40px;
@@ -611,7 +611,7 @@
   line-height: 1;
 }
 .finalStatL {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.7rem;
   color: rgba(255,255,255,0.35);
   margin-top: 4px;
@@ -621,7 +621,7 @@
 .finalBtns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
 .finalNote {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin-top: 20px;
   font-size: 0.78rem;
   color: rgba(255,255,255,0.22);

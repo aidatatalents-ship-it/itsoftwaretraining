@@ -1,4 +1,4 @@
-// Salesforce sub-module pages → /salesforce/[module]
+﻿// Salesforce sub-module pages → /salesforce/[module]
 // Each maps to existing serviceDetails key + services entry
 
 export interface SFModule {

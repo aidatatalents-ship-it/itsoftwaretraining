@@ -1,4 +1,4 @@
-import styles from './TestimonialsSection.module.css';
+﻿import styles from './TestimonialsSection.module.css';
 
 const testimonials = [
   { name: 'Priya Sharma', role: 'Salesforce Developer @ Infosys', avatar: 'PS', color: '#2563EB', rating: 5, text: 'I came from a non-IT background. Nexus\'s Salesforce training was hands-on with real CRM projects. Got placed at Infosys within 2 months of completing! The trainers were ex-Salesforce consultants.', course: 'Salesforce Developer', package: '₹8.5 LPA', city: 'Bangalore' },

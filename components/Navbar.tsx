@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -56,10 +56,10 @@ export default function Navbar() {
             <polygon points="0,8 14,8 0,26" fill="#F26522"/>
             <rect x="18" y="8" width="52" height="12" rx="2" fill="#FFFFFF"/>
             <rect x="37" y="18" width="14" height="52" rx="2" fill="#FFFFFF"/>
-            <text x="82" y="38" fontFamily="'Poppins','Inter',sans-serif" fontWeight="800" fontSize="28" fill="#FFFFFF" letterSpacing="0.5">SOFTWARE</text>
-            <text x="82" y="68" fontFamily="'Poppins','Inter',sans-serif" fontWeight="800" fontSize="28" fill="#FFFFFF" letterSpacing="0.5">TRAINING</text>
+            <text x="82" y="38" fontFamily="'Poppins','Poppins',sans-serif" fontWeight="800" fontSize="28" fill="#FFFFFF" letterSpacing="0.5">SOFTWARE</text>
+            <text x="82" y="68" fontFamily="'Poppins','Poppins',sans-serif" fontWeight="800" fontSize="28" fill="#FFFFFF" letterSpacing="0.5">TRAINING</text>
             <line x1="0" y1="78" x2="420" y2="78" stroke="rgba(255,255,255,0.25)" strokeWidth="1"/>
-            <text x="0" y="91" fontFamily="'Inter',sans-serif" fontWeight="500" fontSize="9" fill="rgba(255,255,255,0.4)" letterSpacing="2.5">BANGALORE&apos;S #1 SOFTWARE TRAINING INSTITUTE</text>
+            <text x="0" y="91" fontFamily="'Poppins',sans-serif" fontWeight="500" fontSize="9" fill="rgba(255,255,255,0.4)" letterSpacing="2.5">BANGALORE&apos;S #1 SOFTWARE TRAINING INSTITUTE</text>
           </svg>
         </Link>
 

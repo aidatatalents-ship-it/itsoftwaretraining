@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -146,26 +146,26 @@ export default function PlatformsIndexPage() {
       {/* ── Hero ── */}
       <section style={{ background: '#0B1A3D', padding: '64px 5% 56px' }}>
         <div style={{ maxWidth: 700, margin: '0 auto', textAlign: 'center' }}>
-          <p style={{ fontFamily: "'Inter',sans-serif", fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#F26522', marginBottom: 14 }}>
+          <p style={{ fontFamily: "'Poppins',sans-serif", fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#F26522', marginBottom: 14 }}>
             Career Guides — Bangalore IT Market
           </p>
           <h1 style={{ fontFamily: "'Fraunces',serif", fontSize: 'clamp(1.8rem,3.5vw,2.6rem)', fontWeight: 900, color: '#fff', letterSpacing: '-1px', lineHeight: 1.1, marginBottom: 16 }}>
             Stop Googling. Let Us Tell You<br />Which Platform Fits <em style={{ color: '#F26522', fontStyle: 'italic' }}>Your</em> Background.
           </h1>
-          <p style={{ fontFamily: "'Inter',sans-serif", color: 'rgba(255,255,255,0.5)', fontSize: '0.95rem', lineHeight: 1.8, marginBottom: 32 }}>
+          <p style={{ fontFamily: "'Poppins',sans-serif", color: 'rgba(255,255,255,0.5)', fontSize: '0.95rem', lineHeight: 1.8, marginBottom: 32 }}>
             3 quick questions. We&apos;ve placed 1,200+ students — we know which platform works for which background. No sales pitch, just honest guidance.
           </p>
           {step === 0 && (
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
               <button
                 onClick={() => setStep(1)}
-                style={{ fontFamily: "'Inter',sans-serif", background: '#F26522', color: '#fff', padding: '14px 32px', borderRadius: 8, border: 'none', fontSize: '0.95rem', fontWeight: 700, cursor: 'pointer', boxShadow: '0 6px 20px rgba(242,101,34,0.4)' }}
+                style={{ fontFamily: "'Poppins',sans-serif", background: '#F26522', color: '#fff', padding: '14px 32px', borderRadius: 8, border: 'none', fontSize: '0.95rem', fontWeight: 700, cursor: 'pointer', boxShadow: '0 6px 20px rgba(242,101,34,0.4)' }}
               >
                 Find My Platform — 3 Questions →
               </button>
               <button
                 onClick={() => setStep(5)}
-                style={{ fontFamily: "'Inter',sans-serif", background: 'transparent', color: 'rgba(255,255,255,0.6)', padding: '14px 24px', borderRadius: 8, border: '1.5px solid rgba(255,255,255,0.2)', fontSize: '0.9rem', fontWeight: 600, cursor: 'pointer' }}
+                style={{ fontFamily: "'Poppins',sans-serif", background: 'transparent', color: 'rgba(255,255,255,0.6)', padding: '14px 24px', borderRadius: 8, border: '1.5px solid rgba(255,255,255,0.2)', fontSize: '0.9rem', fontWeight: 600, cursor: 'pointer' }}
               >
                 Browse All Guides
               </button>
@@ -178,7 +178,7 @@ export default function PlatformsIndexPage() {
       {step === 0 && (
         <section style={{ background: '#fff', borderBottom: '1px solid #E8EDF4', padding: '32px 5%' }}>
           <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-            <p style={{ fontFamily: "'Inter',sans-serif", fontSize: '0.72rem', fontWeight: 700, color: '#9CA3AF', textTransform: 'uppercase', letterSpacing: '0.1em', textAlign: 'center', marginBottom: 20 }}>
+            <p style={{ fontFamily: "'Poppins',sans-serif", fontSize: '0.72rem', fontWeight: 700, color: '#9CA3AF', textTransform: 'uppercase', letterSpacing: '0.1em', textAlign: 'center', marginBottom: 20 }}>
               6 Platforms · Click Any to Start the Quiz
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12 }}>
@@ -192,15 +192,15 @@ export default function PlatformsIndexPage() {
                   >
                     <div style={{ fontSize: '1.6rem', flexShrink: 0 }}>{p.icon}</div>
                     <div>
-                      <div style={{ fontFamily: "'Inter',sans-serif", fontSize: '0.82rem', fontWeight: 700, color: '#1B3369' }}>{p.name}</div>
-                      <div style={{ fontFamily: "'Inter',sans-serif", fontSize: '0.68rem', color: p.color, fontWeight: 600, marginTop: 2 }}>{p.avgSalary.split('·')[0].trim()}</div>
-                      <div style={{ fontFamily: "'Inter',sans-serif", fontSize: '0.65rem', color: '#9CA3AF', marginTop: 1 }}>{p.timeToJob}</div>
+                      <div style={{ fontFamily: "'Poppins',sans-serif", fontSize: '0.82rem', fontWeight: 700, color: '#1B3369' }}>{p.name}</div>
+                      <div style={{ fontFamily: "'Poppins',sans-serif", fontSize: '0.68rem', color: p.color, fontWeight: 600, marginTop: 2 }}>{p.avgSalary.split('·')[0].trim()}</div>
+                      <div style={{ fontFamily: "'Poppins',sans-serif", fontSize: '0.65rem', color: '#9CA3AF', marginTop: 1 }}>{p.timeToJob}</div>
                     </div>
                   </button>
                 );
               })}
             </div>
-            <p style={{ fontFamily: "'Inter',sans-serif", fontSize: '0.8rem', color: '#9CA3AF', textAlign: 'center', marginTop: 20 }}>
+            <p style={{ fontFamily: "'Poppins',sans-serif", fontSize: '0.8rem', color: '#9CA3AF', textAlign: 'center', marginTop: 20 }}>
               Not sure which one? Take the 3-question quiz above — we&apos;ll tell you exactly which fits your background.
             </p>
           </div>
@@ -217,7 +217,7 @@ export default function PlatformsIndexPage() {
             ))}
           </div>
 
-          <p style={{ fontFamily: "'Inter',sans-serif", fontSize: '0.75rem', fontWeight: 700, color: '#F26522', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 12 }}>
+          <p style={{ fontFamily: "'Poppins',sans-serif", fontSize: '0.75rem', fontWeight: 700, color: '#F26522', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 12 }}>
             Question {step} of {questions.length}
           </p>
           <h2 style={{ fontFamily: "'Fraunces',serif", fontSize: '1.5rem', fontWeight: 800, color: '#1B3369', letterSpacing: '-0.5px', marginBottom: 28 }}>
@@ -230,7 +230,7 @@ export default function PlatformsIndexPage() {
                 key={opt.val}
                 onClick={() => handleAnswer(currentQ.id, opt.val)}
                 style={{
-                  fontFamily: "'Inter',sans-serif",
+                  fontFamily: "'Poppins',sans-serif",
                   background: '#fff',
                   border: '1.5px solid #E2E8F0',
                   borderRadius: 10,
@@ -258,7 +258,7 @@ export default function PlatformsIndexPage() {
           </div>
 
           {step > 1 && (
-            <button onClick={() => setStep(s => s - 1)} style={{ marginTop: 20, fontFamily: "'Inter',sans-serif", background: 'none', border: 'none', color: '#9CA3AF', fontSize: '0.85rem', cursor: 'pointer' }}>
+            <button onClick={() => setStep(s => s - 1)} style={{ marginTop: 20, fontFamily: "'Poppins',sans-serif", background: 'none', border: 'none', color: '#9CA3AF', fontSize: '0.85rem', cursor: 'pointer' }}>
               ← Back
             </button>
           )}
@@ -272,7 +272,7 @@ export default function PlatformsIndexPage() {
             <div style={{ background: rec.color, padding: '28px 32px', display: 'flex', alignItems: 'center', gap: 16 }}>
               <div style={{ fontSize: '2.5rem' }}>{rec.icon}</div>
               <div>
-                <p style={{ fontFamily: "'Inter',sans-serif", fontSize: '0.7rem', fontWeight: 700, color: 'rgba(255,255,255,0.6)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 4 }}>
+                <p style={{ fontFamily: "'Poppins',sans-serif", fontSize: '0.7rem', fontWeight: 700, color: 'rgba(255,255,255,0.6)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 4 }}>
                   Our recommendation for you
                 </p>
                 <h2 style={{ fontFamily: "'Fraunces',serif", fontSize: '1.8rem', fontWeight: 900, color: '#fff', letterSpacing: '-0.5px' }}>
@@ -284,7 +284,7 @@ export default function PlatformsIndexPage() {
             <div style={{ padding: '28px 32px' }}>
               {/* Real talk */}
               <div style={{ background: '#F8FAFF', borderLeft: `4px solid ${rec.color}`, borderRadius: '0 10px 10px 0', padding: '16px 20px', marginBottom: 24 }}>
-                <p style={{ fontFamily: "'Inter',sans-serif", fontSize: '0.88rem', color: '#374151', lineHeight: 1.8 }}>
+                <p style={{ fontFamily: "'Poppins',sans-serif", fontSize: '0.88rem', color: '#374151', lineHeight: 1.8 }}>
                   <strong style={{ color: '#1B3369' }}>Honest take:</strong> {rec.realTalk}
                 </p>
               </div>
@@ -297,8 +297,8 @@ export default function PlatformsIndexPage() {
                   { label: 'Difficulty', val: rec.difficulty },
                 ].map(stat => (
                   <div key={stat.label} style={{ background: '#F5F7FB', borderRadius: 10, padding: '14px 16px' }}>
-                    <div style={{ fontFamily: "'Inter',sans-serif", fontSize: '0.65rem', color: '#9CA3AF', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6 }}>{stat.label}</div>
-                    <div style={{ fontFamily: "'Inter',sans-serif", fontSize: '0.82rem', fontWeight: 700, color: '#1B3369', lineHeight: 1.4 }}>{stat.val}</div>
+                    <div style={{ fontFamily: "'Poppins',sans-serif", fontSize: '0.65rem', color: '#9CA3AF', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6 }}>{stat.label}</div>
+                    <div style={{ fontFamily: "'Poppins',sans-serif", fontSize: '0.82rem', fontWeight: 700, color: '#1B3369', lineHeight: 1.4 }}>{stat.val}</div>
                   </div>
                 ))}
               </div>
@@ -306,35 +306,35 @@ export default function PlatformsIndexPage() {
               {/* Who it's for / not for */}
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginBottom: 28 }}>
                 <div style={{ background: '#ECFDF5', borderRadius: 10, padding: '14px 16px' }}>
-                  <div style={{ fontFamily: "'Inter',sans-serif", fontSize: '0.65rem', fontWeight: 700, color: '#059669', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 8 }}>✓ Right for you if…</div>
-                  <p style={{ fontFamily: "'Inter',sans-serif", fontSize: '0.82rem', color: '#374151', lineHeight: 1.7 }}>{rec.forWho}</p>
+                  <div style={{ fontFamily: "'Poppins',sans-serif", fontSize: '0.65rem', fontWeight: 700, color: '#059669', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 8 }}>✓ Right for you if…</div>
+                  <p style={{ fontFamily: "'Poppins',sans-serif", fontSize: '0.82rem', color: '#374151', lineHeight: 1.7 }}>{rec.forWho}</p>
                 </div>
                 <div style={{ background: '#FEF2F2', borderRadius: 10, padding: '14px 16px' }}>
-                  <div style={{ fontFamily: "'Inter',sans-serif", fontSize: '0.65rem', fontWeight: 700, color: '#DC2626', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 8 }}>✗ Avoid if…</div>
-                  <p style={{ fontFamily: "'Inter',sans-serif", fontSize: '0.82rem', color: '#374151', lineHeight: 1.7 }}>{rec.notFor}</p>
+                  <div style={{ fontFamily: "'Poppins',sans-serif", fontSize: '0.65rem', fontWeight: 700, color: '#DC2626', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 8 }}>✗ Avoid if…</div>
+                  <p style={{ fontFamily: "'Poppins',sans-serif", fontSize: '0.82rem', color: '#374151', lineHeight: 1.7 }}>{rec.notFor}</p>
                 </div>
               </div>
 
               {/* Hiring companies */}
               <div style={{ marginBottom: 28 }}>
-                <div style={{ fontFamily: "'Inter',sans-serif", fontSize: '0.7rem', fontWeight: 700, color: '#9CA3AF', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 10 }}>Top Hiring Companies in Bangalore</div>
+                <div style={{ fontFamily: "'Poppins',sans-serif", fontSize: '0.7rem', fontWeight: 700, color: '#9CA3AF', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 10 }}>Top Hiring Companies in Bangalore</div>
                 <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                   {rec.topCompanies.map(c => (
-                    <span key={c} style={{ fontFamily: "'Inter',sans-serif", fontSize: '0.78rem', fontWeight: 600, background: `${rec.color}12`, color: rec.color, padding: '5px 12px', borderRadius: 20, border: `1px solid ${rec.color}30` }}>{c}</span>
+                    <span key={c} style={{ fontFamily: "'Poppins',sans-serif", fontSize: '0.78rem', fontWeight: 600, background: `${rec.color}12`, color: rec.color, padding: '5px 12px', borderRadius: 20, border: `1px solid ${rec.color}30` }}>{c}</span>
                   ))}
                 </div>
               </div>
 
               {/* CTAs */}
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-                <Link href={`/platforms/${result}`} style={{ fontFamily: "'Inter',sans-serif", background: rec.color, color: '#fff', padding: '13px 24px', borderRadius: 8, textDecoration: 'none', fontSize: '0.88rem', fontWeight: 700, flex: 1, textAlign: 'center' }}>
+                <Link href={`/platforms/${result}`} style={{ fontFamily: "'Poppins',sans-serif", background: rec.color, color: '#fff', padding: '13px 24px', borderRadius: 8, textDecoration: 'none', fontSize: '0.88rem', fontWeight: 700, flex: 1, textAlign: 'center' }}>
                   Read Full {rec.name} Career Guide →
                 </Link>
-                <Link href="/contact" style={{ fontFamily: "'Inter',sans-serif", background: '#F26522', color: '#fff', padding: '13px 24px', borderRadius: 8, textDecoration: 'none', fontSize: '0.88rem', fontWeight: 700, flex: 1, textAlign: 'center' }}>
+                <Link href="/contact" style={{ fontFamily: "'Poppins',sans-serif", background: '#F26522', color: '#fff', padding: '13px 24px', borderRadius: 8, textDecoration: 'none', fontSize: '0.88rem', fontWeight: 700, flex: 1, textAlign: 'center' }}>
                   Talk to a Counsellor Free
                 </Link>
               </div>
-              <button onClick={() => { setStep(1); setAnswers({}); setResult(''); }} style={{ width: '100%', marginTop: 12, fontFamily: "'Inter',sans-serif", background: 'none', border: 'none', color: '#9CA3AF', fontSize: '0.82rem', cursor: 'pointer' }}>
+              <button onClick={() => { setStep(1); setAnswers({}); setResult(''); }} style={{ width: '100%', marginTop: 12, fontFamily: "'Poppins',sans-serif", background: 'none', border: 'none', color: '#9CA3AF', fontSize: '0.82rem', cursor: 'pointer' }}>
                 ← Retake the quiz
               </button>
             </div>
@@ -346,7 +346,7 @@ export default function PlatformsIndexPage() {
       {step === 5 && (
         <section style={{ maxWidth: 1100, margin: '48px auto', padding: '0 24px 64px' }}>
           <h2 style={{ fontFamily: "'Fraunces',serif", fontSize: '1.5rem', fontWeight: 800, color: '#1B3369', marginBottom: 8 }}>All Career Guides</h2>
-          <p style={{ fontFamily: "'Inter',sans-serif", color: '#6B7280', marginBottom: 32, fontSize: '0.9rem' }}>
+          <p style={{ fontFamily: "'Poppins',sans-serif", color: '#6B7280', marginBottom: 32, fontSize: '0.9rem' }}>
             Click any platform to read the full market breakdown, salary data, roadmap, and fit assessment.
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 20 }}>
@@ -362,20 +362,20 @@ export default function PlatformsIndexPage() {
                       <div style={{ fontSize: '1.6rem' }}>{p.icon}</div>
                       <div>
                         <div style={{ fontFamily: "'Fraunces',serif", fontWeight: 800, fontSize: '1rem', color: '#1B3369' }}>{p.name}</div>
-                        <div style={{ fontFamily: "'Inter',sans-serif", fontSize: '0.7rem', color: p.color, fontWeight: 700 }}>{p.timeToJob}</div>
+                        <div style={{ fontFamily: "'Poppins',sans-serif", fontSize: '0.7rem', color: p.color, fontWeight: 700 }}>{p.timeToJob}</div>
                       </div>
                     </div>
-                    <p style={{ fontFamily: "'Inter',sans-serif", fontSize: '0.8rem', color: '#6B7280', lineHeight: 1.65, marginBottom: 14 }}>
+                    <p style={{ fontFamily: "'Poppins',sans-serif", fontSize: '0.8rem', color: '#6B7280', lineHeight: 1.65, marginBottom: 14 }}>
                       {p.forWho.slice(0, 90)}…
                     </p>
-                    <span style={{ fontFamily: "'Inter',sans-serif", fontSize: '0.78rem', fontWeight: 700, color: p.color }}>Read Career Guide →</span>
+                    <span style={{ fontFamily: "'Poppins',sans-serif", fontSize: '0.78rem', fontWeight: 700, color: p.color }}>Read Career Guide →</span>
                   </div>
                 </Link>
               );
             })}
           </div>
           <div style={{ textAlign: 'center', marginTop: 40 }}>
-            <button onClick={() => { setStep(1); setAnswers({}); }} style={{ fontFamily: "'Inter',sans-serif", background: '#F26522', color: '#fff', padding: '13px 28px', borderRadius: 8, border: 'none', fontSize: '0.9rem', fontWeight: 700, cursor: 'pointer' }}>
+            <button onClick={() => { setStep(1); setAnswers({}); }} style={{ fontFamily: "'Poppins',sans-serif", background: '#F26522', color: '#fff', padding: '13px 28px', borderRadius: 8, border: 'none', fontSize: '0.9rem', fontWeight: 700, cursor: 'pointer' }}>
               Or take the 3-question quiz →
             </button>
           </div>

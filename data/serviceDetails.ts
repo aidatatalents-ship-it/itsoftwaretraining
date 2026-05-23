@@ -1,4 +1,4 @@
-export interface ServiceDetail {
+﻿export interface ServiceDetail {
   curriculum?: { module: string; topics: string[] }[];
   tools?: string[];
   faqs?: { q: string; a: string }[];

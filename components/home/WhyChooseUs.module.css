@@ -1,4 +1,4 @@
-.grid {
+﻿.grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
@@ -42,7 +42,7 @@
 }
 
 .desc {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.82rem;
   color: var(--t-muted);
   line-height: 1.7;
@@ -85,7 +85,7 @@
 }
 
 .midCtaP {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.88rem;
   color: rgba(255, 255, 255, 0.55);
 }

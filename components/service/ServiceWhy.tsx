@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import {
   TrendingUp, Globe, Shield, Rocket,
   CheckCircle, ArrowRight,

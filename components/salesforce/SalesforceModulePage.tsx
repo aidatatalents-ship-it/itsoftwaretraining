@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import { useState } from 'react';
 import Link from 'next/link';
 import { ChevronRight, CheckCircle, Clock, Users, IndianRupee, Award, ChevronDown, Phone, ArrowRight } from 'lucide-react';

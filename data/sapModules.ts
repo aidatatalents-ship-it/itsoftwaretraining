@@ -1,4 +1,4 @@
-import type { TrainingModule } from './cloudModules';
+﻿import type { TrainingModule } from './cloudModules';
 export type { TrainingModule };
 
 export const sapModules: TrainingModule[] = [

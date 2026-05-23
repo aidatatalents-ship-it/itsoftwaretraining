@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import styles from './WhyChooseUs.module.css';
 
 const reasons = [
@@ -48,7 +48,7 @@ export default function WhyChooseUs() {
               display: 'inline-flex', alignItems: 'center', gap: 8,
               padding: '13px 24px', border: '1.5px solid rgba(255,255,255,0.3)',
               borderRadius: 8, color: 'rgba(255,255,255,0.85)',
-              fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 600,
+              fontFamily: 'Poppins, sans-serif', fontSize: '0.9rem', fontWeight: 600,
               textDecoration: 'none', whiteSpace: 'nowrap'
             }}>
               📞 Call Now
