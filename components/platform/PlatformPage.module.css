@@ -1,4 +1,4 @@
-﻿/* ══════════════════════════════════════
+/* ══════════════════════════════════════
    PLATFORM PAGE — Premium Marketing Layout
    ══════════════════════════════════════ */
 
@@ -6,7 +6,7 @@
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 72px 0 0;
+  padding: 88px 0 0;
   background: linear-gradient(135deg, #0D1B3E 0%, #1B3369 55%, #1565C0 100%);
 }
 .hero::before {

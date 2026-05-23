@@ -1,9 +1,9 @@
-﻿/* ═══ Luminar-style Course Detail Page ═══ */
+/* ═══ Luminar-style Course Detail Page ═══ */
 
 /* ── Hero banner — DARK EDITION ── */
 .hero {
   background: var(--grad-hero-dark);
-  padding: 48px 0 0;
+  padding: 88px 0 0;
   border-bottom: 1px solid rgba(255,255,255,0.06);
   text-align: center;
   position: relative;

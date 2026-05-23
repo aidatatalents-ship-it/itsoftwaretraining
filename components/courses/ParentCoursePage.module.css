@@ -1,4 +1,4 @@
-﻿/* ═══════════════════════════════════════
+/* ═══════════════════════════════════════
    PARENT COURSE PAGE — Premium Layout
    /courses/[parent]
 ═══════════════════════════════════════ */
@@ -6,7 +6,7 @@
 /* ── HERO ── */
 .hero {
   background: linear-gradient(135deg, #0D1B3E 0%, #1B3369 55%, #1565C0 100%);
-  padding: 64px 0 0;
+  padding: 88px 0 0;
   position: relative; overflow: hidden;
 }
 .hero::before {
@@ -374,5 +374,5 @@
 }
 @media (max-width: 480px) {
   .whyGrid { grid-template-columns: 1fr; }
-  .hero { padding: 48px 0 0; }
+  .hero { padding: 80px 0 0; }
 }
